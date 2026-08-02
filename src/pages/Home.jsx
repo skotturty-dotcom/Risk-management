@@ -117,7 +117,7 @@ export default function Home({ onOpenAudit }) {
 
               <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold font-display leading-[1.15] text-[#0F3161] dark:text-white tracking-tight">
                 Navigating Strategic Risk with <br className="hidden sm:inline" />
-                <span className="text-gradient-emerald">Uncompromising Resilience</span>
+                <span className="text-[#008579] dark:text-[#FFB340] font-extrabold">Uncompromising Resilience</span>
               </h1>
 
               <p className="text-slate-700 dark:text-gray-200 text-base md:text-lg max-w-2xl leading-relaxed font-heading font-medium">
@@ -128,32 +128,32 @@ export default function Home({ onOpenAudit }) {
               <div className="flex flex-col sm:flex-row items-stretch sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 pt-4">
                 <a
                   href="#solutions"
-                  className="px-7 py-4 rounded-xl bg-gradient-to-r from-[#008579] to-[#0F3161] text-white font-extrabold text-xs uppercase tracking-wider shadow-xl shadow-teal-600/25 hover:brightness-110 transition-all flex items-center justify-center space-x-2 group"
+                  className="px-7 py-4 rounded-xl bg-[#008579] hover:bg-[#00685E] text-white font-extrabold text-xs uppercase tracking-wider shadow-xl shadow-teal-600/25 transition-all flex items-center justify-center space-x-2 group"
                 >
                   <span>Explore Our Solutions</span>
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight className="w-4 h-4 text-[#FFB340] group-hover:translate-x-1 transition-transform" />
                 </a>
 
                 <button
                   onClick={onOpenAudit}
-                  className="px-7 py-4 rounded-xl bg-[#0F3161] hover:bg-[#06152B] text-white font-extrabold text-xs uppercase tracking-wider shadow-lg dark:bg-white/10 dark:hover:bg-white/20 dark:border dark:border-white/20 transition-all text-center"
+                  className="px-7 py-4 rounded-xl bg-[#0F3161] hover:bg-[#06152B] dark:bg-teal-500/20 dark:hover:bg-teal-500/30 text-white dark:text-[#FFB340] border border-transparent dark:border-teal-500/40 font-extrabold text-xs uppercase tracking-wider shadow-lg transition-all text-center"
                 >
                   Request an Enterprise Audit
                 </button>
               </div>
 
               {/* Key Trust Tags */}
-              <div className="pt-8 border-t border-slate-200 dark:border-white/10 grid grid-cols-3 gap-4 text-xs font-mono text-slate-700 dark:text-gray-200 font-semibold">
+              <div className="pt-8 border-t border-slate-200 dark:border-white/10 grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs font-mono text-slate-700 dark:text-gray-200 font-semibold">
                 <div className="flex items-center space-x-2">
-                  <CheckCircle2 className="w-4 h-4 text-[#008579] dark:text-[#46A095]" />
+                  <CheckCircle2 className="w-4 h-4 text-[#008579] dark:text-[#46A095] shrink-0" />
                   <span>ISO 31000 & COSO</span>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <CheckCircle2 className="w-4 h-4 text-[#008579] dark:text-[#46A095]" />
+                  <CheckCircle2 className="w-4 h-4 text-[#008579] dark:text-[#46A095] shrink-0" />
                   <span>CXO Governance</span>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <CheckCircle2 className="w-4 h-4 text-[#008579] dark:text-[#46A095]" />
+                  <CheckCircle2 className="w-4 h-4 text-[#008579] dark:text-[#46A095] shrink-0" />
                   <span>TPRM & Cyber</span>
                 </div>
               </div>
@@ -164,7 +164,7 @@ export default function Home({ onOpenAudit }) {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.9, delay: 0.2 }}
-              className="lg:col-span-5 relative"
+              className="lg:col-span-5 relative pt-8 lg:pt-0"
             >
               <HeroRiskNetwork onOpenAudit={onOpenAudit} />
             </motion.div>
