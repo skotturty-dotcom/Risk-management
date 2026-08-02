@@ -15,16 +15,16 @@
   }
 
   html.dark {
-    --bg-main: #06152B;
-    --bg-card: #0F2342;
+    --bg-main: #0B132B;
+    --bg-card: #101D38;
     --text-primary: #FFFFFF;
     --text-secondary: #E2E8F0;
     --text-muted: #94A3B8;
-    --border-color: rgba(70, 160, 149, 0.25);
+    --border-color: rgba(0, 133, 121, 0.35);
     --accent-teal: #46A095;
     --accent-teal-hover: #56C4B7;
     --accent-amber: #FFB340;
-    --accent-navy: #06152B;
+    --accent-navy: #0B132B;
   }
 
   html, body {
@@ -48,7 +48,7 @@
     cursor: pointer;
   }
 
-  /* Unified Font Family Across All Website Headings and Boxes */
+  /* Unified Font Family Across All Headings */
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Plus Jakarta Sans', 'Inter', system-ui, sans-serif !important;
     letter-spacing: -0.02em;
@@ -74,7 +74,7 @@
   transform-style: preserve-3d;
 }
 
-/* Custom Typography Utilities - Standardized on Plus Jakarta Sans & Inter */
+/* Custom Typography Utilities */
 .font-display {
   font-family: 'Plus Jakarta Sans', 'Inter', system-ui, sans-serif !important;
 }
@@ -84,15 +84,15 @@
 }
 
 .bg-radial-grid {
-  background-image: radial-gradient(rgba(0, 133, 121, 0.12) 1.2px, transparent 1.2px);
+  background-image: radial-gradient(rgba(0, 133, 121, 0.15) 1.2px, transparent 1.2px);
   background-size: 28px 28px;
 }
 
 html.dark .bg-radial-grid {
-  background-image: radial-gradient(rgba(70, 160, 149, 0.14) 1.2px, transparent 1.2px);
+  background-image: radial-gradient(rgba(70, 160, 149, 0.2) 1.2px, transparent 1.2px);
 }
 
-/* Resolver Card Styling - Unified Typography Container */
+/* Executive Card Styling */
 .glass-panel {
   background: #FFFFFF;
   border: 1px solid #E6E6E6;
@@ -101,9 +101,9 @@ html.dark .bg-radial-grid {
 }
 
 html.dark .glass-panel {
-  background: #0F2342;
-  border: 1px solid rgba(70, 160, 149, 0.25);
-  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.7);
+  background: #101D38;
+  border: 1px solid rgba(0, 133, 121, 0.35);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.8);
 }
 
 .glass-panel-hover {
@@ -116,23 +116,23 @@ html.dark .glass-panel {
 }
 
 html.dark .glass-panel-hover:hover {
-  border-color: #46A095;
-  box-shadow: 0 12px 30px 0 rgba(70, 160, 149, 0.25);
+  border-color: #FFB340;
+  box-shadow: 0 12px 30px 0 rgba(255, 179, 64, 0.25);
 }
 
 .glow-emerald {
   box-shadow: 0 0 25px rgba(0, 133, 121, 0.35);
 }
 
-/* Resolver Teal & Navy Text Gradients */
+/* Vibrant Executive Text Gradients */
 .text-gradient {
-  background: linear-gradient(135deg, #0F3161 0%, #008579 50%, #FF7729 100%);
+  background: linear-gradient(135deg, #0F3161 0%, #008579 50%, #D97706 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 html.dark .text-gradient {
-  background: linear-gradient(135deg, #FFFFFF 0%, #FAFAFB 40%, #46A095 100%);
+  background: linear-gradient(135deg, #FFFFFF 0%, #E2E8F0 50%, #FFB340 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -144,7 +144,7 @@ html.dark .text-gradient {
 }
 
 html.dark .text-gradient-emerald {
-  background: linear-gradient(135deg, #46A095 0%, #FFB340 100%);
+  background: linear-gradient(135deg, #56C4B7 0%, #FFB340 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -159,7 +159,7 @@ html.dark .text-gradient-emerald {
 }
 
 html.dark ::-webkit-scrollbar-track {
-  background: #06152B;
+  background: #0B132B;
 }
 
 ::-webkit-scrollbar-thumb {
