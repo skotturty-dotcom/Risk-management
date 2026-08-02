@@ -173,7 +173,75 @@ export default function Home({ onOpenAudit }) {
       </section>
 
       {/* ==========================================
-          2. PROTECTING ENTERPRISE VALUE SECTION
+          2. FOUNDER & PRINCIPAL LEADERSHIP SECTION (RIGHT AFTER HERO)
+         ========================================== */}
+      <section id="founder" className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="glass-panel p-8 md:p-12 rounded-3xl border border-slate-200 dark:border-teal-500/30 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center bg-white dark:bg-[#0F2342] shadow-2xl">
+          <div className="lg:col-span-5 relative">
+            <div className="relative aspect-[4/5] rounded-2xl bg-gradient-to-br from-[#0F3161] via-[#00437E] to-[#06152B] text-white border-2 border-[#008579] flex flex-col items-center justify-center p-8 text-center shadow-2xl overflow-hidden group">
+              <div className="w-28 h-28 rounded-full bg-[#06152B] border-2 border-[#FFB340] flex items-center justify-center text-[#FFB340] shadow-xl mb-6 group-hover:scale-105 transition-transform">
+                <ShieldCheck className="w-14 h-14" />
+              </div>
+              <h3 className="text-2xl font-extrabold font-display text-white">
+                {founderData.name}
+              </h3>
+              <p className="text-xs font-sans text-[#FFB340] uppercase tracking-wider mt-2 font-extrabold px-3 py-1 rounded bg-white/10 border border-white/20">
+                {founderData.designation}
+              </p>
+              <div className="mt-8 pt-6 border-t border-white/10 text-xs font-sans text-teal-200 font-semibold space-y-1">
+                <p className="flex items-center justify-center space-x-1.5">
+                  <ShieldCheck className="w-4 h-4 text-[#FFB340]" />
+                  <span>SRAJAI TECH FOUNDER</span>
+                </p>
+                <p className="text-[11px] text-slate-300">Enterprise Risk Strategy & ERM Specialist</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="lg:col-span-7 space-y-8">
+            <div className="space-y-3">
+              <span className="text-xs md:text-sm font-bold font-sans text-[#008579] dark:text-[#46A095] uppercase tracking-widest">
+                FOUNDER & PRINCIPAL LEADERSHIP
+              </span>
+              <h2 className="text-3xl md:text-4xl font-extrabold font-display text-[#0F3161] dark:text-white">
+                {founderData.name}
+              </h2>
+            </div>
+
+            <p className="text-slate-700 dark:text-gray-200 text-base md:text-xl leading-relaxed font-medium">
+              {founderData.bio}
+            </p>
+
+            {/* Quote Block */}
+            <div className="glass-panel p-7 sm:p-8 rounded-2xl border-l-4 border-l-[#008579] dark:border-l-[#46A095] border-slate-200 dark:border-white/10 space-y-4 shadow-md bg-slate-50 dark:bg-[#06152B]">
+              <Quote className="w-9 h-9 text-[#008579]/30 dark:text-teal-500/40" />
+              <p className="text-lg md:text-xl font-bold text-[#0F3161] dark:text-white font-heading italic leading-relaxed">
+                "{founderData.quote}"
+              </p>
+              <p className="text-sm font-sans text-[#008579] dark:text-[#46A095] font-extrabold tracking-wide">
+                — Guddeti Sanjay Raj, Founder & Principal Risk Strategist
+              </p>
+            </div>
+
+            {/* Expertise Grid */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 pt-2">
+              {founderData.expertise.map((exp, idx) => (
+                <div key={idx} className="p-6 rounded-2xl bg-white dark:bg-[#06152B] border border-slate-200 dark:border-white/10 space-y-2 shadow-md">
+                  <h4 className="text-base md:text-lg font-extrabold text-[#0F3161] dark:text-white font-display">
+                    {exp.title}
+                  </h4>
+                  <p className="text-sm md:text-base text-slate-700 dark:text-gray-200 font-medium leading-relaxed">
+                    {exp.desc}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ==========================================
+          3. PROTECTING ENTERPRISE VALUE SECTION
          ========================================== */}
       <section id="enterprise-value" className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
@@ -555,73 +623,7 @@ export default function Home({ onOpenAudit }) {
         </div>
       </section>
 
-      {/* ==========================================
-          11. FOUNDER & LEADERSHIP SECTION
-         ========================================== */}
-      <section id="founder" className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="glass-panel p-8 md:p-12 rounded-3xl border border-slate-200 dark:border-teal-500/30 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-          <div className="lg:col-span-5 relative">
-            <div className="relative aspect-[4/5] rounded-2xl bg-gradient-to-br from-[#0F3161] via-[#00437E] to-[#06152B] text-white border-2 border-[#008579] flex flex-col items-center justify-center p-8 text-center shadow-2xl overflow-hidden group">
-              <div className="w-28 h-28 rounded-full bg-[#06152B] border-2 border-[#FFB340] flex items-center justify-center text-[#FFB340] shadow-xl mb-6 group-hover:scale-105 transition-transform">
-                <ShieldCheck className="w-14 h-14" />
-              </div>
-              <h3 className="text-2xl font-extrabold font-display text-white">
-                {founderData.name}
-              </h3>
-              <p className="text-xs font-sans text-[#FFB340] uppercase tracking-wider mt-2 font-extrabold px-3 py-1 rounded bg-white/10 border border-white/20">
-                {founderData.designation}
-              </p>
-              <div className="mt-8 pt-6 border-t border-white/10 text-xs font-sans text-teal-200 font-semibold space-y-1">
-                <p className="flex items-center justify-center space-x-1.5">
-                  <ShieldCheck className="w-4 h-4 text-[#FFB340]" />
-                  <span>SRAJAI TECH FOUNDER</span>
-                </p>
-                <p className="text-[11px] text-slate-300">Enterprise Risk Strategy & ERM Specialist</p>
-              </div>
-            </div>
-          </div>
 
-          <div className="lg:col-span-7 space-y-8">
-            <div className="space-y-3">
-              <span className="text-xs md:text-sm font-bold font-sans text-[#008579] dark:text-[#46A095] uppercase tracking-widest">
-                FOUNDER & PRINCIPAL LEADERSHIP
-              </span>
-              <h2 className="text-3xl md:text-4xl font-extrabold font-display text-[#0F3161] dark:text-white">
-                {founderData.name}
-              </h2>
-            </div>
-
-            <p className="text-slate-700 dark:text-gray-200 text-base md:text-xl leading-relaxed font-medium">
-              {founderData.bio}
-            </p>
-
-            {/* Quote Block with Enlarged Font */}
-            <div className="glass-panel p-7 sm:p-8 rounded-2xl border-l-4 border-l-[#008579] dark:border-l-[#46A095] border-slate-200 dark:border-white/10 space-y-4 shadow-md">
-              <Quote className="w-9 h-9 text-[#008579]/30 dark:text-teal-500/40" />
-              <p className="text-lg md:text-xl font-bold text-[#0F3161] dark:text-white font-heading italic leading-relaxed">
-                "{founderData.quote}"
-              </p>
-              <p className="text-sm font-sans text-[#008579] dark:text-[#46A095] font-extrabold tracking-wide">
-                — Guddeti Sanjay Raj, Founder & Principal Risk Strategist
-              </p>
-            </div>
-
-            {/* Enlarged 4-Card Expertise Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 pt-2">
-              {founderData.expertise.map((exp, idx) => (
-                <div key={idx} className="p-6 rounded-2xl bg-white dark:bg-[#06152B] border border-slate-200 dark:border-white/10 space-y-2 shadow-md">
-                  <h4 className="text-base md:text-lg font-extrabold text-[#0F3161] dark:text-white font-display">
-                    {exp.title}
-                  </h4>
-                  <p className="text-sm md:text-base text-slate-700 dark:text-gray-200 font-medium leading-relaxed">
-                    {exp.desc}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* ==========================================
           12. CONTACT ADVISORY TEAM & INQUIRY FORM
