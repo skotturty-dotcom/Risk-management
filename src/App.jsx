@@ -1,0 +1,65 @@
+import React, { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { ThemeProvider } from './context/ThemeContext';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import CustomCursor from './components/CustomCursor';
+import FloatingNetworkCanvas from './components/FloatingNetworkCanvas';
+import AuditModal from './components/AuditModal';
+import SEOHead from './components/SEOHead';
+import ErrorBoundary from './components/ErrorBoundary';
+
+// Pages
+import Home from './pages/Home';
+import AboutUs from './pages/AboutUs';
+import Solutions from './pages/Solutions';
+import Industries from './pages/Industries';
+import RiskFrameworkPage from './pages/RiskFrameworkPage';
+import Founder from './pages/Founder';
+import Contact from './pages/Contact';
+
+export default function App() {
+  const [isAuditModalOpen, setIsAuditModalOpen] = useState(false);
+
+  const handleOpenAudit = () => setIsAuditModalOpen(true);
+  const handleCloseAudit = () => setIsAuditModalOpen(false);
+
+  return (
+    <ErrorBoundary>
+      <ThemeProvider>
+        <Router>
+          <SEOHead />
+          <div className="relative min-h-screen bg-slate-50 dark:bg-[#050B14] text-slate-900 dark:text-[#EAF2F8] selection:bg-[#2563EB]/20 dark:selection:bg-[#5BC0EB]/30 selection:text-[#2563EB] dark:selection:text-[#5BC0EB] overflow-x-hidden font-sans transition-colors duration-300">
+            {/* Ambient Canvas Visual Background */}
+            <FloatingNetworkCanvas />
+
+            {/* Custom Desktop Magnetic Cursor */}
+            <CustomCursor />
+
+            {/* Sticky Navigation Bar */}
+            <Navbar onOpenAudit={handleOpenAudit} />
+
+            {/* Main Content Router View */}
+            <main className="relative z-10">
+              <Routes>
+                <Route path="/" element={<Home onOpenAudit={handleOpenAudit} />} />
+                <Route path="/about" element={<AboutUs onOpenAudit={handleOpenAudit} />} />
+                <Route path="/solutions" element={<Solutions onOpenAudit={handleOpenAudit} />} />
+                <Route path="/industries" element={<Industries onOpenAudit={handleOpenAudit} />} />
+                <Route path="/risk-framework" element={<RiskFrameworkPage onOpenAudit={handleOpenAudit} />} />
+                <Route path="/founder" element={<Founder onOpenAudit={handleOpenAudit} />} />
+                <Route path="/contact" element={<Contact />} />
+              </Routes>
+            </main>
+
+            {/* Corporate Footer */}
+            <Footer onOpenAudit={handleOpenAudit} />
+
+            {/* Audit Modal */}
+            <AuditModal isOpen={isAuditModalOpen} onClose={handleCloseAudit} />
+          </div>
+        </Router>
+      </ThemeProvider>
+    </ErrorBoundary>
+  );
+}
