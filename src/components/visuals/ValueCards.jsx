@@ -49,7 +49,7 @@ export default function ValueCards() {
             viewport={{ once: true }}
             transition={{ delay: index * 0.15 }}
             whileHover={{ y: -8 }}
-            className="glass-panel p-8 rounded-3xl border border-slate-200 dark:border-white/10 hover:border-[#008579] dark:hover:border-[#46A095] transition-all duration-300 relative overflow-hidden group flex flex-col justify-between bg-white dark:bg-[#0F2342] shadow-xl hover:shadow-2xl hover:shadow-teal-900/10"
+            className="glass-panel p-8 rounded-3xl border border-slate-200 dark:border-white/10 hover:border-[#008579] dark:hover:border-[#46A095] transition-all duration-300 relative overflow-hidden group flex flex-col justify-between shadow-xl hover:shadow-2xl hover:shadow-teal-900/10"
           >
             {/* Top Accent Line */}
             <div className="absolute top-0 left-0 right-0 h-1.5 bg-[#008579] dark:bg-[#46A095]" />

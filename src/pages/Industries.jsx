@@ -69,7 +69,7 @@ export default function Industries({ onOpenAudit }) {
                 key={ind.id}
                 whileHover={{ y: -4 }}
                 onClick={() => setSelectedSectorModal(ind)}
-                className="glass-panel p-6 rounded-2xl cursor-pointer transition-all duration-200 group relative overflow-hidden border border-slate-200 dark:border-white/10 hover:border-[#008579] dark:hover:border-[#46A095] shadow-sm flex flex-col justify-between bg-white dark:bg-[#0F2342]"
+                className="glass-panel p-6 rounded-2xl cursor-pointer transition-all duration-200 group relative overflow-hidden border border-slate-200 dark:border-white/10 hover:border-[#008579] dark:hover:border-[#46A095] shadow-sm flex flex-col justify-between"
               >
                 <div className="space-y-4">
                   {/* Top Badges & Icon */}
