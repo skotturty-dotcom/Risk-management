@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, ShieldCheck, CheckCircle2, ArrowRight, Lock, Send, User, Mail, Building, Phone, Layers } from 'lucide-react';
+import { X, ShieldCheck, CheckCircle2, ArrowRight, Lock, User, Mail, Building, Phone } from 'lucide-react';
 
-export default function AuditModal({ isOpen, onClose }) {
+export default function AuditModal({ isOpen, onClose, selectedPractice }) {
   const [submitted, setSubmitted] = useState(false);
   const [formData, setFormData] = useState({
     fullName: '',
@@ -12,6 +12,13 @@ export default function AuditModal({ isOpen, onClose }) {
     primaryPractice: 'Enterprise Risk Management (ERM)',
     scopeDetails: ''
   });
+
+  useEffect(() => {
+    if (selectedPractice) {
+      const practiceName = typeof selectedPractice === 'string' ? selectedPractice : selectedPractice.title;
+      setFormData((prev) => ({ ...prev, primaryPractice: practiceName }));
+    }
+  }, [selectedPractice]);
 
   if (!isOpen) return null;
 
@@ -141,19 +148,12 @@ export default function AuditModal({ isOpen, onClose }) {
                   <label className="text-xs font-extrabold font-sans uppercase tracking-wider text-[#0F3161] dark:text-gray-200">
                     PRIMARY RISK DOMAIN
                   </label>
-                  <select
+                  <input
+                    type="text"
                     value={formData.primaryPractice}
                     onChange={(e) => setFormData({ ...formData, primaryPractice: e.target.value })}
                     className="w-full px-4 py-2.5 rounded-xl bg-slate-50 dark:bg-[#06152B] border border-slate-300 dark:border-white/20 text-slate-900 dark:text-white text-sm font-medium focus:outline-none focus:border-[#008579] dark:focus:border-[#46A095]"
-                  >
-                    <option value="Enterprise Risk Management (ERM)">Enterprise Risk Management (ERM)</option>
-                    <option value="Cyber & ISMS Governance">Cyber & ISMS Governance</option>
-                    <option value="Operational Risk & BCP">Operational Risk & BCP Architecture</option>
-                    <option value="Financial & Credit Stress-Testing">Financial & Credit Stress-Testing</option>
-                    <option value="FIDIC & CPWD Legal Compliance">FIDIC & CPWD Legal Compliance</option>
-                    <option value="Third-Party Risk (TPRM)">Third-Party Risk & Vendor Due Diligence</option>
-                    <option value="Corporate Fraud & Whistleblower">Corporate Fraud & Forensic Investigations</option>
-                  </select>
+                  />
                 </div>
 
                 <div className="space-y-1.5">

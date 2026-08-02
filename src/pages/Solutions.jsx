@@ -49,7 +49,10 @@ export default function Solutions({ onOpenAudit }) {
               <motion.div
                 key={practice.id}
                 whileHover={{ y: -4 }}
-                onClick={() => setSelectedPractice(practice)}
+                onClick={() => {
+                  setSelectedPractice(practice);
+                  if (onOpenAudit) onOpenAudit(practice);
+                }}
                 className={`glass-panel p-6 rounded-2xl cursor-pointer transition-all duration-200 relative overflow-hidden group border shadow-sm flex flex-col justify-between bg-white dark:bg-[#0F2342] ${
                   isSelected
                     ? 'border-2 border-[#008579] dark:border-[#46A095] ring-2 ring-[#008579]/20 shadow-md'

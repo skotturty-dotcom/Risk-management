@@ -20,9 +20,18 @@ import Contact from './pages/Contact';
 
 export default function App() {
   const [isAuditModalOpen, setIsAuditModalOpen] = useState(false);
+  const [selectedAuditPractice, setSelectedAuditPractice] = useState(null);
 
-  const handleOpenAudit = () => setIsAuditModalOpen(true);
-  const handleCloseAudit = () => setIsAuditModalOpen(false);
+  const handleOpenAudit = (practice) => {
+    if (practice) {
+      setSelectedAuditPractice(practice);
+    }
+    setIsAuditModalOpen(true);
+  };
+  const handleCloseAudit = () => {
+    setIsAuditModalOpen(false);
+    setSelectedAuditPractice(null);
+  };
 
   return (
     <ErrorBoundary>
@@ -56,7 +65,7 @@ export default function App() {
             <Footer onOpenAudit={handleOpenAudit} />
 
             {/* Audit Modal */}
-            <AuditModal isOpen={isAuditModalOpen} onClose={handleCloseAudit} />
+            <AuditModal isOpen={isAuditModalOpen} onClose={handleCloseAudit} selectedPractice={selectedAuditPractice} />
           </div>
         </Router>
       </ThemeProvider>
