@@ -526,7 +526,7 @@ export default function Home({ onOpenAudit }) {
                     <h3 className="text-xl md:text-2xl font-extrabold font-display text-[#0F3161] dark:text-white group-hover:text-[#008579] dark:group-hover:text-[#46A095] transition-colors leading-snug">
                       {ind.name || ind.title}
                     </h3>
-                    <p className="text-xs font-sans font-extrabold uppercase tracking-wider text-[#FF7729] dark:text-[#FFB340]">
+                    <p className="text-xs font-sans font-semibold uppercase tracking-wider text-[#008579] dark:text-[#46A095]">
                       {ind.riskCategory || ind.kri}
                     </p>
                   </div>

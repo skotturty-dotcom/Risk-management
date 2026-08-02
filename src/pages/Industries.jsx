@@ -88,7 +88,7 @@ export default function Industries({ onOpenAudit }) {
                     <h3 className="text-lg md:text-xl font-bold font-display text-[#0F3161] dark:text-white group-hover:text-[#008579] dark:group-hover:text-[#46A095] transition-colors leading-snug">
                       {ind.title}
                     </h3>
-                    <p className="text-[11px] font-mono font-bold text-[#008579] dark:text-[#46A095] uppercase">
+                    <p className="text-xs font-sans font-semibold text-[#008579] dark:text-[#46A095] tracking-wider uppercase">
                       {ind.kri}
                     </p>
                   </div>
