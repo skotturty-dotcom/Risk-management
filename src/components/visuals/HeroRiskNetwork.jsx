@@ -15,15 +15,15 @@ export default function HeroRiskNetwork({ onOpenAudit }) {
     { id: 'governance', label: 'GOVERNANCE', desc: 'Board appetite & KRIs', icon: Compass, angle: 308.4, color: '#B45309' }
   ];
 
-  const radius = 150;
+  const radius = 140; // Scaled radius
 
   return (
-    <div className="relative w-full max-w-lg mx-auto aspect-square flex items-center justify-center perspective-1000">
+    <div className="relative w-full max-w-sm sm:max-w-md lg:max-w-lg mx-auto aspect-square flex items-center justify-center">
       {/* Multi-Ring Radar Scan Background */}
       <div className="absolute inset-2 rounded-full border border-emerald-400/30 dark:border-emerald-500/20 flex items-center justify-center">
         <div className="absolute inset-10 rounded-full border border-slate-300/50 dark:border-white/5" />
-        <div className="absolute inset-24 rounded-full border border-amber-400/30 dark:border-amber-500/15" />
-        <div className="absolute inset-36 rounded-full border border-dashed border-emerald-400/40 dark:border-emerald-500/25" />
+        <div className="absolute inset-20 rounded-full border border-amber-400/30 dark:border-amber-500/15" />
+        <div className="absolute inset-32 rounded-full border border-dashed border-emerald-400/40 dark:border-emerald-500/25" />
 
         {/* Sweep Beam */}
         <div className="absolute w-full h-full rounded-full border border-t-emerald-600 dark:border-t-emerald-400 border-r-transparent border-b-transparent border-l-transparent animate-radar opacity-80" />
@@ -66,20 +66,22 @@ export default function HeroRiskNetwork({ onOpenAudit }) {
         whileHover={{ scale: 1.1, rotateZ: 5 }}
         whileTap={{ scale: 0.95 }}
         onClick={onOpenAudit}
-        className="relative z-20 w-32 h-32 rounded-full bg-slate-900 text-white border-2 border-emerald-500 dark:border-emerald-400 flex flex-col items-center justify-center cursor-pointer shadow-2xl shadow-emerald-600/30 group"
+        className="relative z-20 w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-full bg-slate-900 text-white border-2 border-emerald-500 dark:border-emerald-400 flex flex-col items-center justify-center cursor-pointer shadow-2xl shadow-emerald-600/30 group"
       >
-        <Shield className="w-9 h-9 text-emerald-400 mb-1 group-hover:scale-110 transition-transform duration-300" />
-        <span className="text-[11px] font-extrabold tracking-widest uppercase text-white font-mono">
+        <Shield className="w-7 h-7 sm:w-9 sm:h-9 text-emerald-400 mb-0.5 sm:mb-1 group-hover:scale-110 transition-transform duration-300" />
+        <span className="text-[9px] sm:text-[11px] font-extrabold tracking-widest uppercase text-white font-mono">
           ENTERPRISE
         </span>
-        <span className="text-[8px] text-amber-400 font-mono tracking-wider font-bold">INTELLIGENCE</span>
+        <span className="text-[7px] sm:text-[8px] text-amber-400 font-mono tracking-wider font-bold">INTELLIGENCE</span>
       </motion.div>
 
-      {/* 7 Orbital Practice Nodes */}
+      {/* 7 Orbital Practice Nodes (Percentage Scaled) */}
       {nodes.map((node) => {
         const rad = (node.angle * Math.PI) / 180;
-        const x = 200 + radius * Math.cos(rad) - 34;
-        const y = 200 + radius * Math.sin(rad) - 34;
+        const x = 200 + radius * Math.cos(rad) - 28;
+        const y = 200 + radius * Math.sin(rad) - 28;
+        const leftPercent = (x / 400) * 100;
+        const topPercent = (y / 400) * 100;
         const Icon = node.icon;
         const isSelected = activeNode === node.id;
 
@@ -88,18 +90,18 @@ export default function HeroRiskNetwork({ onOpenAudit }) {
             key={node.id}
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
-            whileHover={{ scale: 1.2, zIndex: 30 }}
+            whileHover={{ scale: 1.15, zIndex: 30 }}
             onHoverStart={() => setActiveNode(node.id)}
             onHoverEnd={() => setActiveNode(null)}
-            className={`absolute z-20 w-16 h-16 rounded-2xl bg-white dark:bg-[#131823] flex flex-col items-center justify-center cursor-pointer transition-all duration-300 border shadow-md ${
+            className={`absolute z-20 w-13 h-13 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-xl sm:rounded-2xl bg-white dark:bg-[#131823] flex flex-col items-center justify-center cursor-pointer transition-all duration-300 border shadow-md ${
               isSelected
                 ? 'border-emerald-600 dark:border-emerald-400 ring-2 ring-emerald-500/40 shadow-xl'
                 : 'border-slate-300 dark:border-white/15 hover:border-emerald-500'
             }`}
-            style={{ left: `${x}px`, top: `${y}px` }}
+            style={{ left: `${leftPercent}%`, top: `${topPercent}%` }}
           >
-            <Icon className="w-5 h-5 mb-0.5" style={{ color: node.color }} />
-            <span className="text-[9px] font-mono font-bold tracking-wider text-slate-900 dark:text-white">
+            <Icon className="w-4 h-4 sm:w-5 sm:h-5 mb-0.5" style={{ color: node.color }} />
+            <span className="text-[8px] sm:text-[9px] font-mono font-bold tracking-wider text-slate-900 dark:text-white">
               {node.label}
             </span>
           </motion.div>
@@ -107,14 +109,14 @@ export default function HeroRiskNetwork({ onOpenAudit }) {
       })}
 
       {/* Floating Status Indicators */}
-      <div className="absolute top-0 left-0 bg-white dark:bg-[#090D16] px-3.5 py-1.5 rounded-full border border-emerald-300 dark:border-emerald-500/30 text-[9px] font-mono text-emerald-800 dark:text-emerald-400 font-bold flex items-center space-x-1.5 shadow-md">
+      <div className="absolute top-0 left-0 bg-white/90 dark:bg-[#090D16]/90 backdrop-blur-sm px-3 py-1 rounded-full border border-emerald-300 dark:border-emerald-500/30 text-[8px] sm:text-[9px] font-mono text-emerald-800 dark:text-emerald-400 font-bold flex items-center space-x-1.5 shadow-md">
         <span className="w-1.5 h-1.5 rounded-full bg-emerald-600 dark:bg-emerald-400 animate-pulse" />
         <span>THREAT LEVEL: LOW</span>
       </div>
 
-      <div className="absolute bottom-0 right-0 bg-white dark:bg-[#090D16] px-3.5 py-1.5 rounded-full border border-amber-300 dark:border-amber-500/30 text-[9px] font-mono text-amber-800 dark:text-amber-400 font-bold flex items-center space-x-1.5 shadow-md">
+      <div className="absolute bottom-0 right-0 bg-white/90 dark:bg-[#090D16]/90 backdrop-blur-sm px-3 py-1 rounded-full border border-amber-300 dark:border-amber-500/30 text-[8px] sm:text-[9px] font-mono text-amber-800 dark:text-amber-400 font-bold flex items-center space-x-1.5 shadow-md">
         <Zap className="w-3 h-3 text-amber-600 dark:text-amber-400 animate-bounce" />
-        <span>GOVERNANCE TELEMETRY: ACTIVE</span>
+        <span>GOVERNANCE: ACTIVE</span>
       </div>
     </div>
   );
