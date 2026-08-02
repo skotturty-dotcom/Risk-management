@@ -61,17 +61,17 @@ export default function Founder({ onOpenAudit }) {
               </h2>
             </div>
 
-            <p className="text-slate-700 dark:text-gray-200 text-base md:text-xl leading-relaxed font-medium">
+            <p className="text-slate-800 dark:text-slate-100 text-base md:text-xl leading-relaxed font-semibold">
               {founderData.bio}
             </p>
 
             {/* Quote Block */}
-            <div className="glass-panel p-7 sm:p-8 rounded-2xl border-l-4 border-l-[#008579] dark:border-l-[#46A095] border-slate-200 dark:border-white/10 space-y-4 shadow-md">
-              <Quote className="w-9 h-9 text-[#008579]/30 dark:text-teal-500/40" />
+            <div className="p-7 sm:p-8 rounded-2xl border-l-4 border-l-[#008579] dark:border-l-[#46A095] bg-slate-100 dark:bg-[#0B132B] border border-slate-200 dark:border-teal-500/30 space-y-4 shadow-md">
+              <Quote className="w-9 h-9 text-[#008579] dark:text-[#46A095]" />
               <p className="text-lg md:text-xl font-bold text-[#0F3161] dark:text-white font-heading italic leading-relaxed">
                 "{founderData.quote}"
               </p>
-              <p className="text-sm font-sans text-[#008579] dark:text-[#46A095] font-extrabold tracking-wide">
+              <p className="text-sm font-sans text-[#008579] dark:text-[#FFB340] font-extrabold tracking-wide">
                 — Guddeti Sanjay Raj, Founder & Principal Risk Strategist
               </p>
             </div>
@@ -79,11 +79,11 @@ export default function Founder({ onOpenAudit }) {
             {/* 4-Card Expertise Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 pt-2">
               {founderData.expertise.map((exp, idx) => (
-                <div key={idx} className="p-6 rounded-2xl bg-white dark:bg-[#06152B] border border-slate-200 dark:border-white/10 space-y-2 shadow-md">
+                <div key={idx} className="p-6 rounded-2xl bg-slate-50 dark:bg-[#0B132B] border border-slate-200 dark:border-teal-500/30 space-y-2 shadow-md">
                   <h4 className="text-base md:text-lg font-extrabold text-[#0F3161] dark:text-white font-display">
                     {exp.title}
                   </h4>
-                  <p className="text-sm md:text-base text-slate-700 dark:text-gray-200 font-medium leading-relaxed">
+                  <p className="text-sm md:text-base text-slate-800 dark:text-slate-200 font-medium leading-relaxed">
                     {exp.desc}
                   </p>
                 </div>
