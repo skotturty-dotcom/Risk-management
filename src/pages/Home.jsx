@@ -631,9 +631,9 @@ export default function Home({ onOpenAudit }) {
       <section id="contact" className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
           <div className="lg:col-span-5 space-y-8">
-            <div className="glass-panel p-8 rounded-3xl border border-slate-200 dark:border-white/10 space-y-6">
+            <div className="glass-panel p-8 rounded-3xl border border-slate-200 dark:border-teal-500/30 space-y-6">
               <div className="space-y-2">
-                <span className="text-xs font-mono font-bold text-[#008579] dark:text-[#46A095] uppercase tracking-widest">
+                <span className="text-xs font-mono font-bold text-[#008579] dark:text-[#46A095] uppercase tracking-widest block">
                   GET IN TOUCH
                 </span>
                 <h2 className="text-3xl font-extrabold font-display text-[#0F3161] dark:text-white">
@@ -641,7 +641,7 @@ export default function Home({ onOpenAudit }) {
                 </h2>
               </div>
 
-              <p className="text-sm text-slate-700 dark:text-gray-200 leading-relaxed font-medium">
+              <p className="text-sm text-slate-800 dark:text-slate-200 leading-relaxed font-semibold">
                 Partner with Srajai Tech to evaluate, strengthen, and optimize your organization's risk profile.
               </p>
 
@@ -651,8 +651,8 @@ export default function Home({ onOpenAudit }) {
                     <Mail className="w-5 h-5" />
                   </div>
                   <div>
-                    <span className="text-[11px] font-mono uppercase text-slate-500 dark:text-gray-400 font-semibold block">
-                      Direct Email
+                    <span className="text-xs font-mono uppercase text-[#008579] dark:text-[#FFB340] font-extrabold block">
+                      DIRECT EMAIL
                     </span>
                     <a
                       href="mailto:Aegisrisk@gmail.com"
@@ -668,10 +668,10 @@ export default function Home({ onOpenAudit }) {
                     <MapPin className="w-5 h-5" />
                   </div>
                   <div>
-                    <span className="text-[11px] font-mono uppercase text-slate-500 dark:text-gray-400 font-semibold block">
-                      Headquarters
+                    <span className="text-xs font-mono uppercase text-[#008579] dark:text-[#FFB340] font-extrabold block">
+                      HEADQUARTERS
                     </span>
-                    <p className="text-[#0F3161] dark:text-white text-sm font-semibold">
+                    <p className="text-[#0F3161] dark:text-white text-sm font-bold">
                       Hyderabad, Telangana, India
                     </p>
                   </div>
@@ -682,18 +682,18 @@ export default function Home({ onOpenAudit }) {
                     <Clock className="w-5 h-5" />
                   </div>
                   <div>
-                    <span className="text-[11px] font-mono uppercase text-slate-500 dark:text-gray-400 font-semibold block">
-                      Advisory Operating Hours
+                    <span className="text-xs font-mono uppercase text-[#008579] dark:text-[#FFB340] font-extrabold block">
+                      ADVISORY OPERATING HOURS
                     </span>
-                    <p className="text-[#0F3161] dark:text-white text-sm font-semibold">
+                    <p className="text-[#0F3161] dark:text-white text-sm font-bold">
                       Monday – Friday: 9:00 AM – 6:00 PM IST
                     </p>
                   </div>
                 </div>
               </div>
 
-              <div className="p-3.5 rounded-lg bg-slate-100 dark:bg-white/5 border border-dashed border-slate-300 dark:border-white/15 text-[11px] text-slate-600 dark:text-gray-400 leading-relaxed font-mono">
-                <span className="text-[#008579] dark:text-[#46A095] font-bold">NOTE:</span> Email reflects official client documentation.
+              <div className="p-3.5 rounded-lg bg-slate-100 dark:bg-[#0B132B] border border-dashed border-slate-300 dark:border-teal-500/30 text-[11px] text-slate-800 dark:text-slate-200 leading-relaxed font-mono">
+                <span className="text-[#008579] dark:text-[#FFB340] font-bold">NOTE:</span> Email reflects official client documentation.
               </div>
             </div>
           </div>
@@ -706,7 +706,7 @@ export default function Home({ onOpenAudit }) {
                     <h3 className="text-2xl font-bold font-display text-[#0F3161] dark:text-white">
                       Request a Confidential Consultation
                     </h3>
-                    <p className="text-xs text-slate-500 dark:text-gray-400 mt-1 font-medium">
+                    <p className="text-xs text-slate-700 dark:text-slate-200 mt-1 font-semibold">
                       Fill in your corporate details to schedule a senior advisory session.
                     </p>
                   </div>
@@ -714,7 +714,7 @@ export default function Home({ onOpenAudit }) {
                   <form onSubmit={handleContactSubmit} className="space-y-4">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div>
-                        <label className="block text-xs font-mono font-semibold uppercase tracking-wider text-slate-700 dark:text-gray-300 mb-1">
+                        <label className="block text-xs font-mono font-extrabold uppercase tracking-wider text-[#0F3161] dark:text-slate-100 mb-1">
                           Full Name *
                         </label>
                         <input
@@ -722,13 +722,13 @@ export default function Home({ onOpenAudit }) {
                           value={contactData.fullName}
                           onChange={(e) => setContactData({ ...contactData, fullName: e.target.value })}
                           placeholder="Executive Name"
-                          className="w-full bg-white dark:bg-[#06152B] border border-slate-300 dark:border-white/15 rounded-xl px-4 py-3 text-sm text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-gray-500 focus:outline-none focus:border-[#008579] dark:focus:border-[#46A095] transition-colors shadow-sm"
+                          className="w-full bg-slate-50 dark:bg-[#06152B] border border-slate-300 dark:border-white/15 rounded-xl px-4 py-3 text-sm text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-gray-400 focus:outline-none focus:border-[#008579] dark:focus:border-[#46A095] transition-colors shadow-sm font-medium"
                         />
                         {contactErrors.fullName && <p className="text-xs text-rose-500 mt-1 font-mono">{contactErrors.fullName}</p>}
                       </div>
 
                       <div>
-                        <label className="block text-xs font-mono font-semibold uppercase tracking-wider text-slate-700 dark:text-gray-300 mb-1">
+                        <label className="block text-xs font-mono font-extrabold uppercase tracking-wider text-[#0F3161] dark:text-slate-100 mb-1">
                           Corporate Email *
                         </label>
                         <input
@@ -736,7 +736,7 @@ export default function Home({ onOpenAudit }) {
                           value={contactData.corporateEmail}
                           onChange={(e) => setContactData({ ...contactData, corporateEmail: e.target.value })}
                           placeholder="name@company.com"
-                          className="w-full bg-white dark:bg-[#06152B] border border-slate-300 dark:border-white/15 rounded-xl px-4 py-3 text-sm text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-gray-500 focus:outline-none focus:border-[#008579] dark:focus:border-[#46A095] transition-colors shadow-sm"
+                          className="w-full bg-slate-50 dark:bg-[#06152B] border border-slate-300 dark:border-white/15 rounded-xl px-4 py-3 text-sm text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-gray-400 focus:outline-none focus:border-[#008579] dark:focus:border-[#46A095] transition-colors shadow-sm font-medium"
                         />
                         {contactErrors.corporateEmail && <p className="text-xs text-rose-500 mt-1 font-mono">{contactErrors.corporateEmail}</p>}
                       </div>

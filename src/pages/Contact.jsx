@@ -53,7 +53,7 @@ export default function Contact() {
               Direct Advisory Channels
             </h3>
 
-            <p className="text-sm md:text-base text-slate-700 dark:text-gray-200 font-medium leading-relaxed">
+            <p className="text-sm md:text-base text-slate-800 dark:text-slate-200 font-semibold leading-relaxed">
               Reach out to our principal strategists for diagnostic audits, corporate board presentations, or customized risk framework implementations.
             </p>
 
@@ -63,7 +63,7 @@ export default function Contact() {
                   <Mail className="w-6 h-6" />
                 </div>
                 <div>
-                  <span className="text-xs font-bold font-sans uppercase text-slate-500 dark:text-gray-400 tracking-wider block">
+                  <span className="text-xs font-bold font-mono uppercase text-[#008579] dark:text-[#FFB340] tracking-wider block">
                     DIRECT ADVISORY EMAIL
                   </span>
                   <a
@@ -80,7 +80,7 @@ export default function Contact() {
                   <MapPin className="w-6 h-6" />
                 </div>
                 <div>
-                  <span className="text-xs font-bold font-sans uppercase text-slate-500 dark:text-gray-400 tracking-wider block">
+                  <span className="text-xs font-bold font-mono uppercase text-[#008579] dark:text-[#FFB340] tracking-wider block">
                     HEADQUARTERS
                   </span>
                   <p className="text-base md:text-lg font-extrabold text-[#0F3161] dark:text-white">
@@ -94,7 +94,7 @@ export default function Contact() {
                   <Clock className="w-6 h-6" />
                 </div>
                 <div>
-                  <span className="text-xs font-bold font-sans uppercase text-slate-500 dark:text-gray-400 tracking-wider block">
+                  <span className="text-xs font-bold font-mono uppercase text-[#008579] dark:text-[#FFB340] tracking-wider block">
                     ADVISORY OPERATING HOURS
                   </span>
                   <p className="text-base md:text-lg font-extrabold text-[#0F3161] dark:text-white">
@@ -104,29 +104,29 @@ export default function Contact() {
               </div>
             </div>
 
-            <div className="pt-4 border-t border-slate-200 dark:border-white/10 text-xs font-sans text-slate-600 dark:text-gray-400 font-medium">
-              <strong className="text-[#008579] dark:text-[#46A095]">NOTE:</strong> Direct email requests receive priority response within 24 hours.
+            <div className="p-3.5 rounded-lg bg-slate-100 dark:bg-[#0B132B] border border-dashed border-slate-300 dark:border-teal-500/30 text-xs font-mono text-slate-800 dark:text-slate-200 font-semibold">
+              <strong className="text-[#008579] dark:text-[#FFB340]">NOTE:</strong> Direct email requests receive priority response within 24 hours.
             </div>
           </div>
         </div>
 
         {/* Right Column: High-Contrast Corporate Advisory Form */}
         <div className="lg:col-span-7">
-          <div className="glass-panel p-8 md:p-10 rounded-3xl border border-slate-200 dark:border-teal-500/30 shadow-xl space-y-6 bg-white dark:bg-[#0F2342]">
+          <div className="glass-panel p-8 md:p-10 rounded-3xl border border-slate-200 dark:border-teal-500/30 shadow-xl space-y-6">
             {!submitted ? (
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="space-y-1">
                   <h3 className="text-2xl font-extrabold font-display text-[#0F3161] dark:text-white">
                     Schedule a Senior Advisory Session
                   </h3>
-                  <p className="text-sm font-medium text-slate-600 dark:text-gray-300">
+                  <p className="text-sm font-semibold text-slate-700 dark:text-slate-200">
                     Fill in your corporate details to request an executive diagnostic audit.
                   </p>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   <div className="space-y-2">
-                    <label className="text-xs font-extrabold uppercase font-sans text-[#0F3161] dark:text-gray-200 tracking-wider block">
+                    <label className="text-xs font-extrabold uppercase font-mono text-[#0F3161] dark:text-slate-100 tracking-wider block">
                       FULL NAME *
                     </label>
                     <input
@@ -135,12 +135,12 @@ export default function Contact() {
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                       placeholder="Executive Name"
-                      className="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-[#06152B] border border-slate-300 dark:border-white/20 text-slate-900 dark:text-white placeholder-slate-400 text-sm font-medium focus:outline-none focus:border-[#008579] dark:focus:border-[#46A095] transition-colors"
+                      className="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-[#06152B] border border-slate-300 dark:border-white/20 text-slate-900 dark:text-white placeholder-slate-400 font-medium focus:outline-none focus:border-[#008579] dark:focus:border-[#46A095] transition-colors"
                     />
                   </div>
 
                   <div className="space-y-2">
-                    <label className="text-xs font-extrabold uppercase font-sans text-[#0F3161] dark:text-gray-200 tracking-wider block">
+                    <label className="text-xs font-extrabold uppercase font-mono text-[#0F3161] dark:text-slate-100 tracking-wider block">
                       CORPORATE EMAIL *
                     </label>
                     <input
@@ -149,14 +149,14 @@ export default function Contact() {
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       placeholder="name@company.com"
-                      className="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-[#06152B] border border-slate-300 dark:border-white/20 text-slate-900 dark:text-white placeholder-slate-400 text-sm font-medium focus:outline-none focus:border-[#008579] dark:focus:border-[#46A095] transition-colors"
+                      className="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-[#06152B] border border-slate-300 dark:border-white/20 text-slate-900 dark:text-white placeholder-slate-400 font-medium focus:outline-none focus:border-[#008579] dark:focus:border-[#46A095] transition-colors"
                     />
                   </div>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   <div className="space-y-2">
-                    <label className="text-xs font-extrabold uppercase font-sans text-[#0F3161] dark:text-gray-200 tracking-wider block">
+                    <label className="text-xs font-extrabold uppercase font-mono text-[#0F3161] dark:text-slate-100 tracking-wider block">
                       COMPANY NAME *
                     </label>
                     <input
@@ -165,12 +165,12 @@ export default function Contact() {
                       value={formData.company}
                       onChange={(e) => setFormData({ ...formData, company: e.target.value })}
                       placeholder="Enterprise Organization"
-                      className="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-[#06152B] border border-slate-300 dark:border-white/20 text-slate-900 dark:text-white placeholder-slate-400 text-sm font-medium focus:outline-none focus:border-[#008579] dark:focus:border-[#46A095] transition-colors"
+                      className="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-[#06152B] border border-slate-300 dark:border-white/20 text-slate-900 dark:text-white placeholder-slate-400 font-medium focus:outline-none focus:border-[#008579] dark:focus:border-[#46A095] transition-colors"
                     />
                   </div>
 
                   <div className="space-y-2">
-                    <label className="text-xs font-extrabold uppercase font-sans text-[#0F3161] dark:text-gray-200 tracking-wider block">
+                    <label className="text-xs font-extrabold uppercase font-mono text-[#0F3161] dark:text-slate-100 tracking-wider block">
                       PHONE NUMBER
                     </label>
                     <input
@@ -178,13 +178,13 @@ export default function Contact() {
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                       placeholder="+1 (555) 000-0000"
-                      className="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-[#06152B] border border-slate-300 dark:border-white/20 text-slate-900 dark:text-white placeholder-slate-400 text-sm font-medium focus:outline-none focus:border-[#008579] dark:focus:border-[#46A095] transition-colors"
+                      className="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-[#06152B] border border-slate-300 dark:border-white/20 text-slate-900 dark:text-white placeholder-slate-400 font-medium focus:outline-none focus:border-[#008579] dark:focus:border-[#46A095] transition-colors"
                     />
                   </div>
                 </div>
 
                 <div className="space-y-2">
-                  <label className="text-xs font-extrabold uppercase font-sans text-[#0F3161] dark:text-gray-200 tracking-wider block">
+                  <label className="text-xs font-extrabold uppercase font-mono text-[#0F3161] dark:text-slate-100 tracking-wider block">
                     SELECT PRIMARY RISK PRACTICE
                   </label>
                   <select
@@ -203,7 +203,7 @@ export default function Contact() {
                 </div>
 
                 <div className="space-y-2">
-                  <label className="text-xs font-extrabold uppercase font-sans text-[#0F3161] dark:text-gray-200 tracking-wider block">
+                  <label className="text-xs font-extrabold uppercase font-mono text-[#0F3161] dark:text-slate-100 tracking-wider block">
                     MESSAGE / PROJECT SCOPE
                   </label>
                   <textarea
