@@ -100,21 +100,34 @@ export default function Home({ onOpenAudit }) {
           1. HERO SECTION (100vh)
          ========================================== */}
       <section id="hero" className="relative min-h-[95vh] lg:min-h-screen flex items-center pt-32 md:pt-36 pb-12 overflow-hidden">
-        <div className="absolute top-1/4 left-10 w-96 h-96 bg-teal-500/10 dark:bg-teal-500/10 rounded-full blur-3xl pointer-events-none" />
+        {/* Animated Floating Ambient Background Orbits */}
+        <motion.div
+          animate={{ y: [0, -25, 0], opacity: [0.3, 0.6, 0.3], scale: [1, 1.15, 1] }}
+          transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute top-1/4 left-10 w-96 h-96 bg-teal-500/20 rounded-full blur-3xl pointer-events-none"
+        />
+        <motion.div
+          animate={{ x: [0, 30, 0], y: [0, -20, 0], opacity: [0.2, 0.5, 0.2] }}
+          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute bottom-1/3 right-12 w-80 h-80 bg-sky-400/20 rounded-full blur-3xl pointer-events-none"
+        />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
             {/* Left Column */}
             <motion.div
-              initial={{ opacity: 0, x: -30 }}
+              initial={{ opacity: 0, x: -35 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
               className="lg:col-span-7 space-y-6"
             >
-              <div className="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-teal-50 border border-teal-200 text-[#008579] text-xs font-mono font-bold uppercase tracking-wider shadow-sm">
-                <ShieldCheck className="w-4 h-4 text-[#008579]" />
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                className="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-teal-50 border border-teal-200 text-[#008579] text-xs font-mono font-bold uppercase tracking-wider shadow-sm cursor-pointer"
+              >
+                <ShieldCheck className="w-4 h-4 text-[#008579] animate-pulse" />
                 <span>Strategic Risk Advisory & Governance</span>
-              </div>
+              </motion.div>
 
               <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold font-display leading-[1.15] text-[#06182D] tracking-tight">
                 Navigating Strategic Risk with <br className="hidden sm:inline" />
@@ -127,42 +140,46 @@ export default function Home({ onOpenAudit }) {
 
               {/* Action Buttons */}
               <div className="flex flex-col sm:flex-row items-stretch sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 pt-4">
-                <a
+                <motion.a
+                  whileHover={{ scale: 1.04, y: -2 }}
+                  whileTap={{ scale: 0.97 }}
                   href="#solutions"
-                  className="btn-primary-cta px-7 py-4 rounded-xl text-xs uppercase tracking-wider transition-all flex items-center justify-center space-x-2 group"
+                  className="btn-primary-cta px-7 py-4 rounded-xl text-xs uppercase tracking-wider transition-all flex items-center justify-center space-x-2 group shadow-xl"
                 >
                   <span>Explore Our Solutions</span>
-                  <ArrowRight className="w-4 h-4 text-[#FFFFFF] group-hover:translate-x-1 transition-transform" />
-                </a>
+                  <ArrowRight className="w-4 h-4 text-[#FFFFFF] group-hover:translate-x-1.5 transition-transform" />
+                </motion.a>
 
-                <button
+                <motion.button
+                  whileHover={{ scale: 1.04, y: -2 }}
+                  whileTap={{ scale: 0.97 }}
                   onClick={onOpenAudit}
-                  className="px-7 py-4 rounded-xl text-xs font-bold uppercase tracking-wider text-center text-[#06182D] bg-slate-100 hover:bg-slate-200 border border-slate-300 shadow-sm transition-all"
+                  className="px-7 py-4 rounded-xl text-xs font-bold uppercase tracking-wider text-center text-[#06182D] bg-slate-100 hover:bg-slate-200 border border-slate-300 shadow-sm transition-all cursor-pointer"
                 >
                   Request an Enterprise Audit
-                </button>
+                </motion.button>
               </div>
 
               {/* Key Trust Tags */}
               <div className="pt-8 border-t border-slate-200 grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs font-mono text-slate-700 font-semibold">
-                <div className="flex items-center space-x-2">
+                <motion.div whileHover={{ scale: 1.05 }} className="flex items-center space-x-2">
                   <CheckCircle2 className="w-4 h-4 text-[#008579] shrink-0" />
                   <span>ISO 31000 & COSO</span>
-                </div>
-                <div className="flex items-center space-x-2">
+                </motion.div>
+                <motion.div whileHover={{ scale: 1.05 }} className="flex items-center space-x-2">
                   <CheckCircle2 className="w-4 h-4 text-[#008579] shrink-0" />
                   <span>CXO Governance</span>
-                </div>
-                <div className="flex items-center space-x-2">
+                </motion.div>
+                <motion.div whileHover={{ scale: 1.05 }} className="flex items-center space-x-2">
                   <CheckCircle2 className="w-4 h-4 text-[#008579] shrink-0" />
                   <span>TPRM & Cyber</span>
-                </div>
+                </motion.div>
               </div>
             </motion.div>
 
             {/* Right Interactive Risk Network */}
             <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
+              initial={{ opacity: 0, scale: 0.88 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.9, delay: 0.2 }}
               className="lg:col-span-5 relative pt-8 lg:pt-0"
