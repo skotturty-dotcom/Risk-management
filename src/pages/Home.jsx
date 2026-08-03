@@ -110,17 +110,17 @@ export default function Home({ onOpenAudit }) {
               transition={{ duration: 0.8 }}
               className="lg:col-span-7 space-y-6"
             >
-              <div className="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-[rgba(40,199,183,0.10)] border border-[rgba(72,214,201,0.25)] text-[#55D9CC] text-xs font-mono font-bold uppercase tracking-wider shadow-sm">
-                <ShieldCheck className="w-4 h-4 text-[#55D9CC]" />
+              <div className="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-teal-50 border border-teal-200 text-[#008579] text-xs font-mono font-bold uppercase tracking-wider shadow-sm">
+                <ShieldCheck className="w-4 h-4 text-[#008579]" />
                 <span>Strategic Risk Advisory & Governance</span>
               </div>
 
-              <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold font-display leading-[1.15] text-[#F5F8FA] tracking-tight">
+              <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold font-display leading-[1.15] text-[#06182D] tracking-tight">
                 Navigating Strategic Risk with <br className="hidden sm:inline" />
-                <span className="text-[#55D9CC] font-extrabold">Uncompromising Resilience</span>
+                <span className="text-[#008579] font-extrabold">Uncompromising Resilience</span>
               </h1>
 
-              <p className="text-[#B8C4CF] text-base md:text-lg max-w-2xl leading-relaxed font-heading font-medium">
+              <p className="text-slate-700 text-base md:text-lg max-w-2xl leading-relaxed font-heading font-medium">
                 Integrated Risk Advisory Solutions across Enterprise, Cyber, Operational, Finance, Legal, TPRM, and Fraud Risk Domains.
               </p>
 
@@ -136,24 +136,24 @@ export default function Home({ onOpenAudit }) {
 
                 <button
                   onClick={onOpenAudit}
-                  className="btn-secondary-cta px-7 py-4 rounded-xl text-xs uppercase tracking-wider text-center"
+                  className="px-7 py-4 rounded-xl text-xs font-bold uppercase tracking-wider text-center text-[#06182D] bg-slate-100 hover:bg-slate-200 border border-slate-300 shadow-sm transition-all"
                 >
                   Request an Enterprise Audit
                 </button>
               </div>
 
               {/* Key Trust Tags */}
-              <div className="pt-8 border-t border-[rgba(72,214,201,0.18)] grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs font-mono text-[#B8C4CF] font-semibold">
+              <div className="pt-8 border-t border-slate-200 grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs font-mono text-slate-700 font-semibold">
                 <div className="flex items-center space-x-2">
-                  <CheckCircle2 className="w-4 h-4 text-[#55D9CC] shrink-0" />
+                  <CheckCircle2 className="w-4 h-4 text-[#008579] shrink-0" />
                   <span>ISO 31000 & COSO</span>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <CheckCircle2 className="w-4 h-4 text-[#55D9CC] shrink-0" />
+                  <CheckCircle2 className="w-4 h-4 text-[#008579] shrink-0" />
                   <span>CXO Governance</span>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <CheckCircle2 className="w-4 h-4 text-[#55D9CC] shrink-0" />
+                  <CheckCircle2 className="w-4 h-4 text-[#008579] shrink-0" />
                   <span>TPRM & Cyber</span>
                 </div>
               </div>
