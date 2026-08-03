@@ -325,7 +325,7 @@ export default function Home({ onOpenAudit }) {
           </NavLink>
         </div>
 
-        <RiskDomainMap />
+        <RiskDomainMap onSelectDomain={(practice) => onOpenAudit && onOpenAudit(practice)} />
       </section>
 
       {/* ==========================================

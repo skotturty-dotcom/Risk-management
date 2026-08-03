@@ -58,10 +58,10 @@ export default function RiskDomainMap({ onSelectDomain }) {
 
             {/* Compact Action Footer */}
             <div className="pt-2 mt-2 border-t border-white/15 flex items-center justify-between">
-              <span className="text-[10px] font-mono font-extrabold uppercase tracking-wider text-[#38BDF8] group-hover:underline">
-                Inspect Practice
+              <span className="text-[10px] font-mono font-extrabold uppercase tracking-wider text-[#38BDF8] group-hover:text-white transition-colors">
+                Request Audit & Fill Form
               </span>
-              <ArrowRight className="w-3 h-3 text-[#38BDF8] group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="w-3.5 h-3.5 text-[#38BDF8] group-hover:translate-x-1 transition-transform" />
             </div>
           </motion.div>
         );
