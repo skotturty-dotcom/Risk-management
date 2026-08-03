@@ -27,7 +27,7 @@ export default function Founder({ onOpenAudit }) {
 
       {/* Main Founder Profile & Expertise Section */}
       <section className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="glass-panel p-8 md:p-12 rounded-3xl border border-slate-200 dark:border-teal-500/30 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center shadow-xl">
+        <div className="p-8 md:p-12 rounded-3xl border border-[#38BDF8]/40 bg-gradient-to-br from-[#0B2545] via-[#13315C] to-[#061A33] grid grid-cols-1 lg:grid-cols-12 gap-10 items-center shadow-2xl text-white">
           {/* Left Column: Clean Executive Emblem Card */}
           <div className="lg:col-span-5 relative">
             <div className="relative aspect-[4/5] rounded-2xl bg-gradient-to-br from-[#0F3161] via-[#00437E] to-[#06152B] text-white border-2 border-[#008579] flex flex-col items-center justify-center p-6 sm:p-8 text-center shadow-2xl overflow-hidden group">

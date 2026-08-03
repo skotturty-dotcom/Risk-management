@@ -42,79 +42,79 @@ export default function AboutUs({ onOpenAudit }) {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <motion.div
-            whileHover={{ y: -6 }}
-            className="p-8 rounded-2xl bg-white border border-slate-200 hover:border-[#008579] transition-all space-y-5 shadow-lg"
+            whileHover={{ y: -6, scale: 1.02 }}
+            className="p-8 rounded-2xl bg-gradient-to-br from-[#0B2545] via-[#13315C] to-[#061A33] border border-[#38BDF8]/40 hover:border-[#38BDF8] transition-all space-y-5 shadow-2xl text-white"
           >
             <div className="flex items-center justify-between">
-              <span className="text-3xl font-extrabold font-display text-[#008579]">
+              <span className="text-3xl font-extrabold font-mono text-[#38BDF8]">
                 01
               </span>
-              <div className="w-12 h-12 rounded-xl bg-slate-100 border border-slate-200 flex items-center justify-center text-[#008579]">
+              <div className="w-12 h-12 rounded-xl bg-[#38BDF8]/15 border border-[#38BDF8]/30 flex items-center justify-center text-[#38BDF8]">
                 <Target className="w-6 h-6" />
               </div>
             </div>
 
-            <h3 className="text-2xl md:text-3xl font-extrabold font-display text-[#06182D]">
+            <h3 className="text-2xl md:text-3xl font-extrabold font-display text-[#38BDF8]">
               Diagnose
             </h3>
 
-            <p className="text-xs md:text-sm font-extrabold font-sans uppercase text-[#008579] tracking-wider">
+            <p className="text-xs md:text-sm font-extrabold font-mono uppercase text-[#38BDF8] tracking-wider">
               Understand Organizational Exposure
             </p>
 
-            <p className="text-sm md:text-base text-[#06182D] leading-relaxed font-semibold">
+            <p className="text-sm md:text-base text-[#E2E8F0] leading-relaxed font-medium">
               We conduct thorough diagnostic audits across corporate capital, data infrastructure, vendor dependencies, and legal obligations to pinpoint critical single-point vulnerabilities.
             </p>
           </motion.div>
 
           <motion.div
-            whileHover={{ y: -6 }}
-            className="p-8 rounded-2xl bg-white border border-slate-200 hover:border-[#008579] transition-all space-y-5 shadow-lg"
+            whileHover={{ y: -6, scale: 1.02 }}
+            className="p-8 rounded-2xl bg-gradient-to-br from-[#0B2545] via-[#13315C] to-[#061A33] border border-[#38BDF8]/40 hover:border-[#38BDF8] transition-all space-y-5 shadow-2xl text-white"
           >
             <div className="flex items-center justify-between">
-              <span className="text-3xl font-extrabold font-display text-[#008579]">
+              <span className="text-3xl font-extrabold font-mono text-[#38BDF8]">
                 02
               </span>
-              <div className="w-12 h-12 rounded-xl bg-slate-100 border border-slate-200 flex items-center justify-center text-[#008579]">
+              <div className="w-12 h-12 rounded-xl bg-[#38BDF8]/15 border border-[#38BDF8]/30 flex items-center justify-center text-[#38BDF8]">
                 <Layers className="w-6 h-6" />
               </div>
             </div>
 
-            <h3 className="text-2xl md:text-3xl font-extrabold font-display text-[#06182D]">
+            <h3 className="text-2xl md:text-3xl font-extrabold font-display text-[#38BDF8]">
               Design
             </h3>
 
-            <p className="text-xs md:text-sm font-extrabold font-sans uppercase text-[#008579] tracking-wider">
+            <p className="text-xs md:text-sm font-extrabold font-mono uppercase text-[#38BDF8] tracking-wider">
               Build Resilience Architecture
             </p>
 
-            <p className="text-sm md:text-base text-[#06182D] leading-relaxed font-semibold">
+            <p className="text-sm md:text-base text-[#E2E8F0] leading-relaxed font-medium">
               We formulate tailored frameworks, internal controls, Key Risk Indicators (KRIs), RCSA protocols, and Business Continuity Plans (BCP) aligned with ISO 31000 and COSO standards.
             </p>
           </motion.div>
 
           <motion.div
-            whileHover={{ y: -6 }}
-            className="p-8 rounded-2xl bg-white border border-slate-200 hover:border-[#008579] transition-all space-y-5 shadow-lg"
+            whileHover={{ y: -6, scale: 1.02 }}
+            className="p-8 rounded-2xl bg-gradient-to-br from-[#0B2545] via-[#13315C] to-[#061A33] border border-[#38BDF8]/40 hover:border-[#38BDF8] transition-all space-y-5 shadow-2xl text-white"
           >
             <div className="flex items-center justify-between">
-              <span className="text-3xl font-extrabold font-display text-[#008579]">
+              <span className="text-3xl font-extrabold font-mono text-[#38BDF8]">
                 03
               </span>
-              <div className="w-12 h-12 rounded-xl bg-slate-100 border border-slate-200 flex items-center justify-center text-[#008579]">
+              <div className="w-12 h-12 rounded-xl bg-[#38BDF8]/15 border border-[#38BDF8]/30 flex items-center justify-center text-[#38BDF8]">
                 <Eye className="w-6 h-6" />
               </div>
             </div>
 
-            <h3 className="text-2xl md:text-3xl font-extrabold font-display text-[#06182D]">
+            <h3 className="text-2xl md:text-3xl font-extrabold font-display text-[#38BDF8]">
               Strengthen
             </h3>
 
-            <p className="text-xs md:text-sm font-extrabold font-sans uppercase text-[#008579] tracking-wider">
+            <p className="text-xs md:text-sm font-extrabold font-mono uppercase text-[#38BDF8] tracking-wider">
               Continuous Governance & Telemetry
             </p>
 
-            <p className="text-sm md:text-base text-[#06182D] leading-relaxed font-semibold">
+            <p className="text-sm md:text-base text-[#E2E8F0] leading-relaxed font-medium">
               We assist boards and CXOs in continuous telemetry monitoring, board dashboard reporting, whistleblower integrity testing, and iterative risk appetite refinement.
             </p>
           </motion.div>
@@ -123,7 +123,7 @@ export default function AboutUs({ onOpenAudit }) {
 
       {/* FOUNDER & LEADERSHIP SECTION INTEGRATED INTO ABOUT US PAGE */}
       <section id="founder-profile" className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="glass-panel p-8 md:p-12 rounded-3xl border border-slate-200 dark:border-teal-500/30 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center shadow-xl">
+        <div className="p-8 md:p-12 rounded-3xl border border-[#38BDF8]/40 bg-gradient-to-br from-[#0B2545] via-[#13315C] to-[#061A33] grid grid-cols-1 lg:grid-cols-12 gap-10 items-center shadow-2xl text-white">
           {/* Left Column: Clean Executive Emblem Card */}
           <div className="lg:col-span-5 relative">
             <div className="relative aspect-[4/5] rounded-2xl bg-gradient-to-br from-[#0F3161] via-[#00437E] to-[#06152B] text-white border-2 border-[#008579] flex flex-col items-center justify-center p-6 sm:p-8 text-center shadow-2xl overflow-hidden group">

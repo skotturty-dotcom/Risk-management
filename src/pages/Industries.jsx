@@ -67,44 +67,44 @@ export default function Industries({ onOpenAudit }) {
             return (
               <motion.div
                 key={ind.id}
-                whileHover={{ y: -4 }}
+                whileHover={{ y: -6, scale: 1.02 }}
                 onClick={() => setSelectedSectorModal(ind)}
-                className="glass-panel p-6 rounded-2xl cursor-pointer transition-all duration-200 group relative overflow-hidden border border-slate-200 dark:border-white/10 hover:border-[#008579] dark:hover:border-[#46A095] shadow-sm flex flex-col justify-between"
+                className="p-6 rounded-2xl cursor-pointer transition-all duration-300 group relative overflow-hidden border border-[#38BDF8]/40 hover:border-[#38BDF8] shadow-2xl flex flex-col justify-between bg-gradient-to-br from-[#0B2545] via-[#13315C] to-[#061A33] text-white"
               >
                 <div className="space-y-4">
                   {/* Top Badges & Icon */}
                   <div className="flex items-center justify-between">
-                    <div className="w-10 h-10 rounded-xl bg-teal-50 dark:bg-teal-500/10 border border-teal-200 dark:border-teal-500/20 flex items-center justify-center text-[#008579] dark:text-[#46A095]">
+                    <div className="w-10 h-10 rounded-xl bg-[#38BDF8]/15 border border-[#38BDF8]/30 flex items-center justify-center text-[#38BDF8]">
                       <IconComponent className="w-5 h-5" />
                     </div>
 
-                    <span className="text-[10px] font-mono font-bold text-[#55D9CC] bg-[rgba(40,199,183,0.10)] px-2.5 py-0.5 rounded border border-[rgba(72,214,201,0.25)] uppercase tracking-wider">
+                    <span className="text-[10px] font-mono font-extrabold text-[#38BDF8] bg-[#38BDF8]/15 px-2.5 py-0.5 rounded border border-[#38BDF8]/30 uppercase tracking-wider shadow-sm">
                       SECTOR 0{ind.id}
                     </span>
                   </div>
 
                   {/* Title & Subheading */}
                   <div className="space-y-1">
-                    <h3 className="text-lg md:text-xl font-bold font-display text-white group-hover:text-[#55D9CC] transition-colors leading-snug">
+                    <h3 className="text-lg md:text-xl font-extrabold font-display text-[#38BDF8] group-hover:text-[#55D9CC] transition-colors leading-snug">
                       {ind.title}
                     </h3>
-                    <p className="text-xs font-sans font-semibold text-[#55D9CC] tracking-wider uppercase">
+                    <p className="text-xs font-mono font-extrabold text-[#38BDF8] tracking-wider uppercase">
                       {ind.kri}
                     </p>
                   </div>
 
-                  {/* Description Info Copy */}
-                  <p className="text-xs md:text-sm text-[#CBD5E1] font-normal leading-relaxed">
+                  {/* Description */}
+                  <p className="text-xs text-[#E2E8F0] font-medium leading-relaxed">
                     {ind.desc}
                   </p>
                 </div>
 
-                {/* Card Action Footer */}
-                <div className="pt-4 mt-4 border-t border-white/10 flex items-center justify-between">
-                  <span className="text-xs font-mono font-bold text-[#B8C4CF] group-hover:text-[#55D9CC]">
-                    Inspect Scope
+                {/* Simple Action Footer */}
+                <div className="pt-4 mt-4 border-t border-white/15 flex items-center justify-between">
+                  <span className="text-xs font-mono font-extrabold text-[#38BDF8] uppercase tracking-wider group-hover:underline">
+                    Inspect Sector Scope
                   </span>
-                  <ArrowRight className="w-4 h-4 text-[#FFB340] group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight className="w-4 h-4 text-[#38BDF8] group-hover:translate-x-1.5 transition-transform" />
                 </div>
               </motion.div>
             );

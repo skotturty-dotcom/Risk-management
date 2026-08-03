@@ -149,7 +149,7 @@ export default function Contact() {
 
         {/* Right Column: High-Contrast Corporate Advisory Form */}
         <div className="lg:col-span-7">
-          <div className="glass-panel p-8 md:p-10 rounded-3xl border border-[rgba(72,214,201,0.18)] bg-[#0A1725] text-white shadow-2xl space-y-6">
+          <div className="p-8 md:p-10 rounded-3xl border border-[#38BDF8]/40 bg-gradient-to-br from-[#0B2545] via-[#13315C] to-[#061A33] text-white shadow-2xl space-y-6">
             {!submitted ? (
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="space-y-1">

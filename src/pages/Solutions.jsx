@@ -48,20 +48,20 @@ export default function Solutions({ onOpenAudit }) {
             return (
               <motion.div
                 key={practice.id}
-                whileHover={{ y: -4 }}
+                whileHover={{ y: -6, scale: 1.02 }}
                 onClick={() => {
                   setSelectedPractice(practice);
                   if (onOpenAudit) onOpenAudit(practice);
                 }}
-                className={`glass-panel p-6 rounded-2xl cursor-pointer transition-all duration-200 relative overflow-hidden group border shadow-sm flex flex-col justify-between ${
+                className={`p-6 rounded-2xl cursor-pointer transition-all duration-300 relative overflow-hidden group border shadow-2xl flex flex-col justify-between bg-gradient-to-br from-[#0B2545] via-[#13315C] to-[#061A33] text-white ${
                   isSelected
-                    ? 'border-2 border-[#008579] dark:border-[#46A095] ring-2 ring-[#008579]/20 shadow-md'
-                    : 'border-slate-200 dark:border-white/10 hover:border-[#008579] dark:hover:border-[#46A095]'
+                    ? 'border-2 border-[#38BDF8] ring-4 ring-[#38BDF8]/30'
+                    : 'border-[#38BDF8]/40 hover:border-[#38BDF8]'
                 }`}
               >
                 <div className="space-y-4">
                   {/* Practice Topic Header Banner */}
-                  <div className="relative h-36 w-full rounded-xl overflow-hidden bg-[#06152B] border border-slate-700/40 shadow-sm">
+                  <div className="relative h-36 w-full rounded-xl overflow-hidden bg-black/40 border border-white/10 shadow-md">
                     {practice.image ? (
                       <img
                         src={practice.image}
@@ -69,32 +69,32 @@ export default function Solutions({ onOpenAudit }) {
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                       />
                     ) : (
-                      <div className="w-full h-full bg-gradient-to-br from-[#0F3161] to-[#06152B] flex items-center justify-center text-teal-400">
-                        <IconComponent className="w-10 h-10" />
+                      <div className="w-full h-full flex items-center justify-center text-white">
+                        <IconComponent className="w-10 h-10 text-[#38BDF8]" />
                       </div>
                     )}
-                    <div className="absolute top-2.5 left-2.5 bg-[#06152B]/85 backdrop-blur-md px-2.5 py-0.5 rounded border border-teal-500/30 text-[10px] font-mono font-bold text-[#FFB340]">
+                    <div className="absolute top-2.5 left-2.5 bg-[#38BDF8]/15 backdrop-blur-md px-2.5 py-0.5 rounded border border-[#38BDF8]/30 text-[10px] font-mono font-extrabold text-[#38BDF8] shadow-sm">
                       MODULE {practice.number}
                     </div>
                   </div>
 
                   {/* Title & Subheading */}
                   <div className="space-y-1.5">
-                    <h3 className="text-lg md:text-xl font-bold font-display text-white group-hover:text-[#55D9CC] transition-colors leading-snug">
+                    <h3 className="text-lg md:text-xl font-extrabold font-display text-[#38BDF8] group-hover:text-[#55D9CC] transition-colors leading-snug">
                       {practice.title}
                     </h3>
-                    <p className="text-xs text-[#CBD5E1] font-normal leading-relaxed">
+                    <p className="text-xs text-[#E2E8F0] font-medium leading-relaxed">
                       {practice.shortDesc}
                     </p>
                   </div>
                 </div>
 
                 {/* Simple Action Footer */}
-                <div className="pt-4 mt-4 border-t border-white/10 flex items-center justify-between">
-                  <span className="text-xs font-mono font-bold text-[#55D9CC] uppercase">
+                <div className="pt-4 mt-4 border-t border-white/15 flex items-center justify-between">
+                  <span className="text-xs font-mono font-extrabold text-[#38BDF8] uppercase tracking-wider group-hover:underline">
                     Inspect Practice
                   </span>
-                  <ArrowRight className="w-4 h-4 text-[#FFB340] group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight className="w-4 h-4 text-[#38BDF8] group-hover:translate-x-1.5 transition-transform" />
                 </div>
               </motion.div>
             );
@@ -105,8 +105,8 @@ export default function Solutions({ onOpenAudit }) {
       {/* Detailed Domain Inspector */}
       {selectedPractice && (
         <section className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="glass-panel p-6 md:p-10 rounded-2xl border-2 border-[#008579] dark:border-[#46A095] space-y-6 shadow-xl bg-white dark:bg-[#0F2342]">
-            <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 border-b border-slate-200 dark:border-white/10 pb-5">
+          <div className="p-6 md:p-10 rounded-3xl border-2 border-[#38BDF8] space-y-6 shadow-2xl bg-gradient-to-br from-[#0B2545] via-[#13315C] to-[#061A33] text-white">
+            <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 border-b border-white/15 pb-5">
               <div className="space-y-1">
                 <span className="text-xs font-mono font-bold text-[#008579] dark:text-[#46A095] uppercase tracking-widest px-3 py-0.5 rounded bg-teal-50 dark:bg-teal-500/10 border border-teal-200 dark:border-teal-500/30">
                   ACTIVE PRACTICE DEPLOYMENT SCOPE
