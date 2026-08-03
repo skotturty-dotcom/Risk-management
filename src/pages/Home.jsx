@@ -327,37 +327,37 @@ export default function Home({ onOpenAudit }) {
                 initial={{ opacity: 0, y: 25 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
-                className={`glass-panel p-8 md:p-12 rounded-3xl border border-[rgba(72,214,201,0.18)] hover:border-[#55D9CC] transition-all duration-300 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-[#0A1725] text-white shadow-2xl ${
+                transition={{ duration: 0.5 }}
+                className={`p-5 sm:p-6 md:p-8 rounded-2xl border border-[#38BDF8]/40 hover:border-[#38BDF8] transition-all duration-300 grid grid-cols-1 lg:grid-cols-12 gap-6 items-center bg-gradient-to-br from-[#0B2545] via-[#13315C] to-[#061A33] text-white shadow-xl ${
                   !isEven ? 'lg:flex-row-reverse' : ''
                 }`}
               >
-                <div className={`space-y-6 ${isEven ? 'lg:col-span-7' : 'lg:col-span-7 lg:order-2'}`}>
+                <div className={`space-y-4 ${isEven ? 'lg:col-span-7' : 'lg:col-span-7 lg:order-2'}`}>
                   <div className="flex items-center space-x-3">
-                    <span className="text-xs font-mono font-bold text-[#55D9CC] px-3 py-1 rounded-md bg-[rgba(40,199,183,0.10)] border border-[rgba(72,214,201,0.25)]">
+                    <span className="text-[10px] font-mono font-extrabold text-[#38BDF8] px-2.5 py-0.5 rounded bg-[#38BDF8]/15 border border-[#38BDF8]/30 uppercase tracking-widest shadow-sm">
                       PRACTICE DOMAIN {sol.number}
                     </span>
-                    <span className="text-xs font-mono text-[#B8C4CF] uppercase tracking-widest font-semibold">
+                    <span className="text-[11px] font-mono text-[#E2E8F0] uppercase tracking-widest font-extrabold">
                       ENTERPRISE ADVISORY
                     </span>
                   </div>
 
-                  <h3 className="text-2xl md:text-3xl font-extrabold font-display text-white">
+                  <h3 className="text-xl md:text-2xl font-extrabold font-display text-[#38BDF8] leading-tight">
                     {sol.title}
                   </h3>
 
-                  <p className="text-white text-base leading-relaxed font-normal">
+                  <p className="text-xs sm:text-sm text-[#E2E8F0] leading-relaxed font-medium">
                     {sol.fullDesc}
                   </p>
 
-                  <div className="space-y-3">
-                    <h4 className="text-xs font-mono font-bold text-[#55D9CC] uppercase tracking-wider">
+                  <div className="space-y-2">
+                    <h4 className="text-[11px] font-mono font-extrabold text-[#38BDF8] uppercase tracking-wider">
                       Core Framework Scope:
                     </h4>
-                    <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                       {sol.features.map((feat, fIdx) => (
-                        <li key={fIdx} className="flex items-start space-x-2.5 text-sm text-white font-normal">
-                          <CheckCircle2 className="w-4 h-4 text-[#55D9CC] shrink-0 mt-0.5" />
+                        <li key={fIdx} className="flex items-start space-x-2 text-xs text-[#E2E8F0] font-normal">
+                          <CheckCircle2 className="w-3.5 h-3.5 text-[#38BDF8] shrink-0 mt-0.5" />
                           <span>{feat}</span>
                         </li>
                       ))}
@@ -365,10 +365,10 @@ export default function Home({ onOpenAudit }) {
                   </div>
                 </div>
 
-                {/* Right Column: Prominent Generated Topic Image + Name Below */}
-                <div className="lg:col-span-5 space-y-4">
-                  {/* Large Prominent Topic Image */}
-                  <div className="relative h-64 sm:h-72 md:h-80 w-full rounded-2xl bg-[#06152B] border-2 border-[#008579] overflow-hidden shadow-2xl group">
+                {/* Right Column: Compact Topic Image + Action Block */}
+                <div className="lg:col-span-5 space-y-3">
+                  {/* Compact Topic Image */}
+                  <div className="relative h-44 sm:h-48 md:h-52 w-full rounded-xl bg-black/40 border border-white/15 overflow-hidden shadow-lg group">
                     {sol.image ? (
                       <img
                         src={sol.image}
@@ -376,32 +376,32 @@ export default function Home({ onOpenAudit }) {
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                       />
                     ) : (
-                      <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-[#0F3161] to-[#06152B] text-teal-400">
-                        <Icon className="w-16 h-16" />
+                      <div className="w-full h-full flex items-center justify-center text-[#38BDF8]">
+                        <Icon className="w-12 h-12" />
                       </div>
                     )}
-                    <div className="absolute top-3 left-3 bg-[#06152B]/85 backdrop-blur-md px-3 py-1 rounded-lg border border-teal-500/30 text-xs font-mono font-bold text-[#FFB340]">
+                    <div className="absolute top-2.5 left-2.5 bg-[#38BDF8]/15 backdrop-blur-md px-2.5 py-0.5 rounded border border-[#38BDF8]/30 text-[10px] font-mono font-extrabold text-[#38BDF8] shadow-sm">
                       PRACTICE 0{sol.number}
                     </div>
                   </div>
 
                   {/* Name & Action Block Below the Image */}
-                  <div className="glass-panel p-6 rounded-2xl border border-slate-200 dark:border-white/10 space-y-4 shadow-lg bg-white dark:bg-[#0F2342]">
-                    <div className="space-y-1">
-                      <span className="text-xs font-sans font-extrabold text-[#008579] dark:text-[#46A095] uppercase tracking-wider block">
+                  <div className="p-3.5 sm:p-4 rounded-xl border border-white/15 bg-black/30 space-y-2.5 shadow-md">
+                    <div className="space-y-0.5">
+                      <span className="text-[10px] font-mono font-extrabold text-[#38BDF8] uppercase tracking-wider block">
                         MODULE 0{sol.number} ADVISORY DOMAIN
                       </span>
-                      <h3 className="text-2xl font-extrabold font-display text-[#0F3161] dark:text-white leading-tight">
+                      <h4 className="text-sm sm:text-base font-extrabold font-display text-white leading-snug">
                         {sol.title}
-                      </h3>
+                      </h4>
                     </div>
 
                     <button
                       onClick={onOpenAudit}
-                      className="w-full py-3.5 rounded-xl bg-[#008579] hover:bg-[#00685E] text-white text-xs font-extrabold uppercase tracking-wider shadow-lg shadow-teal-600/20 transition-all flex items-center justify-center space-x-2"
+                      className="w-full py-2.5 rounded-lg bg-[#38BDF8] hover:bg-[#55D9CC] text-[#06182D] text-xs font-extrabold uppercase tracking-wider shadow-md transition-all flex items-center justify-center space-x-2 cursor-pointer"
                     >
                       <span>Audit {sol.title.split(' ')[0]} Scope</span>
-                      <ArrowRight className="w-4 h-4 text-[#FFB340]" />
+                      <ArrowRight className="w-3.5 h-3.5 text-[#06182D]" />
                     </button>
                   </div>
                 </div>
