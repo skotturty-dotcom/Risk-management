@@ -32,8 +32,8 @@ export default function Solutions({ onOpenAudit }) {
             <span className="text-gradient-emerald">Quantitative Frameworks</span>
           </h1>
 
-          <p className="text-slate-700 dark:text-gray-200 text-base md:text-lg font-medium leading-relaxed max-w-3xl">
-            Srajai Tech operates across seven core risk disciplines, delivering diagnostic reviews, control design, KRI architecture, and continuous board telemetry.
+          <p className="text-[#CBD5E1] text-base md:text-lg font-normal leading-relaxed max-w-3xl">
+            Srajai Tech delivers tailored risk advisory frameworks designed to safeguard corporate capital, data infrastructure, legal standing, and operational continuity.
           </p>
         </div>
       </section>

@@ -255,7 +255,7 @@ export default function Home({ onOpenAudit }) {
           <h2 className="text-3xl md:text-4xl font-extrabold font-display text-[#0F3161] dark:text-white">
             Protecting Enterprise Value in a Dynamic World
           </h2>
-          <p className="text-slate-700 dark:text-gray-200 text-base leading-relaxed font-medium">
+          <p className="text-[#CBD5E1] text-base leading-relaxed font-normal">
             Srajai Tech provides end-to-end framework architecture, diagnostic audits, and governance frameworks designed to safeguard corporate capital, data infrastructure, and brand reputation.
           </p>
         </div>
@@ -275,7 +275,7 @@ export default function Home({ onOpenAudit }) {
             <h2 className="text-3xl md:text-4xl font-extrabold font-display text-[#0F3161] dark:text-white">
               Core Solution Domains
             </h2>
-            <p className="text-slate-700 dark:text-gray-200 text-base max-w-xl font-medium">
+            <p className="text-[#CBD5E1] text-base max-w-xl font-normal">
               Seven integrated advisory pillars surrounding enterprise risk intelligence.
             </p>
           </div>
@@ -310,7 +310,7 @@ export default function Home({ onOpenAudit }) {
           <h2 className="text-3xl md:text-4xl font-extrabold font-display text-[#0F3161] dark:text-white">
             Comprehensive Practice Solutions
           </h2>
-          <p className="text-slate-700 dark:text-gray-200 text-base font-medium">
+          <p className="text-[#CBD5E1] text-base font-normal">
             Customized frameworks structured to maintain operational continuity, financial stability, and regulatory compliance.
           </p>
         </div>
@@ -422,7 +422,7 @@ export default function Home({ onOpenAudit }) {
             <h2 className="text-3xl md:text-5xl font-extrabold font-display text-[#0F3161] dark:text-white">
               Building Resilient Enterprises Through Strategic Risk
             </h2>
-            <p className="text-slate-700 dark:text-gray-200 text-lg leading-relaxed font-medium">
+            <p className="text-[#CBD5E1] text-lg md:text-xl leading-relaxed font-normal">
               We provide integrated risk advisory capabilities spanning enterprise, cyber, operational, financial, legal, third-party, and fraud risk.
             </p>
           </div>
@@ -506,7 +506,7 @@ export default function Home({ onOpenAudit }) {
             <h2 className="text-3xl md:text-4xl font-extrabold font-display text-[#0F3161] dark:text-white">
               Industries We Serve
             </h2>
-            <p className="text-slate-700 dark:text-gray-200 text-base max-w-xl font-medium">
+            <p className="text-[#CBD5E1] text-base max-w-xl font-normal">
               Click on any sector box below to inspect its full advisory scope and Key Risk Indicators.
             </p>
           </div>
@@ -588,7 +588,7 @@ export default function Home({ onOpenAudit }) {
           <h2 className="text-3xl md:text-4xl font-extrabold font-display text-[#0F3161] dark:text-white">
             Risk Management Framework
           </h2>
-          <p className="text-slate-700 dark:text-gray-200 text-base font-medium">
+          <p className="text-[#CBD5E1] text-base font-normal">
             A structured approach to identifying, assessing, mitigating, monitoring, and continuously improving enterprise risk.
           </p>
         </div>
@@ -621,7 +621,7 @@ export default function Home({ onOpenAudit }) {
           <h2 className="text-3xl font-extrabold font-display text-[#06182D]">
             Framework Foundations
           </h2>
-          <p className="text-slate-700 text-base font-medium">
+          <p className="text-[#CBD5E1] text-base font-normal">
             Core international standards and internal control components underpinning Srajai Tech advisory architecture.
           </p>
         </div>

@@ -19,7 +19,7 @@ export default function RiskFrameworkPage() {
             <span className="text-[#008579] font-extrabold">Framework Architecture</span>
           </h1>
 
-          <p className="text-slate-700 text-lg md:text-xl font-medium leading-relaxed max-w-3xl">
+          <p className="text-[#CBD5E1] text-lg md:text-xl font-normal leading-relaxed max-w-3xl">
             Our advisory methodologies integrate international risk governance standards, quantitative heatmaps, RCSA protocols, and continuous board telemetry.
           </p>
         </div>
