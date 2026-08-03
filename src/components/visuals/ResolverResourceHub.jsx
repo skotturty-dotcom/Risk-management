@@ -104,45 +104,48 @@ export default function ResolverResourceHub({ onOpenAudit }) {
 
   return (
     <div className="space-y-8">
-      {/* Resolver Header Banner */}
-      <div className="p-6 md:p-8 rounded-2xl border border-[#38BDF8]/40 bg-gradient-to-br from-[#0B2545] via-[#13315C] to-[#061A33] text-white space-y-6 shadow-2xl">
-        <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+      {/* Resolver Header Banner - SOLID WHITE PREMIUM BOX */}
+      <div className="p-6 md:p-8 rounded-2xl border border-slate-200 bg-white text-slate-900 space-y-6 shadow-xl relative overflow-hidden">
+        {/* Top Brand Accent Line */}
+        <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-[#008579] via-[#00A896] to-[#008579]" />
+
+        <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6 relative z-10">
           <div className="space-y-1.5">
-            <span className="text-xs font-mono font-bold text-[#38BDF8] uppercase tracking-widest px-3 py-1 rounded bg-[#38BDF8]/15 border border-[#38BDF8]/30">
+            <span className="text-xs font-mono font-extrabold text-[#008579] uppercase tracking-widest px-3 py-1 rounded-md bg-teal-50 border border-teal-200 inline-block shadow-sm">
               RESOLVER ADVISORY MODEL
             </span>
-            <h2 className="text-2xl md:text-3xl font-extrabold font-display text-white">
+            <h2 className="text-2xl md:text-3xl font-extrabold font-display text-[#06182D]">
               Risk Management & Security Resource Hub
             </h2>
-            <p className="text-sm text-[#E2E8F0] font-medium max-w-2xl">
+            <p className="text-sm text-slate-700 font-semibold max-w-2xl">
               Explore playbooks, eBooks, datasheets, case studies, and executive benchmark reports curated by Srajai Tech principal strategists.
             </p>
           </div>
 
           {/* Search Bar */}
           <div className="relative w-full lg:w-80 shrink-0">
-            <Search className="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-300" />
+            <Search className="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400" />
             <input
               type="text"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder="Search resources..."
-              className="w-full pl-10 pr-3.5 py-2.5 rounded-xl bg-black/40 border border-white/20 text-xs text-white placeholder-gray-300 focus:outline-none focus:border-[#38BDF8] transition-colors shadow-sm font-medium"
+              className="w-full pl-10 pr-3.5 py-2.5 rounded-xl bg-slate-50 border border-slate-300 text-xs text-slate-900 placeholder-slate-400 focus:outline-none focus:border-[#008579] focus:ring-1 focus:ring-[#008579] transition-colors shadow-sm font-semibold"
             />
           </div>
         </div>
 
         {/* Filter Category Tabs */}
-        <div className="flex items-center space-x-2 overflow-x-auto pb-1 no-scrollbar pt-2 border-t border-white/15">
-          <Filter className="w-3.5 h-3.5 text-[#38BDF8] shrink-0 mr-1" />
+        <div className="flex items-center space-x-2 overflow-x-auto pb-1 no-scrollbar pt-2 border-t border-slate-200 relative z-10">
+          <Filter className="w-3.5 h-3.5 text-[#008579] shrink-0 mr-1" />
           {categories.map((cat) => (
             <button
               key={cat}
               onClick={() => setSelectedCategory(cat)}
               className={`px-3.5 py-1.5 rounded-md text-[11px] font-mono font-bold uppercase tracking-wider transition-all whitespace-nowrap border ${
                 selectedCategory === cat
-                  ? 'bg-[#38BDF8] text-[#06182D] border-[#38BDF8] font-extrabold shadow-sm'
-                  : 'bg-black/30 text-[#CBD5E1] border-white/10 hover:border-[#38BDF8]/50'
+                  ? 'bg-[#008579] text-white border-[#008579] font-extrabold shadow-sm'
+                  : 'bg-slate-100 text-slate-700 border-slate-200 hover:bg-slate-200 hover:text-slate-900'
               }`}
             >
               {cat}
