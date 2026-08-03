@@ -39,12 +39,12 @@ export default function AuditModal({ isOpen, onClose, selectedPractice }) {
           className="fixed inset-0 bg-[#06152B]/80 backdrop-blur-md"
         />
 
-        {/* Modal Container - Pure White Box */}
+        {/* Modal Container - Bright Crisp White Box */}
         <motion.div
           initial={{ opacity: 0, scale: 0.95, y: 20 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.95, y: 20 }}
-          className="relative w-full max-w-2xl bg-white text-slate-900 border-2 border-teal-500/40 rounded-3xl p-6 sm:p-8 md:p-10 shadow-2xl z-10 overflow-hidden"
+          className="relative w-full max-w-2xl bg-white text-slate-900 border-2 border-[#008579] rounded-3xl p-6 sm:p-8 md:p-10 shadow-2xl z-10 overflow-hidden"
         >
           {/* Header Multi-Color Accent Bar */}
           <div className="absolute top-0 left-0 right-0 h-2 bg-gradient-to-r from-[#008579] via-[#38BDF8] to-[#FFB340]" />
