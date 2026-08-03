@@ -70,18 +70,15 @@
   h1, h2 {
     font-family: 'Plus Jakarta Sans', 'Inter', system-ui, sans-serif !important;
     letter-spacing: -0.02em;
-    color: #F5F8FA !important;
   }
 
   h3 {
     font-family: 'Plus Jakarta Sans', 'Inter', system-ui, sans-serif !important;
     letter-spacing: -0.01em;
-    color: #EAF2F5 !important;
   }
 
   h4, h5, h6 {
     font-family: 'Plus Jakarta Sans', 'Inter', system-ui, sans-serif !important;
-    color: #F5F8FA !important;
   }
 
   p, span, div, label, input, textarea, select, button {
