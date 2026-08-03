@@ -14,19 +14,19 @@ export default function Footer({ onOpenAudit }) {
   };
 
   return (
-    <footer className="relative bg-gradient-to-b from-[#005B52] via-[#004D46] to-[#003833] text-white overflow-hidden border-t border-[#55D9CC]/30">
-      {/* Resolver-Inspired Newsletter & Intelligence Subscription Banner - BRIGHT VIBRANT TEAL */}
-      <div className="relative bg-gradient-to-r from-[#008579] via-[#00A896] to-[#028090] py-12 px-4 sm:px-6 lg:px-8 border-b border-[#55D9CC]/40 shadow-2xl overflow-hidden">
+    <footer className="relative bg-[#008579] text-white overflow-hidden border-t border-teal-300/40 shadow-2xl">
+      {/* Resolver-Inspired Newsletter & Intelligence Subscription Banner - UNIFIED BRIGHT TEAL */}
+      <div className="relative bg-[#008579] py-12 px-4 sm:px-6 lg:px-8 border-b border-white/20 overflow-hidden">
         <div className="absolute -right-20 -top-20 w-80 h-80 bg-white/10 rounded-full blur-3xl pointer-events-none" />
         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-8 relative z-10">
           <div className="space-y-2 text-center lg:text-left">
-            <span className="text-xs font-mono font-extrabold text-[#FFB340] uppercase tracking-widest px-3 py-1 rounded bg-[#003833]/90 border border-[#FFB340]/40 inline-block shadow-md">
+            <span className="text-xs font-mono font-extrabold text-[#FFB340] uppercase tracking-widest px-3 py-1 rounded bg-[#00685E] border border-[#FFB340]/40 inline-block shadow-md">
               SRAJAI TECH RISK INTELLIGENCE BULLETIN
             </span>
             <h3 className="text-2xl md:text-3xl font-extrabold font-display text-white">
               Subscribe to Boardroom Risk Briefings & Telemetry Insights
             </h3>
-            <p className="text-sm text-white max-w-xl font-medium leading-relaxed">
+            <p className="text-sm text-white max-w-xl font-semibold leading-relaxed">
               Join over 5,000+ CXOs, risk officers, and governance directors receiving our monthly advisory breakdown.
             </p>
           </div>
@@ -51,7 +51,7 @@ export default function Footer({ onOpenAudit }) {
                 </button>
               </form>
             ) : (
-              <div className="flex items-center space-x-2 text-[#FFB340] font-mono text-sm font-extrabold bg-[#003833]/90 px-5 py-3 rounded-xl border border-[#FFB340]/40 shadow-lg">
+              <div className="flex items-center space-x-2 text-[#FFB340] font-mono text-sm font-extrabold bg-[#00685E] px-5 py-3 rounded-xl border border-[#FFB340]/40 shadow-lg">
                 <CheckCircle2 className="w-5 h-5 text-[#FFB340]" />
                 <span>Subscription Confirmed. Welcome to Srajai Tech Intelligence.</span>
               </div>
@@ -60,8 +60,8 @@ export default function Footer({ onOpenAudit }) {
         </div>
       </div>
 
-      {/* Main Corporate Footer Links - RICH EMERALD GREEN BACKGROUND */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      {/* Main Corporate Footer Links - UNIFIED BRIGHT TEAL BACKGROUND */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 bg-[#008579]">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
           {/* Col 1: Brand Info */}
           <div className="lg:col-span-2 space-y-4">
@@ -73,13 +73,13 @@ export default function Footer({ onOpenAudit }) {
               />
             </div>
 
-            <p className="text-xs text-emerald-100 leading-relaxed font-medium max-w-sm">
+            <p className="text-xs text-white leading-relaxed font-semibold max-w-sm">
               Srajai Tech transforms traditional reactive risk management into a strategic growth driver. Built for enterprise boards, financial institutions, and multi-cloud technology organizations.
             </p>
 
-            <div className="pt-2 text-xs font-mono text-emerald-200 space-y-1">
-              <p><strong className="text-white">Founder:</strong> Guddeti Sanjay Raj</p>
-              <p><strong className="text-white">Headquarters:</strong> Hyderabad, Telangana, India</p>
+            <div className="pt-2 text-xs font-mono text-white space-y-1">
+              <p><strong className="text-[#FFB340]">Founder:</strong> Guddeti Sanjay Raj</p>
+              <p><strong className="text-[#FFB340]">Headquarters:</strong> Hyderabad, Telangana, India</p>
             </div>
           </div>
 
@@ -88,14 +88,14 @@ export default function Footer({ onOpenAudit }) {
             <h4 className="text-xs font-mono font-extrabold uppercase tracking-widest text-[#FFB340]">
               Advisory Solutions
             </h4>
-            <ul className="space-y-2 text-xs font-semibold text-white">
-              <li><NavLink to="/solutions" className="hover:text-[#55D9CC] transition-colors">Enterprise Risk Management</NavLink></li>
-              <li><NavLink to="/solutions" className="hover:text-[#55D9CC] transition-colors">Cyber Risk Governance</NavLink></li>
-              <li><NavLink to="/solutions" className="hover:text-[#55D9CC] transition-colors">Operational Risk & BCP</NavLink></li>
-              <li><NavLink to="/solutions" className="hover:text-[#55D9CC] transition-colors">Financial Risk Advisory</NavLink></li>
-              <li><NavLink to="/solutions" className="hover:text-[#55D9CC] transition-colors">Legal & Regulatory (CPWD/FIDIC)</NavLink></li>
-              <li><NavLink to="/solutions" className="hover:text-[#55D9CC] transition-colors">Third-Party Risk (TPRM)</NavLink></li>
-              <li><NavLink to="/solutions" className="hover:text-[#55D9CC] transition-colors">Fraud Risk & Forensics</NavLink></li>
+            <ul className="space-y-2 text-xs font-bold text-white">
+              <li><NavLink to="/solutions" className="hover:text-[#FFB340] transition-colors">Enterprise Risk Management</NavLink></li>
+              <li><NavLink to="/solutions" className="hover:text-[#FFB340] transition-colors">Cyber Risk Governance</NavLink></li>
+              <li><NavLink to="/solutions" className="hover:text-[#FFB340] transition-colors">Operational Risk & BCP</NavLink></li>
+              <li><NavLink to="/solutions" className="hover:text-[#FFB340] transition-colors">Financial Risk Advisory</NavLink></li>
+              <li><NavLink to="/solutions" className="hover:text-[#FFB340] transition-colors">Legal & Regulatory (CPWD/FIDIC)</NavLink></li>
+              <li><NavLink to="/solutions" className="hover:text-[#FFB340] transition-colors">Third-Party Risk (TPRM)</NavLink></li>
+              <li><NavLink to="/solutions" className="hover:text-[#FFB340] transition-colors">Fraud Risk & Forensics</NavLink></li>
             </ul>
           </div>
 
@@ -104,13 +104,13 @@ export default function Footer({ onOpenAudit }) {
             <h4 className="text-xs font-mono font-extrabold uppercase tracking-widest text-[#FFB340]">
               Company & Practice
             </h4>
-            <ul className="space-y-2 text-xs font-semibold text-white">
-              <li><NavLink to="/" className="hover:text-[#55D9CC] transition-colors">Home Platform</NavLink></li>
-              <li><NavLink to="/about" className="hover:text-[#55D9CC] transition-colors">About Srajai Tech</NavLink></li>
-              <li><NavLink to="/industries" className="hover:text-[#55D9CC] transition-colors">Industries We Serve (18 Sectors)</NavLink></li>
-              <li><NavLink to="/risk-framework" className="hover:text-[#55D9CC] transition-colors">Risk Management Framework</NavLink></li>
-              <li><NavLink to="/founder" className="hover:text-[#55D9CC] transition-colors">Founder Leadership</NavLink></li>
-              <li><NavLink to="/contact" className="hover:text-[#55D9CC] transition-colors">Contact Advisory Team</NavLink></li>
+            <ul className="space-y-2 text-xs font-bold text-white">
+              <li><NavLink to="/" className="hover:text-[#FFB340] transition-colors">Home Platform</NavLink></li>
+              <li><NavLink to="/about" className="hover:text-[#FFB340] transition-colors">About Srajai Tech</NavLink></li>
+              <li><NavLink to="/industries" className="hover:text-[#FFB340] transition-colors">Industries We Serve (18 Sectors)</NavLink></li>
+              <li><NavLink to="/risk-framework" className="hover:text-[#FFB340] transition-colors">Risk Management Framework</NavLink></li>
+              <li><NavLink to="/founder" className="hover:text-[#FFB340] transition-colors">Founder Leadership</NavLink></li>
+              <li><NavLink to="/contact" className="hover:text-[#FFB340] transition-colors">Contact Advisory Team</NavLink></li>
             </ul>
           </div>
 
@@ -119,12 +119,12 @@ export default function Footer({ onOpenAudit }) {
             <h4 className="text-xs font-mono font-extrabold uppercase tracking-widest text-[#FFB340]">
               Enterprise Audit
             </h4>
-            <p className="text-xs text-emerald-100 leading-relaxed font-medium">
+            <p className="text-xs text-white leading-relaxed font-semibold">
               Schedule a confidential diagnostic audit with our principal risk strategists.
             </p>
             <button
               onClick={onOpenAudit}
-              className="w-full py-3.5 rounded-xl bg-[#55D9CC] hover:bg-[#28C7B7] text-[#06182D] font-extrabold text-xs uppercase tracking-wider shadow-2xl shadow-[#55D9CC]/40 transition-all hover:scale-105 flex items-center justify-center space-x-2 border-2 border-white cursor-pointer"
+              className="w-full py-3.5 rounded-xl bg-[#FFB340] hover:bg-[#FFA41A] text-[#06182D] font-extrabold text-xs uppercase tracking-wider shadow-2xl transition-all hover:scale-105 flex items-center justify-center space-x-2 border-2 border-white cursor-pointer"
             >
               <Lock className="w-4 h-4 text-[#06182D]" />
               <span>Request Diagnostic Audit</span>
@@ -133,16 +133,16 @@ export default function Footer({ onOpenAudit }) {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-12 mt-12 border-t border-emerald-400/20 flex flex-col md:flex-row items-center justify-between text-xs text-emerald-100 font-mono gap-4">
+        <div className="pt-12 mt-12 border-t border-white/20 flex flex-col md:flex-row items-center justify-between text-xs text-white font-mono gap-4">
           <p>© {new Date().getFullYear()} Srajai Tech. All Rights Reserved. Strategic Risk Advisory & Intelligence.</p>
           <div className="flex flex-wrap items-center gap-4">
-            <span className="text-[#FFB340] font-bold">ISO 31000 & COSO Compliant</span>
+            <span className="text-[#FFB340] font-extrabold">ISO 31000 & COSO Compliant</span>
             <div className="flex items-center gap-3">
-              <a href="mailto:srajaitech@gmail.com" className="hover:text-white transition-colors">
+              <a href="mailto:srajaitech@gmail.com" className="hover:text-[#FFB340] transition-colors font-bold">
                 srajaitech@gmail.com
               </a>
               <span>•</span>
-              <a href="tel:+919182119045" className="hover:text-white transition-colors">
+              <a href="tel:+919182119045" className="hover:text-[#FFB340] transition-colors font-bold">
                 +91 9182119045
               </a>
               <span>•</span>
@@ -150,7 +150,7 @@ export default function Footer({ onOpenAudit }) {
                 href="https://wa.me/919182119045"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[#25D366] hover:underline font-bold"
+                className="text-[#FFB340] hover:underline font-extrabold"
               >
                 WhatsApp
               </a>
