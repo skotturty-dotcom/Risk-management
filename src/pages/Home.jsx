@@ -414,15 +414,15 @@ export default function Home({ onOpenAudit }) {
           5. ABOUT US & 3-STEP METHODOLOGY
          ========================================== */}
       <section id="about" className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="glass-panel p-8 md:p-12 rounded-3xl border border-slate-200 dark:border-teal-500/30 space-y-12">
+        <div className="glass-panel p-8 md:p-12 rounded-3xl border border-[rgba(72,214,201,0.18)] bg-[#0A1725] text-white space-y-12 shadow-2xl">
           <div className="max-w-3xl space-y-4">
-            <span className="text-xs font-mono font-bold text-[#008579] dark:text-[#46A095] uppercase tracking-widest">
+            <span className="text-xs font-mono font-extrabold text-[#55D9CC] uppercase tracking-widest">
               ABOUT SRAJAI TECH
             </span>
-            <h2 className="text-3xl md:text-5xl font-extrabold font-display text-[#0F3161] dark:text-white">
+            <h2 className="text-3xl md:text-5xl font-extrabold font-display text-white">
               Building Resilient Enterprises Through Strategic Risk
             </h2>
-            <p className="text-dark-navy text-lg md:text-xl leading-relaxed font-semibold">
+            <p className="text-white text-lg md:text-xl leading-relaxed font-medium">
               We provide integrated risk advisory capabilities spanning enterprise, cyber, operational, financial, legal, third-party, and fraud risk.
             </p>
           </div>
