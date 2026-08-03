@@ -80,7 +80,7 @@ export default function ValueCards() {
 
               {/* Title & Subheading */}
               <div className="space-y-2">
-                <h3 className="text-2xl font-extrabold font-display text-[#38BDF8] group-hover:text-[#55D9CC] transition-colors leading-snug">
+                <h3 className="text-2xl font-extrabold font-display text-white group-hover:text-[#55D9CC] transition-colors leading-snug">
                   {card.title}
                 </h3>
 
