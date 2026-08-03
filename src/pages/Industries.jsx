@@ -60,51 +60,51 @@ export default function Industries({ onOpenAudit }) {
 
       {/* 18 Clean Compact Sector Cards Grid */}
       <section className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3.5 sm:gap-4">
           {filteredIndustries.map((ind) => {
             const IconComponent = iconMap[ind.icon] || Landmark;
 
             return (
               <motion.div
                 key={ind.id}
-                whileHover={{ y: -4, scale: 1.01 }}
+                whileHover={{ y: -3, scale: 1.01 }}
                 onClick={() => setSelectedSectorModal(ind)}
-                className="p-4 sm:p-5 rounded-xl cursor-pointer transition-all duration-300 group relative overflow-hidden border border-[#38BDF8]/40 hover:border-[#38BDF8] shadow-xl flex flex-col justify-between bg-gradient-to-br from-[#0B2545] via-[#13315C] to-[#061A33] text-white"
+                className="p-3.5 sm:p-4 rounded-xl cursor-pointer transition-all duration-300 group relative overflow-hidden border border-[#38BDF8]/40 hover:border-[#38BDF8] shadow-lg flex flex-col justify-between bg-gradient-to-br from-[#0B2545] via-[#13315C] to-[#061A33] text-white"
               >
-                <div className="space-y-2.5">
+                <div className="space-y-2">
                   {/* Top Badges & Icon */}
                   <div className="flex items-center justify-between">
-                    <div className="w-8 h-8 rounded-lg bg-[#38BDF8]/15 border border-[#38BDF8]/30 flex items-center justify-center text-[#38BDF8]">
-                      <IconComponent className="w-4 h-4" />
+                    <div className="w-7 h-7 rounded-md bg-[#38BDF8]/15 border border-[#38BDF8]/30 flex items-center justify-center text-[#38BDF8]">
+                      <IconComponent className="w-3.5 h-3.5" />
                     </div>
 
-                    <span className="text-[9px] font-mono font-extrabold text-[#38BDF8] bg-[#38BDF8]/15 px-2 py-0.5 rounded border border-[#38BDF8]/30 uppercase tracking-wider shadow-sm">
+                    <span className="text-[8.5px] font-mono font-extrabold text-[#38BDF8] bg-[#38BDF8]/15 px-2 py-0.5 rounded border border-[#38BDF8]/30 uppercase tracking-wider shadow-sm">
                       SECTOR {ind.id.toString().padStart(2, '0')}
                     </span>
                   </div>
 
                   {/* Title & Subheading */}
                   <div className="space-y-0.5">
-                    <h3 className="text-base md:text-lg font-extrabold font-display text-[#38BDF8] group-hover:text-[#55D9CC] transition-colors leading-snug">
+                    <h3 className="text-sm sm:text-base font-extrabold font-display text-[#38BDF8] group-hover:text-[#55D9CC] transition-colors leading-tight">
                       {ind.title}
                     </h3>
-                    <p className="text-[11px] font-mono font-extrabold text-[#38BDF8] tracking-wider uppercase">
+                    <p className="text-[10px] font-mono font-extrabold text-[#38BDF8] tracking-wider uppercase">
                       {ind.kri}
                     </p>
                   </div>
 
                   {/* Description */}
-                  <p className="text-[11px] text-[#E2E8F0] font-medium leading-snug line-clamp-3">
+                  <p className="text-[10.5px] text-[#E2E8F0] font-medium leading-snug line-clamp-2">
                     {ind.desc}
                   </p>
                 </div>
 
                 {/* Compact Action Footer */}
-                <div className="pt-2.5 mt-2.5 border-t border-white/15 flex items-center justify-between">
-                  <span className="text-[11px] font-mono font-extrabold text-[#38BDF8] uppercase tracking-wider group-hover:underline">
+                <div className="pt-2 mt-2 border-t border-white/15 flex items-center justify-between">
+                  <span className="text-[10px] font-mono font-extrabold text-[#38BDF8] uppercase tracking-wider group-hover:underline">
                     Inspect Scope
                   </span>
-                  <ArrowRight className="w-3.5 h-3.5 text-[#38BDF8] group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight className="w-3 h-3 text-[#38BDF8] group-hover:translate-x-1 transition-transform" />
                 </div>
               </motion.div>
             );
