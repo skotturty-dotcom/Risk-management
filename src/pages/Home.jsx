@@ -635,20 +635,22 @@ export default function Home({ onOpenAudit }) {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: idx * 0.07 }}
-              whileHover={{ y: -6, scale: 1.025 }}
-              className="p-6 rounded-2xl bg-white border border-slate-200/90 hover:border-[#008579] transition-all duration-300 flex items-start space-x-4 shadow-md hover:shadow-2xl hover:shadow-[#008579]/15 group cursor-pointer relative overflow-hidden"
+              whileHover={{ y: -8, scale: 1.03 }}
+              className="p-6 rounded-2xl bg-gradient-to-br from-white via-teal-50/30 to-slate-50 border-2 border-teal-500/40 hover:border-[#008579] transition-all duration-300 flex items-center space-x-4 shadow-lg hover:shadow-2xl hover:shadow-[#008579]/25 group cursor-pointer relative overflow-hidden"
             >
-              {/* Top Accent Line on Hover */}
-              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#008579] via-[#00A896] to-[#008579] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              {/* Permanent Executive Accent Top Bar */}
+              <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-[#008579] via-[#38BDF8] to-[#FFB340]" />
 
-              <div className="w-11 h-11 rounded-xl bg-teal-50 border border-teal-200/80 flex items-center justify-center text-[#008579] shrink-0 group-hover:scale-110 group-hover:bg-[#008579] group-hover:text-white transition-all duration-300 shadow-sm">
-                <CheckCircle2 className="w-5.5 h-5.5 transition-colors" />
+              {/* Bold Icon Container */}
+              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#008579] to-[#005B53] text-white flex items-center justify-center shadow-md group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shrink-0">
+                <CheckCircle2 className="w-6 h-6 text-white" />
               </div>
+
               <div>
                 <h3 className="text-lg font-extrabold font-display text-[#06182D] group-hover:text-[#008579] transition-colors duration-200">
                   {found.name}
                 </h3>
-                <p className="text-xs text-slate-600 mt-1 font-medium leading-relaxed">
+                <p className="text-xs text-slate-700 font-semibold mt-0.5 leading-relaxed">
                   {found.desc}
                 </p>
               </div>
