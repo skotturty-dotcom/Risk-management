@@ -521,55 +521,55 @@ export default function Home({ onOpenAudit }) {
           </NavLink>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
           {industriesData.map((ind) => {
             const Icon = sectorIconMap[ind.icon] || Building2;
 
             return (
               <motion.div
                 key={ind.id}
-                whileHover={{ y: -8 }}
+                whileHover={{ y: -4, scale: 1.01 }}
                 onClick={() => setSelectedSector(ind)}
-                className="glass-panel p-8 rounded-3xl cursor-pointer transition-all duration-300 group relative overflow-hidden border border-slate-200 dark:border-white/10 hover:border-[#008579] dark:hover:border-[#46A095] shadow-xl hover:shadow-2xl flex flex-col justify-between bg-white dark:bg-[#0F2342]"
+                className="p-4 sm:p-5 rounded-2xl cursor-pointer transition-all duration-300 group relative overflow-hidden border border-[#38BDF8]/40 hover:border-[#38BDF8] shadow-xl flex flex-col justify-between bg-gradient-to-br from-[#0B2545] via-[#13315C] to-[#061A33] text-white"
               >
                 {/* Multi-Color Gradient Top Accent Bar */}
-                <div className="absolute top-0 left-0 right-0 h-2 bg-gradient-to-r from-[#008579] via-[#00437E] to-[#FFB340]" />
+                <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-[#38BDF8] via-[#008579] to-[#FFB340]" />
 
-                <div className="space-y-5 pt-2">
+                <div className="space-y-3 pt-1">
                   {/* Top Badges & Icon */}
                   <div className="flex items-center justify-between">
-                    <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-[#0F3161] to-[#008579] text-white flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-                      <Icon className="w-6 h-6 text-[#FFB340]" />
+                    <div className="w-8 h-8 rounded-xl bg-[#38BDF8]/15 border border-[#38BDF8]/30 flex items-center justify-center text-[#38BDF8] shadow-md group-hover:scale-110 transition-transform duration-300">
+                      <Icon className="w-4 h-4 text-[#38BDF8]" />
                     </div>
 
-                    <span className="text-xs font-mono font-extrabold text-[#008579] dark:text-[#46A095] bg-teal-50 dark:bg-teal-500/10 px-3.5 py-1.5 rounded-xl border border-teal-200 dark:border-teal-500/30 uppercase tracking-wider">
+                    <span className="text-[9px] font-mono font-extrabold text-[#38BDF8] bg-[#38BDF8]/15 px-2.5 py-0.5 rounded-lg border border-[#38BDF8]/30 uppercase tracking-wider shadow-sm">
                       SECTOR {ind.id.toString().padStart(2, '0')}
                     </span>
                   </div>
 
                   {/* Title & Subheading */}
-                  <div className="space-y-1.5">
-                    <h3 className="text-xl md:text-2xl font-extrabold font-display text-white group-hover:text-[#55D9CC] transition-colors leading-snug">
+                  <div className="space-y-0.5">
+                    <h3 className="text-base md:text-lg font-extrabold font-display text-[#38BDF8] group-hover:text-[#55D9CC] transition-colors leading-snug">
                       {ind.name || ind.title}
                     </h3>
-                    <p className="text-xs font-sans font-semibold uppercase tracking-wider text-[#55D9CC]">
+                    <p className="text-[10px] font-mono font-extrabold uppercase tracking-wider text-[#38BDF8]">
                       {ind.riskCategory || ind.kri}
                     </p>
                   </div>
 
                   {/* Description Info Copy */}
-                  <p className="text-sm md:text-base text-[#CBD5E1] font-normal leading-relaxed">
+                  <p className="text-[11px] text-[#E2E8F0] font-medium leading-snug line-clamp-3">
                     {ind.description || ind.desc}
                   </p>
                 </div>
 
                 {/* Card Action Footer */}
-                <div className="pt-6 mt-6 border-t border-slate-200 dark:border-white/10 flex items-center justify-between">
-                  <span className="text-xs font-sans font-extrabold text-[#008579] dark:text-[#46A095] uppercase tracking-wider group-hover:underline">
+                <div className="pt-3 mt-3 border-t border-white/15 flex items-center justify-between">
+                  <span className="text-[10px] font-mono font-extrabold text-[#38BDF8] uppercase tracking-wider group-hover:underline">
                     Click to Inspect Scope
                   </span>
-                  <div className="w-8 h-8 rounded-full bg-teal-50 dark:bg-teal-500/10 flex items-center justify-center text-[#008579] dark:text-[#46A095] group-hover:translate-x-1.5 transition-transform">
-                    <ArrowRight className="w-4 h-4 text-[#FFB340]" />
+                  <div className="w-6 h-6 rounded-full bg-[#38BDF8]/15 border border-[#38BDF8]/30 flex items-center justify-center text-[#38BDF8] group-hover:translate-x-1 transition-transform">
+                    <ArrowRight className="w-3 h-3 text-[#38BDF8]" />
                   </div>
                 </div>
               </motion.div>
