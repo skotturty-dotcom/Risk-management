@@ -151,47 +151,44 @@ export default function ResolverResourceHub({ onOpenAudit }) {
         </div>
       </div>
 
-      {/* Featured Resource Banner */}
+      {/* Featured Resource Banner - SOLID WHITE PREMIUM BOX */}
       {featuredResource && selectedCategory === 'ALL RESOURCES' && !searchQuery && (
         <motion.div
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="rounded-2xl p-6 md:p-8 text-white bg-gradient-to-br from-[#0A223D] via-[#0F355C] to-[#071B30] border border-[#38BDF8]/60 animate-blue-glow grid grid-cols-1 lg:grid-cols-12 gap-6 items-center shadow-[0_10px_35px_rgba(14,165,233,0.3)] relative overflow-hidden group"
+          className="rounded-2xl p-6 md:p-8 text-slate-900 bg-white border border-slate-200 hover:border-[#008579] grid grid-cols-1 lg:grid-cols-12 gap-6 items-center shadow-xl hover:shadow-2xl transition-all duration-300 relative overflow-hidden group"
         >
-          {/* Animated Shimmer Top Border */}
-          <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-transparent via-[#38BDF8] to-transparent opacity-80 animate-shimmer-blue" />
-          
-          {/* Glowing Ambient Background Orbs */}
-          <div className="absolute -top-20 -right-20 w-48 h-48 bg-[#38BDF8]/20 rounded-full blur-3xl group-hover:scale-150 group-hover:bg-[#38BDF8]/35 transition-all duration-700 pointer-events-none" />
+          {/* Top Brand Accent Line */}
+          <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-[#008579] via-[#00A896] to-[#008579]" />
 
           <div className="lg:col-span-8 space-y-4 relative z-10">
             <div className="flex items-center space-x-3">
               <span className="text-[11px] font-mono font-extrabold text-[#06182D] uppercase tracking-wider px-3 py-1 rounded-md bg-[#FFB340] shadow-sm">
                 {featuredResource.tag}
               </span>
-              <span className="text-xs font-mono text-[#38BDF8] font-bold">{featuredResource.readTime}</span>
+              <span className="text-xs font-mono text-[#008579] font-extrabold">{featuredResource.readTime}</span>
             </div>
 
-            <h3 className="text-xl md:text-3xl font-extrabold font-display text-white leading-tight group-hover:text-[#38BDF8] transition-colors">
+            <h3 className="text-xl md:text-3xl font-extrabold font-display text-[#06182D] leading-tight group-hover:text-[#008579] transition-colors">
               {featuredResource.title}
             </h3>
 
-            <p className="text-sm text-[#E2E8F0] font-medium leading-relaxed max-w-2xl">
+            <p className="text-sm text-slate-700 font-semibold leading-relaxed max-w-2xl">
               {featuredResource.desc}
             </p>
 
             <div className="pt-2 flex flex-wrap items-center gap-3">
               <button
                 onClick={onOpenAudit}
-                className="px-5 py-2.5 rounded-xl bg-gradient-to-r from-[#008579] via-[#00A896] to-[#38BDF8] hover:brightness-110 text-white text-xs font-extrabold uppercase tracking-wider shadow-lg shadow-teal-500/20 transition-all flex items-center space-x-2 cursor-pointer"
+                className="px-5 py-2.5 rounded-xl bg-gradient-to-r from-[#008579] via-[#00A896] to-[#008579] hover:brightness-110 text-white text-xs font-extrabold uppercase tracking-wider shadow-md hover:shadow-lg transition-all flex items-center space-x-2 cursor-pointer"
               >
                 <Download className="w-4 h-4 text-white" />
                 <span>Download Executive eBook</span>
                 <ArrowRight className="w-4 h-4 text-[#FFB340]" />
               </button>
-              <span className="text-xs font-mono text-[#38BDF8] font-bold flex items-center space-x-1.5 uppercase">
-                <ShieldCheck className="w-4 h-4 text-[#38BDF8]" />
+              <span className="text-xs font-mono text-[#008579] font-bold flex items-center space-x-1.5 uppercase">
+                <ShieldCheck className="w-4 h-4 text-[#008579]" />
                 <span>CONFIDENTIAL BOARD ADVISORY</span>
               </span>
             </div>
@@ -199,7 +196,7 @@ export default function ResolverResourceHub({ onOpenAudit }) {
 
           {/* Right Column: 3D Executive eBook Cover */}
           <div className="lg:col-span-4 flex justify-center relative z-10">
-            <div className="w-48 sm:w-52 aspect-[3/4] rounded-xl border border-[#38BDF8]/60 shadow-[0_0_25px_rgba(56,189,248,0.3)] overflow-hidden relative bg-[#0B2545] group-hover:scale-105 transition-transform duration-500">
+            <div className="w-48 sm:w-52 aspect-[3/4] rounded-xl border border-slate-200 shadow-xl overflow-hidden relative bg-slate-900 group-hover:scale-105 transition-transform duration-500">
               <img
                 src="/images/ebook_cover.png"
                 alt="2026 Enterprise Risk Management & Board Telemetry Guide eBook"
