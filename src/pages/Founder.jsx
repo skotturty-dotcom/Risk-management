@@ -30,26 +30,34 @@ export default function Founder({ onOpenAudit }) {
         <div className="p-8 md:p-12 rounded-3xl border border-[#38BDF8]/40 bg-gradient-to-br from-[#0B2545] via-[#13315C] to-[#061A33] grid grid-cols-1 lg:grid-cols-12 gap-10 items-center shadow-2xl text-white">
           {/* Left Column: Clean Executive Emblem Card */}
           <div className="lg:col-span-5 relative">
-            <div className="relative aspect-[4/5] rounded-2xl bg-gradient-to-br from-[#0F3161] via-[#00437E] to-[#06152B] text-white border-2 border-[#008579] flex flex-col items-center justify-center p-6 sm:p-8 text-center shadow-2xl overflow-hidden group">
-              <div className="w-32 h-32 sm:w-36 sm:h-36 rounded-full border-2 border-[#FFB340] dark:border-[#55D9CC] overflow-hidden shadow-2xl mb-5 group-hover:scale-105 transition-transform duration-300 shrink-0">
-                <img
-                  src="/images/founder.png"
-                  alt={founderData.name}
-                  className="w-full h-full object-cover object-top"
-                />
+            <div className="relative rounded-3xl bg-white text-slate-900 border border-slate-200 hover:border-[#008579] flex flex-col items-center justify-center p-6 sm:p-8 text-center shadow-2xl overflow-hidden group space-y-3 transition-all duration-300">
+              <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-[#008579] via-[#38BDF8] to-[#FFB340]" />
+              
+              <div className="relative w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 rounded-2xl p-1 bg-gradient-to-tr from-[#008579] via-[#38BDF8] to-[#FFB340] shadow-2xl group-hover:scale-[1.01] transition-transform duration-300 shrink-0 mt-1">
+                <div className="w-full h-full rounded-xl border-2 border-white overflow-hidden bg-slate-100">
+                  <img
+                    src="/images/founder.png"
+                    alt={founderData.name}
+                    className="w-full h-full object-cover object-top"
+                  />
+                </div>
               </div>
-              <h3 className="text-2xl font-extrabold font-display text-white">
-                {founderData.name}
-              </h3>
-              <p className="text-xs font-sans text-[#FFB340] uppercase tracking-wider mt-2 font-extrabold px-3 py-1 rounded bg-white/10 border border-white/20">
-                {founderData.designation}
-              </p>
-              <div className="mt-6 pt-5 border-t border-white/10 text-xs font-sans text-teal-200 font-semibold space-y-1 w-full">
-                <p className="flex items-center justify-center space-x-1.5">
-                  <UserCheck className="w-4 h-4 text-[#FFB340]" />
+
+              <div className="space-y-1 pt-1">
+                <h3 className="text-base sm:text-lg font-bold font-display text-[#06182D] tracking-tight uppercase">
+                  {founderData.name}
+                </h3>
+                <span className="inline-block text-[10px] font-mono font-bold text-[#008579] uppercase tracking-widest px-3 py-0.5 rounded-full bg-teal-50 border border-teal-200/80 shadow-sm">
+                  {founderData.designation}
+                </span>
+              </div>
+
+              <div className="w-full pt-2.5 border-t border-slate-100 font-sans space-y-0.5">
+                <p className="flex items-center justify-center space-x-1.5 text-[10px] font-mono font-extrabold text-[#06182D] tracking-wider uppercase">
+                  <UserCheck className="w-3 h-3 text-[#008579]" />
                   <span>SRAJAI TECH FOUNDER</span>
                 </p>
-                <p className="text-[11px] text-slate-300">Enterprise Risk Strategy & ERM Specialist</p>
+                <p className="text-[10px] text-slate-500 font-medium">Enterprise Risk Strategy & ERM Specialist</p>
               </div>
             </div>
           </div>
