@@ -104,45 +104,45 @@ export default function ResolverResourceHub({ onOpenAudit }) {
 
   return (
     <div className="space-y-8">
-      {/* Resolver Header Banner */}
-      <div className="glass-panel p-6 md:p-8 rounded-2xl border border-[rgba(72,214,201,0.18)] bg-[#0A1725] text-white space-y-6 shadow-2xl">
+      {/* Resolver Header Banner - BRIGHT WHITE CONTAINER */}
+      <div className="p-6 md:p-8 rounded-2xl border border-slate-200 bg-white text-[#06182D] space-y-6 shadow-xl">
         <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
           <div className="space-y-1.5">
-            <span className="text-xs font-mono font-bold text-[#55D9CC] uppercase tracking-widest px-3 py-0.5 rounded bg-[rgba(40,199,183,0.10)] border border-[rgba(72,214,201,0.25)]">
+            <span className="text-xs font-mono font-bold text-[#008579] uppercase tracking-widest px-3 py-1 rounded bg-teal-50 border border-teal-200">
               RESOLVER ADVISORY MODEL
             </span>
-            <h2 className="text-2xl md:text-3xl font-extrabold font-display text-white">
+            <h2 className="text-2xl md:text-3xl font-extrabold font-display text-[#06182D]">
               Risk Management & Security Resource Hub
             </h2>
-            <p className="text-sm text-[#CBD5E1] font-normal max-w-2xl">
+            <p className="text-sm text-dark-navy font-semibold max-w-2xl">
               Explore playbooks, eBooks, datasheets, case studies, and executive benchmark reports curated by Srajai Tech principal strategists.
             </p>
           </div>
 
           {/* Search Bar */}
           <div className="relative w-full lg:w-80 shrink-0">
-            <Search className="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-400" />
+            <Search className="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-500" />
             <input
               type="text"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder="Search resources..."
-              className="w-full pl-10 pr-3.5 py-2.5 rounded-xl bg-[#06152B] border border-white/15 text-xs text-white placeholder-gray-400 focus:outline-none focus:border-[#55D9CC] transition-colors shadow-sm font-medium"
+              className="w-full pl-10 pr-3.5 py-2.5 rounded-xl bg-slate-50 border border-slate-300 text-xs text-slate-900 placeholder-slate-500 focus:outline-none focus:border-[#008579] transition-colors shadow-sm font-semibold"
             />
           </div>
         </div>
 
         {/* Filter Category Tabs */}
-        <div className="flex items-center space-x-2 overflow-x-auto pb-1 no-scrollbar pt-2 border-t border-white/10">
-          <Filter className="w-3.5 h-3.5 text-[#55D9CC] shrink-0 mr-1" />
+        <div className="flex items-center space-x-2 overflow-x-auto pb-1 no-scrollbar pt-2 border-t border-slate-200">
+          <Filter className="w-3.5 h-3.5 text-[#008579] shrink-0 mr-1" />
           {categories.map((cat) => (
             <button
               key={cat}
               onClick={() => setSelectedCategory(cat)}
-              className={`px-3 py-1.5 rounded-md text-[11px] font-mono font-bold uppercase tracking-wider transition-all whitespace-nowrap border ${
+              className={`px-3.5 py-1.5 rounded-md text-[11px] font-mono font-bold uppercase tracking-wider transition-all whitespace-nowrap border ${
                 selectedCategory === cat
-                  ? 'bg-gradient-to-r from-[#008579] to-[#0F3161] text-white border-[#55D9CC] shadow-sm'
-                  : 'bg-[#06152B] text-[#CBD5E1] border-white/10 hover:border-[#55D9CC]/50'
+                  ? 'bg-[#008579] text-white border-[#008579] shadow-sm'
+                  : 'bg-slate-100 text-slate-700 border-slate-200 hover:bg-slate-200'
               }`}
             >
               {cat}
@@ -151,40 +151,40 @@ export default function ResolverResourceHub({ onOpenAudit }) {
         </div>
       </div>
 
-      {/* Featured Resource Banner */}
+      {/* Featured Resource Banner - BRIGHT WHITE CONTAINER */}
       {featuredResource && selectedCategory === 'ALL RESOURCES' && !searchQuery && (
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
-          className="rounded-2xl p-6 md:p-8 text-white bg-[#06152B] border border-teal-500/30 grid grid-cols-1 lg:grid-cols-12 gap-6 items-center shadow-lg relative overflow-hidden"
+          className="rounded-2xl p-6 md:p-8 text-[#06182D] bg-white border border-slate-200 grid grid-cols-1 lg:grid-cols-12 gap-6 items-center shadow-xl relative overflow-hidden"
         >
           <div className="lg:col-span-8 space-y-4 relative z-10">
             <div className="flex items-center space-x-3">
-              <span className="text-[11px] font-mono font-extrabold text-[#06152B] uppercase tracking-wider px-2.5 py-0.5 rounded bg-[#FFB340]">
+              <span className="text-[11px] font-mono font-extrabold text-[#06182D] uppercase tracking-wider px-2.5 py-0.5 rounded bg-[#FFB340]">
                 {featuredResource.tag}
               </span>
-              <span className="text-xs font-mono text-amber-300 font-bold">{featuredResource.readTime}</span>
+              <span className="text-xs font-mono text-[#008579] font-bold">{featuredResource.readTime}</span>
             </div>
 
-            <h3 className="text-xl md:text-3xl font-extrabold font-display text-white leading-tight">
+            <h3 className="text-xl md:text-3xl font-extrabold font-display text-[#06182D] leading-tight">
               {featuredResource.title}
             </h3>
 
-            <p className="text-sm text-[#CBD5E1] font-normal leading-relaxed max-w-2xl">
+            <p className="text-sm text-dark-navy font-semibold leading-relaxed max-w-2xl">
               {featuredResource.desc}
             </p>
 
             <div className="pt-2 flex flex-wrap items-center gap-3">
               <button
                 onClick={onOpenAudit}
-                className="px-5 py-2.5 rounded-lg bg-[#008579] hover:bg-[#00685E] text-white text-xs font-bold uppercase tracking-wider shadow-md transition-all flex items-center space-x-2"
+                className="px-5 py-2.5 rounded-lg bg-[#008579] hover:bg-[#00685E] text-white text-xs font-extrabold uppercase tracking-wider shadow-md transition-all flex items-center space-x-2 cursor-pointer"
               >
                 <Download className="w-3.5 h-3.5 text-white" />
                 <span>Download Executive eBook</span>
                 <ArrowRight className="w-3.5 h-3.5 text-[#FFB340]" />
               </button>
-              <span className="text-xs font-mono text-[#55D9CC] font-bold flex items-center space-x-1.5 uppercase">
-                <ShieldCheck className="w-3.5 h-3.5 text-[#FFB340]" />
+              <span className="text-xs font-mono text-[#008579] font-extrabold flex items-center space-x-1.5 uppercase">
+                <ShieldCheck className="w-3.5 h-3.5 text-[#008579]" />
                 <span>CONFIDENTIAL BOARD ADVISORY</span>
               </span>
             </div>
@@ -192,7 +192,7 @@ export default function ResolverResourceHub({ onOpenAudit }) {
 
           {/* Right Column: 3D Executive eBook Cover */}
           <div className="lg:col-span-4 flex justify-center relative z-10">
-            <div className="w-48 sm:w-52 aspect-[3/4] rounded-xl border border-teal-500/30 shadow-xl overflow-hidden relative bg-[#06152B]">
+            <div className="w-48 sm:w-52 aspect-[3/4] rounded-xl border border-slate-200 shadow-xl overflow-hidden relative bg-slate-100">
               <img
                 src="/images/ebook_cover.png"
                 alt="2026 Enterprise Risk Management & Board Telemetry Guide eBook"
