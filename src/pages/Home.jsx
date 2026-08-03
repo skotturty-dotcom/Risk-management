@@ -432,19 +432,19 @@ export default function Home({ onOpenAudit }) {
               animate={{ y: [0, -6, 0] }}
               transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
               whileHover={{ y: -10, scale: 1.02 }}
-              className="p-6 rounded-2xl bg-[#0A1725] text-white border border-[rgba(72,214,201,0.18)] hover:border-[#55D9CC] space-y-3 shadow-xl relative overflow-hidden group"
+              className="p-6 rounded-2xl bg-slate-100 text-slate-900 border border-slate-300 hover:border-[#008579] space-y-3 shadow-lg relative overflow-hidden group"
             >
               <div className="flex items-center justify-between">
-                <span className="text-2xl font-mono font-bold text-[#55D9CC]">01</span>
-                <div className="p-2.5 rounded-xl bg-[rgba(40,199,183,0.10)] border border-[rgba(72,214,201,0.25)] text-[#55D9CC] group-hover:scale-110 transition-transform">
+                <span className="text-2xl font-mono font-extrabold text-[#008579]">01</span>
+                <div className="p-2.5 rounded-xl bg-white border border-slate-300 text-[#008579] group-hover:scale-110 transition-transform shadow-sm">
                   <Target className="w-5 h-5" />
                 </div>
               </div>
-              <h3 className="text-xl font-bold font-display text-white">Diagnose</h3>
-              <p className="text-xs font-mono uppercase text-[#55D9CC] tracking-wider font-bold">
+              <h3 className="text-xl font-extrabold font-display text-[#06182D]">Diagnose</h3>
+              <p className="text-xs font-mono uppercase text-[#008579] tracking-wider font-extrabold">
                 Understand Organizational Exposure
               </p>
-              <p className="text-xs text-[#CBD5E1] leading-relaxed font-normal">
+              <p className="text-xs text-slate-800 leading-relaxed font-medium">
                 Comprehensive diagnostic scanning across data, capital, contract liabilities, and third-party dependencies.
               </p>
             </motion.div>
@@ -453,19 +453,19 @@ export default function Home({ onOpenAudit }) {
               animate={{ y: [0, 6, 0] }}
               transition={{ duration: 4.5, repeat: Infinity, ease: 'easeInOut' }}
               whileHover={{ y: -10, scale: 1.02 }}
-              className="p-6 rounded-2xl bg-[#0A1725] text-white border border-[rgba(72,214,201,0.18)] hover:border-[#55D9CC] space-y-3 shadow-xl relative overflow-hidden group"
+              className="p-6 rounded-2xl bg-slate-100 text-slate-900 border border-slate-300 hover:border-[#008579] space-y-3 shadow-lg relative overflow-hidden group"
             >
               <div className="flex items-center justify-between">
-                <span className="text-2xl font-mono font-bold text-[#55D9CC]">02</span>
-                <div className="p-2.5 rounded-xl bg-[rgba(40,199,183,0.10)] border border-[rgba(72,214,201,0.25)] text-[#55D9CC] group-hover:scale-110 transition-transform">
+                <span className="text-2xl font-mono font-extrabold text-[#008579]">02</span>
+                <div className="p-2.5 rounded-xl bg-white border border-slate-300 text-[#008579] group-hover:scale-110 transition-transform shadow-sm">
                   <Layers className="w-5 h-5" />
                 </div>
               </div>
-              <h3 className="text-xl font-bold font-display text-white">Design</h3>
-              <p className="text-xs font-mono uppercase text-[#55D9CC] tracking-wider font-bold">
+              <h3 className="text-xl font-extrabold font-display text-[#06182D]">Design</h3>
+              <p className="text-xs font-mono uppercase text-[#008579] tracking-wider font-extrabold">
                 Build Resilience Architecture
               </p>
-              <p className="text-xs text-[#CBD5E1] leading-relaxed font-normal">
+              <p className="text-xs text-slate-800 leading-relaxed font-medium">
                 Formulating governance controls, KRIs, RCSA protocols, BCP architectures, and board appetite thresholds.
               </p>
             </motion.div>
@@ -474,19 +474,19 @@ export default function Home({ onOpenAudit }) {
               animate={{ y: [0, -6, 0] }}
               transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
               whileHover={{ y: -10, scale: 1.02 }}
-              className="p-6 rounded-2xl bg-[#0A1725] text-white border border-[rgba(72,214,201,0.18)] hover:border-[#55D9CC] space-y-3 shadow-xl relative overflow-hidden group"
+              className="p-6 rounded-2xl bg-slate-100 text-slate-900 border border-slate-300 hover:border-[#008579] space-y-3 shadow-lg relative overflow-hidden group"
             >
               <div className="flex items-center justify-between">
-                <span className="text-2xl font-mono font-bold text-[#55D9CC]">03</span>
-                <div className="p-2.5 rounded-xl bg-[rgba(40,199,183,0.10)] border border-[rgba(72,214,201,0.25)] text-[#55D9CC] group-hover:scale-110 transition-transform">
+                <span className="text-2xl font-mono font-extrabold text-[#008579]">03</span>
+                <div className="p-2.5 rounded-xl bg-white border border-slate-300 text-[#008579] group-hover:scale-110 transition-transform shadow-sm">
                   <Eye className="w-5 h-5" />
                 </div>
               </div>
-              <h3 className="text-xl font-bold font-display text-white">Strengthen</h3>
-              <p className="text-xs font-mono uppercase text-[#55D9CC] tracking-wider font-bold">
+              <h3 className="text-xl font-extrabold font-display text-[#06182D]">Strengthen</h3>
+              <p className="text-xs font-mono uppercase text-[#008579] tracking-wider font-extrabold">
                 Continuous Governance & Telemetry
               </p>
-              <p className="text-xs text-[#CBD5E1] leading-relaxed font-normal">
+              <p className="text-xs text-slate-800 leading-relaxed font-medium">
                 Continuous control monitoring, board dashboard reporting, whistleblower integrity testing, and optimization.
               </p>
             </motion.div>
