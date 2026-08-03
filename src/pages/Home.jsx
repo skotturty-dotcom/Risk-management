@@ -336,7 +336,7 @@ export default function Home({ onOpenAudit }) {
                     <span className="text-xs font-mono font-bold text-[#008579] dark:text-[#46A095] px-3 py-1 rounded-md bg-teal-50 dark:bg-teal-500/10 border border-teal-200 dark:border-teal-500/20">
                       PRACTICE DOMAIN {sol.number}
                     </span>
-                    <span className="text-xs font-mono text-slate-500 dark:text-gray-400 uppercase tracking-widest">
+                    <span className="text-xs font-mono text-slate-600 dark:text-slate-200 uppercase tracking-widest font-semibold">
                       ENTERPRISE ADVISORY
                     </span>
                   </div>
@@ -345,17 +345,17 @@ export default function Home({ onOpenAudit }) {
                     {sol.title}
                   </h3>
 
-                  <p className="text-slate-700 dark:text-gray-200 text-base leading-relaxed font-medium">
+                  <p className="text-slate-800 dark:text-slate-100 text-base leading-relaxed font-normal">
                     {sol.fullDesc}
                   </p>
 
                   <div className="space-y-3">
-                    <h4 className="text-xs font-mono font-bold text-[#008579] dark:text-[#46A095] uppercase tracking-wider">
+                    <h4 className="text-xs font-mono font-bold text-[#008579] dark:text-[#55D9CC] uppercase tracking-wider">
                       Core Framework Scope:
                     </h4>
                     <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                       {sol.features.map((feat, fIdx) => (
-                        <li key={fIdx} className="flex items-start space-x-2.5 text-sm text-slate-800 dark:text-gray-200 font-medium">
+                        <li key={fIdx} className="flex items-start space-x-2.5 text-sm text-slate-800 dark:text-slate-100 font-normal">
                           <CheckCircle2 className="w-4 h-4 text-[#008579] dark:text-[#46A095] shrink-0 mt-0.5" />
                           <span>{feat}</span>
                         </li>
@@ -437,7 +437,7 @@ export default function Home({ onOpenAudit }) {
               <p className="text-xs font-mono uppercase text-[#008579] dark:text-[#46A095] tracking-wider font-bold">
                 Understand Organizational Exposure
               </p>
-              <p className="text-xs text-slate-600 dark:text-gray-400 leading-relaxed font-medium">
+              <p className="text-xs text-slate-700 dark:text-slate-100 leading-relaxed font-normal">
                 Comprehensive diagnostic scanning across data, capital, contract liabilities, and third-party dependencies.
               </p>
             </div>
@@ -451,7 +451,7 @@ export default function Home({ onOpenAudit }) {
               <p className="text-xs font-mono uppercase text-[#008579] dark:text-[#46A095] tracking-wider font-bold">
                 Build Resilience Architecture
               </p>
-              <p className="text-xs text-slate-600 dark:text-gray-400 leading-relaxed font-medium">
+              <p className="text-xs text-slate-700 dark:text-slate-100 leading-relaxed font-normal">
                 Formulating governance controls, KRIs, RCSA protocols, BCP architectures, and board appetite thresholds.
               </p>
             </div>
@@ -465,7 +465,7 @@ export default function Home({ onOpenAudit }) {
               <p className="text-xs font-mono uppercase text-[#008579] dark:text-[#46A095] tracking-wider font-bold">
                 Continuous Governance & Telemetry
               </p>
-              <p className="text-xs text-slate-600 dark:text-gray-400 leading-relaxed font-medium">
+              <p className="text-xs text-slate-700 dark:text-slate-100 leading-relaxed font-normal">
                 Continuous control monitoring, board dashboard reporting, whistleblower integrity testing, and optimization.
               </p>
             </div>

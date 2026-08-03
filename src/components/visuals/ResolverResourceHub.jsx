@@ -217,44 +217,44 @@ export default function ResolverResourceHub({ onOpenAudit }) {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.98 }}
                 whileHover={{ y: -4 }}
-                className="glass-panel p-5 rounded-2xl border border-slate-200 dark:border-white/10 hover:border-[#008579] dark:hover:border-[#46A095] transition-all duration-200 flex flex-col justify-between group shadow-sm bg-white dark:bg-[#0F2342]"
+                className="glass-panel p-5 rounded-2xl border border-slate-200 dark:border-white/15 hover:border-[#008579] dark:hover:border-[#55D9CC] transition-all duration-200 flex flex-col justify-between group shadow-sm bg-white dark:bg-[#0F2342]"
               >
                 <div className="space-y-3">
                   {/* Top Badges & Category Icon */}
                   <div className="flex items-center justify-between">
                     <div className="flex items-center space-x-2">
-                      <div className="w-7 h-7 rounded-md bg-teal-50 dark:bg-teal-500/10 border border-teal-200 dark:border-teal-500/20 flex items-center justify-center text-[#008579] dark:text-[#46A095]">
+                      <div className="w-7 h-7 rounded-md bg-teal-50 dark:bg-teal-500/20 border border-teal-200 dark:border-teal-500/40 flex items-center justify-center text-[#008579] dark:text-[#55D9CC]">
                         <IconComponent className="w-3.5 h-3.5" />
                       </div>
-                      <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-[#008579] dark:text-[#46A095] bg-teal-50 dark:bg-teal-500/10 px-2 py-0.5 rounded border border-teal-200 dark:border-teal-500/20">
+                      <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-[#008579] dark:text-[#55D9CC] bg-teal-50 dark:bg-teal-500/20 px-2 py-0.5 rounded border border-teal-200 dark:border-teal-500/30">
                         {res.tag}
                       </span>
                     </div>
 
-                    <span className="text-[11px] font-mono text-slate-500 dark:text-gray-400 font-medium">
+                    <span className="text-[11px] font-mono text-slate-600 dark:text-slate-200 font-semibold">
                       {res.readTime}
                     </span>
                   </div>
 
                   {/* Title */}
-                  <h4 className="text-base font-bold font-display text-[#0F3161] dark:text-white group-hover:text-[#008579] dark:group-hover:text-[#46A095] transition-colors leading-snug">
+                  <h4 className="text-base font-bold font-display text-[#0F3161] dark:text-white group-hover:text-[#008579] dark:group-hover:text-[#55D9CC] transition-colors leading-snug">
                     {res.title}
                   </h4>
 
                   {/* Description */}
-                  <p className="text-xs text-slate-600 dark:text-gray-300 leading-relaxed font-medium line-clamp-3">
+                  <p className="text-xs text-slate-700 dark:text-slate-100 leading-relaxed font-normal line-clamp-3">
                     {res.desc}
                   </p>
                 </div>
 
                 {/* Simple Action Footer */}
-                <div className="pt-4 mt-3 border-t border-slate-200 dark:border-white/10 flex items-center justify-between">
-                  <span className="text-[11px] font-mono text-slate-500 dark:text-gray-400 uppercase font-semibold">
+                <div className="pt-4 mt-3 border-t border-slate-200 dark:border-white/15 flex items-center justify-between">
+                  <span className="text-[11px] font-mono text-slate-600 dark:text-slate-200 uppercase font-bold tracking-wider">
                     {res.type}
                   </span>
                   <button
                     onClick={onOpenAudit}
-                    className="inline-flex items-center space-x-1 text-xs font-bold text-[#008579] dark:text-[#46A095] hover:underline"
+                    className="inline-flex items-center space-x-1.5 text-xs font-extrabold text-[#008579] dark:text-[#55D9CC] hover:underline"
                   >
                     <span>Download</span>
                     <ArrowRight className="w-3.5 h-3.5 text-[#FFB340] group-hover:translate-x-0.5 transition-transform" />
