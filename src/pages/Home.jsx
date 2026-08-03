@@ -311,14 +311,16 @@ ${contactData.fullName}`;
                 </p>
               </div>
 
-              {/* Expertise Cards Grid */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-0.5">
+              {/* Expertise Cards Grid - Highlighted White Cards */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
                 {founderData.expertise.map((exp, idx) => (
-                  <div key={idx} className="p-3 rounded-lg bg-white/5 border border-white/10 hover:border-[#55D9CC] space-y-0.5 transition-all shadow-sm">
-                    <h4 className="text-[11px] font-bold text-white font-display">
-                      {exp.title}
+                  <div key={idx} className="relative p-3.5 rounded-xl bg-white text-slate-900 border-2 border-teal-500/40 hover:border-[#008579] space-y-1 shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group">
+                    <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#008579] via-[#38BDF8] to-[#FFB340]" />
+                    <h4 className="text-xs sm:text-sm font-extrabold text-[#06182D] font-display flex items-center space-x-1.5 pt-0.5">
+                      <CheckCircle2 className="w-3.5 h-3.5 text-[#008579] shrink-0" />
+                      <span>{exp.title}</span>
                     </h4>
-                    <p className="text-[10px] text-slate-300 font-normal leading-normal">
+                    <p className="text-[10px] sm:text-[11px] text-slate-700 font-medium leading-normal">
                       {exp.desc}
                     </p>
                   </div>
