@@ -124,9 +124,9 @@ export default function Footer({ onOpenAudit }) {
             </p>
             <button
               onClick={onOpenAudit}
-              className="w-full py-3.5 rounded-xl bg-gradient-to-r from-[#00A896] via-[#28C7B7] to-[#008579] hover:brightness-110 text-white font-extrabold text-xs uppercase tracking-wider shadow-xl shadow-teal-500/30 transition-all hover:scale-105 flex items-center justify-center space-x-2 border border-[#55D9CC]/50"
+              className="w-full py-3.5 rounded-xl bg-[#55D9CC] hover:bg-[#28C7B7] text-[#06182D] font-extrabold text-xs uppercase tracking-wider shadow-2xl shadow-[#55D9CC]/40 transition-all hover:scale-105 flex items-center justify-center space-x-2 border-2 border-white cursor-pointer"
             >
-              <Lock className="w-4 h-4 text-[#FFB340]" />
+              <Lock className="w-4 h-4 text-[#06182D]" />
               <span>Request Diagnostic Audit</span>
             </button>
           </div>
