@@ -327,36 +327,36 @@ export default function Home({ onOpenAudit }) {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
-                className={`glass-panel p-8 md:p-12 rounded-3xl border border-slate-200 dark:border-white/10 hover:border-[#008579] dark:hover:border-[#46A095] transition-all duration-300 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center ${
+                className={`glass-panel p-8 md:p-12 rounded-3xl border border-[rgba(72,214,201,0.18)] hover:border-[#55D9CC] transition-all duration-300 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-[#0A1725] text-white shadow-2xl ${
                   !isEven ? 'lg:flex-row-reverse' : ''
                 }`}
               >
                 <div className={`space-y-6 ${isEven ? 'lg:col-span-7' : 'lg:col-span-7 lg:order-2'}`}>
                   <div className="flex items-center space-x-3">
-                    <span className="text-xs font-mono font-bold text-[#008579] dark:text-[#46A095] px-3 py-1 rounded-md bg-teal-50 dark:bg-teal-500/10 border border-teal-200 dark:border-teal-500/20">
+                    <span className="text-xs font-mono font-bold text-[#55D9CC] px-3 py-1 rounded-md bg-[rgba(40,199,183,0.10)] border border-[rgba(72,214,201,0.25)]">
                       PRACTICE DOMAIN {sol.number}
                     </span>
-                    <span className="text-xs font-mono text-slate-600 dark:text-slate-200 uppercase tracking-widest font-semibold">
+                    <span className="text-xs font-mono text-[#B8C4CF] uppercase tracking-widest font-semibold">
                       ENTERPRISE ADVISORY
                     </span>
                   </div>
 
-                  <h3 className="text-2xl md:text-3xl font-extrabold font-display text-[#0F3161] dark:text-white">
+                  <h3 className="text-2xl md:text-3xl font-extrabold font-display text-white">
                     {sol.title}
                   </h3>
 
-                  <p className="text-slate-800 dark:text-slate-100 text-base leading-relaxed font-normal">
+                  <p className="text-white text-base leading-relaxed font-normal">
                     {sol.fullDesc}
                   </p>
 
                   <div className="space-y-3">
-                    <h4 className="text-xs font-mono font-bold text-[#008579] dark:text-[#55D9CC] uppercase tracking-wider">
+                    <h4 className="text-xs font-mono font-bold text-[#55D9CC] uppercase tracking-wider">
                       Core Framework Scope:
                     </h4>
                     <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                       {sol.features.map((feat, fIdx) => (
-                        <li key={fIdx} className="flex items-start space-x-2.5 text-sm text-slate-800 dark:text-slate-100 font-normal">
-                          <CheckCircle2 className="w-4 h-4 text-[#008579] dark:text-[#46A095] shrink-0 mt-0.5" />
+                        <li key={fIdx} className="flex items-start space-x-2.5 text-sm text-white font-normal">
+                          <CheckCircle2 className="w-4 h-4 text-[#55D9CC] shrink-0 mt-0.5" />
                           <span>{feat}</span>
                         </li>
                       ))}

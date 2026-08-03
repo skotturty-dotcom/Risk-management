@@ -131,12 +131,12 @@ export default function Solutions({ onOpenAudit }) {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 pt-2">
               {selectedPractice.features?.map((feat, fIdx) => (
-                <div key={fIdx} className="p-4 rounded-xl bg-slate-50 dark:bg-[#06152B] border border-slate-200 dark:border-white/10 space-y-1 shadow-sm">
-                  <div className="flex items-center space-x-2 text-[#008579] dark:text-[#46A095]">
+                <div key={fIdx} className="p-4 rounded-xl bg-[#0A1725] border border-[rgba(72,214,201,0.18)] space-y-1 shadow-md">
+                  <div className="flex items-center space-x-2 text-[#55D9CC]">
                     <CheckCircle2 className="w-4 h-4 text-[#FFB340]" />
                     <span className="text-xs font-mono font-bold uppercase">Control Core 0{fIdx + 1}</span>
                   </div>
-                  <p className="text-xs md:text-sm text-slate-800 dark:text-gray-100 font-bold leading-relaxed">{feat}</p>
+                  <p className="text-xs md:text-sm text-white font-bold leading-relaxed">{feat}</p>
                 </div>
               ))}
             </div>
