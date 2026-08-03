@@ -65,17 +65,11 @@ export default function Footer({ onOpenAudit }) {
           {/* Col 1: Brand Info */}
           <div className="lg:col-span-2 space-y-4">
             <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 rounded-xl bg-[#008579]/20 border border-teal-400/40 flex items-center justify-center text-[#46A095]">
-                <Shield className="w-5 h-5" />
-              </div>
-              <div className="flex flex-col">
-                <span className="font-display text-xl font-extrabold tracking-wider text-white">
-                  SRAJAI TECH
-                </span>
-                <span className="text-[9px] uppercase tracking-widest text-[#46A095] font-mono font-bold">
-                  STRATEGIC RISK ADVISORY
-                </span>
-              </div>
+              <img
+                src="/logo-dark.png"
+                alt="Srajai Tech Logo"
+                className="h-11 md:h-12 w-auto object-contain"
+              />
             </div>
 
             <p className="text-xs text-slate-300 leading-relaxed font-medium max-w-sm">
@@ -140,9 +134,26 @@ export default function Footer({ onOpenAudit }) {
         {/* Bottom Bar */}
         <div className="pt-12 mt-12 border-t border-slate-800 flex flex-col md:flex-row items-center justify-between text-xs text-slate-400 font-mono gap-4">
           <p>© {new Date().getFullYear()} Srajai Tech. All Rights Reserved. Strategic Risk Advisory & Intelligence.</p>
-          <div className="flex items-center space-x-6">
+          <div className="flex flex-wrap items-center gap-4">
             <span className="text-[#46A095]">ISO 31000 & COSO Compliant</span>
-            <span>Direct Contact: Aegisrisk@gmail.com</span>
+            <div className="flex items-center gap-3">
+              <a href="mailto:srajaitech@gmail.com" className="hover:text-white transition-colors">
+                srajaitech@gmail.com
+              </a>
+              <span>•</span>
+              <a href="tel:+919182119045" className="hover:text-white transition-colors">
+                +91 9182119045
+              </a>
+              <span>•</span>
+              <a
+                href="https://wa.me/919182119045"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#25D366] hover:underline font-bold"
+              >
+                WhatsApp
+              </a>
+            </div>
           </div>
         </div>
       </div>

@@ -45,17 +45,11 @@ export default function Navbar({ onOpenAudit }) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         {/* Brand Logo */}
         <NavLink to="/" className="flex items-center space-x-3 group shrink-0">
-          <div className="relative w-10 h-10 rounded-xl bg-[rgba(40,199,183,0.10)] border border-[rgba(40,199,183,0.35)] flex items-center justify-center group-hover:border-[#55D9CC] transition-colors shadow-sm shrink-0">
-            <Shield className="w-5 h-5 text-[#55D9CC] group-hover:scale-110 transition-transform duration-300" />
-          </div>
-          <div className="flex flex-col justify-center">
-            <span className="font-display text-xl font-bold tracking-tight text-[#F5F8FA] group-hover:text-[#55D9CC] transition-colors leading-none">
-              Srajai Tech
-            </span>
-            <span className="text-[11px] font-sans font-semibold tracking-wider text-[#55D9CC] block mt-1 whitespace-nowrap">
-              Risk Advisory
-            </span>
-          </div>
+          <img
+            src="/logo-dark.png"
+            alt="Srajai Tech Logo"
+            className="h-10 md:h-12 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
+          />
         </NavLink>
 
         {/* Desktop Navigation Links */}

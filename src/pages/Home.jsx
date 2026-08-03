@@ -16,7 +16,7 @@ import { frameworkArchitecture, frameworkFoundations } from '../data/frameworkDa
 import { founderData } from '../data/founderData';
 import {
   ShieldCheck, ArrowRight, CheckCircle2, Building2, ChevronDown, Lock,
-  TrendingUp, Activity, FileCheck, Users, Search, Mail, MapPin, Clock, Quote,
+  TrendingUp, Activity, FileCheck, Users, Search, Mail, MapPin, Clock, Quote, Phone, MessageSquare,
   Award, Briefcase, Target, Layers, Eye, Sliders, ChevronRight, Landmark, Cloud,
   HeartPulse, Pill, Factory, ShoppingCart, Wifi, Zap, Truck, Car, Scale, GraduationCap,
   Plane, Film, Sprout
@@ -655,11 +655,45 @@ export default function Home({ onOpenAudit }) {
                       DIRECT EMAIL
                     </span>
                     <a
-                      href="mailto:Aegisrisk@gmail.com"
+                      href="mailto:srajaitech@gmail.com"
                       className="text-[#0F3161] dark:text-white hover:text-[#008579] dark:hover:text-[#46A095] font-mono text-sm font-bold transition-colors"
                     >
-                      Aegisrisk@gmail.com
+                      srajaitech@gmail.com
                     </a>
+                  </div>
+                </div>
+
+                <div className="flex items-start space-x-4">
+                  <div className="w-10 h-10 rounded-xl bg-teal-50 dark:bg-teal-500/10 border border-teal-200 dark:border-teal-500/30 flex items-center justify-center text-[#008579] dark:text-[#46A095] shrink-0">
+                    <Phone className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <span className="text-xs font-mono uppercase text-[#008579] dark:text-[#FFB340] font-extrabold block">
+                      PHONE & WHATSAPP
+                    </span>
+                    <a
+                      href="tel:+919182119045"
+                      className="text-[#0F3161] dark:text-white hover:text-[#008579] dark:hover:text-[#46A095] font-mono text-sm font-bold transition-colors block"
+                    >
+                      +91 9182119045
+                    </a>
+                    <div className="flex items-center gap-2 pt-1">
+                      <a
+                        href="tel:+919182119045"
+                        className="px-2 py-0.5 rounded text-[11px] font-bold bg-[#0F3161] text-white hover:bg-[#008579] transition-colors"
+                      >
+                        Call
+                      </a>
+                      <a
+                        href="https://wa.me/919182119045"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="px-2 py-0.5 rounded text-[11px] font-bold bg-[#25D366] text-white hover:bg-[#1DA851] transition-colors flex items-center gap-1"
+                      >
+                        <MessageSquare className="w-3 h-3" />
+                        WhatsApp
+                      </a>
+                    </div>
                   </div>
                 </div>
 

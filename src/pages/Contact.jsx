@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, MapPin, Clock, Send, ShieldCheck, CheckCircle2, Phone, Building } from 'lucide-react';
+import { Mail, MapPin, Clock, Send, ShieldCheck, CheckCircle2, Phone, Building, MessageSquare } from 'lucide-react';
 
 const contactInfo = {
-  email: 'Aegisrisk@gmail.com',
+  email: 'srajaitech@gmail.com',
+  phone: '+91 9182119045',
+  whatsapp: '919182119045',
   location: 'Hyderabad, Telangana, India',
   hours: 'Monday – Friday, 09:00 – 18:00 IST'
 };
@@ -77,6 +79,41 @@ export default function Contact() {
 
               <div className="flex items-start space-x-4">
                 <div className="w-12 h-12 rounded-xl bg-teal-50 dark:bg-teal-500/10 border border-teal-200 dark:border-teal-500/30 flex items-center justify-center text-[#008579] dark:text-[#46A095] shrink-0 mt-1 shadow-sm">
+                  <Phone className="w-6 h-6" />
+                </div>
+                <div className="space-y-1.5">
+                  <span className="text-xs font-bold font-mono uppercase text-[#008579] dark:text-[#FFB340] tracking-wider block">
+                    PHONE & WHATSAPP
+                  </span>
+                  <a
+                    href={`tel:${contactInfo.phone.replace(/\s+/g, '')}`}
+                    className="text-base md:text-lg font-extrabold text-[#0F3161] dark:text-white hover:text-[#008579] dark:hover:text-[#46A095] transition-colors block"
+                  >
+                    {contactInfo.phone}
+                  </a>
+                  <div className="flex flex-wrap items-center gap-2 pt-1">
+                    <a
+                      href={`tel:${contactInfo.phone.replace(/\s+/g, '')}`}
+                      className="px-3 py-1 rounded-lg text-xs font-bold bg-[#0F3161] text-white hover:bg-[#008579] transition-colors flex items-center gap-1.5 shadow-sm"
+                    >
+                      <Phone className="w-3.5 h-3.5" />
+                      Call Now
+                    </a>
+                    <a
+                      href={`https://wa.me/${contactInfo.whatsapp}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-3 py-1 rounded-lg text-xs font-bold bg-[#25D366] text-white hover:bg-[#1DA851] transition-colors flex items-center gap-1.5 shadow-sm"
+                    >
+                      <MessageSquare className="w-3.5 h-3.5" />
+                      WhatsApp
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div className="flex items-start space-x-4">
+                <div className="w-12 h-12 rounded-xl bg-teal-50 dark:bg-teal-500/10 border border-teal-200 dark:border-teal-500/30 flex items-center justify-center text-[#008579] dark:text-[#46A095] shrink-0 mt-1 shadow-sm">
                   <MapPin className="w-6 h-6" />
                 </div>
                 <div>
@@ -105,7 +142,7 @@ export default function Contact() {
             </div>
 
             <div className="p-3.5 rounded-lg bg-slate-100 dark:bg-[#0B132B] border border-dashed border-slate-300 dark:border-teal-500/30 text-xs font-mono text-slate-800 dark:text-slate-200 font-semibold">
-              <strong className="text-[#008579] dark:text-[#FFB340]">NOTE:</strong> Direct email requests receive priority response within 24 hours.
+              <strong className="text-[#008579] dark:text-[#FFB340]">NOTE:</strong> Direct phone/WhatsApp and email requests receive priority response within 24 hours.
             </div>
           </div>
         </div>
