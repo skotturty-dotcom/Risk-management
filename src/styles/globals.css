@@ -231,3 +231,29 @@
 .animate-radar {
   animation: radarSweep 12s linear infinite;
 }
+
+/* Blue Glow & Shimmer Keyframes */
+@keyframes bluePulseGlow {
+  0%, 100% {
+    box-shadow: 0 4px 20px rgba(14, 165, 233, 0.25), 0 0 15px rgba(56, 189, 248, 0.2);
+    border-color: rgba(56, 189, 248, 0.5);
+  }
+  50% {
+    box-shadow: 0 8px 30px rgba(14, 165, 233, 0.5), 0 0 25px rgba(85, 217, 204, 0.4);
+    border-color: rgba(85, 217, 204, 0.85);
+  }
+}
+
+@keyframes shimmerBlue {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(200%); }
+}
+
+.animate-blue-glow {
+  animation: bluePulseGlow 3.5s infinite ease-in-out;
+}
+
+.animate-shimmer-blue {
+  animation: shimmerBlue 3s infinite linear;
+}
+

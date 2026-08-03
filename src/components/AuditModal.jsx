@@ -53,11 +53,26 @@ ${formData.fullName}`;
     setModalGmailUrl(gmail);
     setModalMailtoUrl(mailto);
 
-    // Auto open Gmail compose window immediately on click
-    try {
-      window.open(gmail, '_blank');
-    } catch (e) {
-      console.warn("Could not auto-open tab:", e);
+    // Auto open email composer window / app immediately on click
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || (typeof window !== 'undefined' && window.innerWidth <= 768);
+
+    if (isMobile) {
+      // On mobile devices, open native mail app directly with pre-filled composed email
+      const a = document.createElement('a');
+      a.href = mailto;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+    } else {
+      try {
+        const opened = window.open(gmail, '_blank');
+        if (!opened || opened.closed || typeof opened.closed === 'undefined') {
+          window.location.href = mailto;
+        }
+      } catch (e) {
+        console.warn("Could not auto-open tab:", e);
+        window.location.href = mailto;
+      }
     }
 
     try {
@@ -268,28 +283,28 @@ ${formData.fullName}`;
               </div>
               <div className="space-y-2">
                 <h3 className="text-2xl sm:text-3xl font-extrabold font-display text-[#06182D]">
-                  Audit Request Transmitted & Auto-Opened in Gmail!
+                  Audit Request Transmitted & Mail App Opened!
                 </h3>
                 <p className="text-slate-600 text-sm sm:text-base font-semibold max-w-sm mx-auto leading-relaxed">
-                  Your audit parameters have been sent to <strong className="text-[#008579]">srajaitech@gmail.com</strong> and pre-filled into Gmail.
+                  Your audit parameters have been sent to <strong className="text-[#008579]">srajaitech@gmail.com</strong> and pre-filled into your mail application.
                 </p>
               </div>
               <div className="flex flex-wrap items-center justify-center gap-3">
                 <a
-                  href={modalGmailUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href={modalMailtoUrl}
                   className="px-5 py-3 rounded-xl bg-[#008579] hover:bg-[#00685E] text-white font-extrabold text-xs uppercase tracking-wider shadow-md cursor-pointer transition-all inline-flex items-center space-x-2"
                 >
                   <Mail className="w-4 h-4 text-[#FFB340]" />
-                  <span>Open Gmail Web Compose</span>
+                  <span>Open Native Mail App</span>
                 </a>
                 <a
-                  href={modalMailtoUrl}
+                  href={modalGmailUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="px-5 py-3 rounded-xl bg-slate-700 hover:bg-slate-600 text-white font-extrabold text-xs uppercase tracking-wider shadow-md cursor-pointer transition-all inline-flex items-center space-x-2 border border-slate-500"
                 >
                   <Mail className="w-4 h-4 text-[#55D9CC]" />
-                  <span>Open System Mail App</span>
+                  <span>Open Gmail Web Compose</span>
                 </a>
                 <a
                   href={`https://wa.me/919182119045?text=${encodeURIComponent(

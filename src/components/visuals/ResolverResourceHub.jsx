@@ -154,19 +154,26 @@ export default function ResolverResourceHub({ onOpenAudit }) {
       {/* Featured Resource Banner */}
       {featuredResource && selectedCategory === 'ALL RESOURCES' && !searchQuery && (
         <motion.div
-          initial={{ opacity: 0, y: 10 }}
+          initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
-          className="rounded-2xl p-6 md:p-8 text-white bg-gradient-to-br from-[#0B2545] via-[#13315C] to-[#061A33] border border-[#38BDF8]/40 grid grid-cols-1 lg:grid-cols-12 gap-6 items-center shadow-xl relative overflow-hidden"
+          transition={{ duration: 0.5 }}
+          className="rounded-2xl p-6 md:p-8 text-white bg-gradient-to-br from-[#0A223D] via-[#0F355C] to-[#071B30] border border-[#38BDF8]/60 animate-blue-glow grid grid-cols-1 lg:grid-cols-12 gap-6 items-center shadow-[0_10px_35px_rgba(14,165,233,0.3)] relative overflow-hidden group"
         >
+          {/* Animated Shimmer Top Border */}
+          <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-transparent via-[#38BDF8] to-transparent opacity-80 animate-shimmer-blue" />
+          
+          {/* Glowing Ambient Background Orbs */}
+          <div className="absolute -top-20 -right-20 w-48 h-48 bg-[#38BDF8]/20 rounded-full blur-3xl group-hover:scale-150 group-hover:bg-[#38BDF8]/35 transition-all duration-700 pointer-events-none" />
+
           <div className="lg:col-span-8 space-y-4 relative z-10">
             <div className="flex items-center space-x-3">
-              <span className="text-[11px] font-mono font-extrabold text-[#06182D] uppercase tracking-wider px-2.5 py-0.5 rounded bg-[#FFB340]">
+              <span className="text-[11px] font-mono font-extrabold text-[#06182D] uppercase tracking-wider px-3 py-1 rounded-md bg-[#FFB340] shadow-sm">
                 {featuredResource.tag}
               </span>
               <span className="text-xs font-mono text-[#38BDF8] font-bold">{featuredResource.readTime}</span>
             </div>
 
-            <h3 className="text-xl md:text-3xl font-extrabold font-display text-white leading-tight">
+            <h3 className="text-xl md:text-3xl font-extrabold font-display text-white leading-tight group-hover:text-[#38BDF8] transition-colors">
               {featuredResource.title}
             </h3>
 
@@ -177,14 +184,14 @@ export default function ResolverResourceHub({ onOpenAudit }) {
             <div className="pt-2 flex flex-wrap items-center gap-3">
               <button
                 onClick={onOpenAudit}
-                className="px-5 py-2.5 rounded-lg bg-[#008579] hover:bg-[#00685E] text-white text-xs font-extrabold uppercase tracking-wider shadow-md transition-all flex items-center space-x-2 cursor-pointer"
+                className="px-5 py-2.5 rounded-xl bg-gradient-to-r from-[#008579] via-[#00A896] to-[#38BDF8] hover:brightness-110 text-white text-xs font-extrabold uppercase tracking-wider shadow-lg shadow-teal-500/20 transition-all flex items-center space-x-2 cursor-pointer"
               >
-                <Download className="w-3.5 h-3.5 text-white" />
+                <Download className="w-4 h-4 text-white" />
                 <span>Download Executive eBook</span>
-                <ArrowRight className="w-3.5 h-3.5 text-[#FFB340]" />
+                <ArrowRight className="w-4 h-4 text-[#FFB340]" />
               </button>
               <span className="text-xs font-mono text-[#38BDF8] font-bold flex items-center space-x-1.5 uppercase">
-                <ShieldCheck className="w-3.5 h-3.5 text-[#38BDF8]" />
+                <ShieldCheck className="w-4 h-4 text-[#38BDF8]" />
                 <span>CONFIDENTIAL BOARD ADVISORY</span>
               </span>
             </div>
@@ -192,7 +199,7 @@ export default function ResolverResourceHub({ onOpenAudit }) {
 
           {/* Right Column: 3D Executive eBook Cover */}
           <div className="lg:col-span-4 flex justify-center relative z-10">
-            <div className="w-48 sm:w-52 aspect-[3/4] rounded-xl border border-[#38BDF8]/40 shadow-xl overflow-hidden relative bg-[#0B2545]">
+            <div className="w-48 sm:w-52 aspect-[3/4] rounded-xl border border-[#38BDF8]/60 shadow-[0_0_25px_rgba(56,189,248,0.3)] overflow-hidden relative bg-[#0B2545] group-hover:scale-105 transition-transform duration-500">
               <img
                 src="/images/ebook_cover.png"
                 alt="2026 Enterprise Risk Management & Board Telemetry Guide eBook"
@@ -203,61 +210,69 @@ export default function ResolverResourceHub({ onOpenAudit }) {
         </motion.div>
       )}
 
-      {/* Resource Cards Grid - EXACT MATCH TO SECOND IMAGE */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+      {/* Resource Cards Grid - BLUE ANIMATED BOXES */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         <AnimatePresence>
-          {filteredResources.map((res) => {
+          {filteredResources.map((res, index) => {
             const IconComponent = res.icon || FileText;
 
             return (
               <motion.div
                 key={res.id}
                 layout
-                initial={{ opacity: 0, scale: 0.98 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.98 }}
-                whileHover={{ y: -5, scale: 1.01 }}
-                className="p-5 rounded-2xl cursor-pointer border border-[#38BDF8]/40 hover:border-[#38BDF8] transition-all duration-300 flex flex-col justify-between group shadow-xl hover:shadow-2xl bg-gradient-to-br from-[#0B2545] via-[#13315C] to-[#061A33] text-white"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, scale: 0.95 }}
+                transition={{ duration: 0.4, delay: index * 0.06 }}
+                whileHover={{ y: -8, scale: 1.025 }}
+                className="p-6 rounded-2xl cursor-pointer border border-[#38BDF8]/50 hover:border-[#55D9CC] transition-all duration-500 flex flex-col justify-between group relative overflow-hidden bg-gradient-to-br from-[#092039] via-[#0F355E] to-[#071A2E] text-white shadow-[0_6px_25px_rgba(14,165,233,0.22)] hover:shadow-[0_12px_40px_rgba(56,189,248,0.5)] animate-blue-glow"
               >
-                <div className="space-y-3">
+                {/* Animated Shimmer Beam across Top */}
+                <div className="absolute top-0 left-0 right-0 h-[2.5px] bg-gradient-to-r from-transparent via-[#38BDF8] to-transparent opacity-75 group-hover:opacity-100 group-hover:via-[#55D9CC] animate-shimmer-blue" />
+
+                {/* Animated Blue Ambient Radial Light */}
+                <div className="absolute -top-16 -right-16 w-36 h-36 bg-[#38BDF8]/20 rounded-full blur-2xl group-hover:bg-[#38BDF8]/40 group-hover:scale-150 transition-all duration-700 pointer-events-none" />
+                <div className="absolute -bottom-16 -left-16 w-36 h-36 bg-[#008579]/20 rounded-full blur-2xl group-hover:bg-[#55D9CC]/30 group-hover:scale-150 transition-all duration-700 pointer-events-none" />
+
+                <div className="space-y-4 relative z-10">
                   {/* Top Badges & Category Icon */}
                   <div className="flex items-center justify-between">
-                    <div className="flex items-center space-x-2">
-                      <div className="w-7 h-7 rounded-md bg-[#38BDF8]/15 border border-[#38BDF8]/30 flex items-center justify-center text-[#38BDF8]">
-                        <IconComponent className="w-3.5 h-3.5" />
+                    <div className="flex items-center space-x-2.5">
+                      <div className="w-8 h-8 rounded-xl bg-[#38BDF8]/20 border border-[#38BDF8]/40 flex items-center justify-center text-[#38BDF8] group-hover:bg-[#38BDF8] group-hover:text-[#06182D] group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-[0_0_12px_rgba(56,189,248,0.35)]">
+                        <IconComponent className="w-4 h-4" />
                       </div>
-                      <span className="text-[10px] font-mono font-extrabold uppercase tracking-wider text-[#38BDF8] bg-[#38BDF8]/15 px-2 py-0.5 rounded border border-[#38BDF8]/30 shadow-sm">
+                      <span className="text-[10px] font-mono font-extrabold uppercase tracking-wider text-[#38BDF8] bg-[#38BDF8]/20 px-2.5 py-0.5 rounded-md border border-[#38BDF8]/40 shadow-[0_0_10px_rgba(56,189,248,0.25)] group-hover:border-[#38BDF8] transition-all">
                         {res.tag}
                       </span>
                     </div>
 
-                    <span className="text-[11px] font-mono text-slate-300 font-semibold">
+                    <span className="text-[11px] font-mono text-[#94A3B8] font-semibold group-hover:text-[#E2E8F0] transition-colors">
                       {res.readTime}
                     </span>
                   </div>
 
                   {/* Title */}
-                  <h4 className="text-base font-extrabold font-display text-white group-hover:text-[#55D9CC] transition-colors leading-snug">
+                  <h4 className="text-base font-extrabold font-display text-white group-hover:text-[#38BDF8] transition-colors duration-300 leading-snug">
                     {res.title}
                   </h4>
 
                   {/* Description */}
-                  <p className="text-xs text-[#E2E8F0] leading-relaxed font-normal line-clamp-3">
+                  <p className="text-xs text-[#E2E8F0] leading-relaxed font-normal line-clamp-3 group-hover:text-white transition-colors duration-300">
                     {res.desc}
                   </p>
                 </div>
 
                 {/* Action Footer */}
-                <div className="pt-4 mt-3 border-t border-white/15 flex items-center justify-between">
-                  <span className="text-[10px] font-mono text-[#38BDF8] group-hover:text-white uppercase font-extrabold tracking-wider transition-colors">
+                <div className="pt-4 mt-4 border-t border-white/15 flex items-center justify-between relative z-10">
+                  <span className="text-[10px] font-mono text-[#38BDF8] group-hover:text-[#55D9CC] uppercase font-extrabold tracking-wider transition-colors">
                     {res.type}
                   </span>
                   <button
                     onClick={onOpenAudit}
-                    className="inline-flex items-center space-x-1.5 text-xs font-extrabold text-[#38BDF8] group-hover:text-white transition-colors cursor-pointer"
+                    className="inline-flex items-center space-x-1.5 px-3.5 py-1.5 rounded-lg bg-gradient-to-r from-[#008579] via-[#00A896] to-[#38BDF8] hover:brightness-110 text-xs font-extrabold text-white transition-all duration-300 shadow-md hover:shadow-cyan-500/40 cursor-pointer"
                   >
                     <span>Download</span>
-                    <ArrowRight className="w-3.5 h-3.5 text-[#38BDF8] group-hover:translate-x-1 transition-transform" />
+                    <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
                   </button>
                 </div>
               </motion.div>
