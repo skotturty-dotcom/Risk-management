@@ -428,47 +428,68 @@ export default function Home({ onOpenAudit }) {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="p-6 rounded-2xl bg-white dark:bg-[#06152B] border border-slate-200 dark:border-white/10 space-y-3 shadow-md">
+            <motion.div
+              animate={{ y: [0, -6, 0] }}
+              transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
+              whileHover={{ y: -10, scale: 1.02 }}
+              className="p-6 rounded-2xl bg-[#0A1725] text-white border border-[rgba(72,214,201,0.18)] hover:border-[#55D9CC] space-y-3 shadow-xl relative overflow-hidden group"
+            >
               <div className="flex items-center justify-between">
-                <span className="text-2xl font-mono font-bold text-[#008579] dark:text-[#46A095]">01</span>
-                <Target className="w-6 h-6 text-[#008579] dark:text-[#46A095]" />
+                <span className="text-2xl font-mono font-bold text-[#55D9CC]">01</span>
+                <div className="p-2.5 rounded-xl bg-[rgba(40,199,183,0.10)] border border-[rgba(72,214,201,0.25)] text-[#55D9CC] group-hover:scale-110 transition-transform">
+                  <Target className="w-5 h-5" />
+                </div>
               </div>
-              <h3 className="text-xl font-bold font-display text-[#0F3161] dark:text-white">Diagnose</h3>
-              <p className="text-xs font-mono uppercase text-[#008579] dark:text-[#46A095] tracking-wider font-bold">
+              <h3 className="text-xl font-bold font-display text-white">Diagnose</h3>
+              <p className="text-xs font-mono uppercase text-[#55D9CC] tracking-wider font-bold">
                 Understand Organizational Exposure
               </p>
-              <p className="text-xs text-slate-700 dark:text-slate-100 leading-relaxed font-normal">
+              <p className="text-xs text-[#CBD5E1] leading-relaxed font-normal">
                 Comprehensive diagnostic scanning across data, capital, contract liabilities, and third-party dependencies.
               </p>
-            </div>
+            </motion.div>
 
-            <div className="p-6 rounded-2xl bg-white dark:bg-[#06152B] border border-slate-200 dark:border-white/10 space-y-3 shadow-md">
+            <motion.div
+              animate={{ y: [0, 6, 0] }}
+              transition={{ duration: 4.5, repeat: Infinity, ease: 'easeInOut' }}
+              whileHover={{ y: -10, scale: 1.02 }}
+              className="p-6 rounded-2xl bg-[#0A1725] text-white border border-[rgba(72,214,201,0.18)] hover:border-[#55D9CC] space-y-3 shadow-xl relative overflow-hidden group"
+            >
               <div className="flex items-center justify-between">
-                <span className="text-2xl font-mono font-bold text-[#008579] dark:text-[#46A095]">02</span>
-                <Layers className="w-6 h-6 text-[#008579] dark:text-[#46A095]" />
+                <span className="text-2xl font-mono font-bold text-[#55D9CC]">02</span>
+                <div className="p-2.5 rounded-xl bg-[rgba(40,199,183,0.10)] border border-[rgba(72,214,201,0.25)] text-[#55D9CC] group-hover:scale-110 transition-transform">
+                  <Layers className="w-5 h-5" />
+                </div>
               </div>
-              <h3 className="text-xl font-bold font-display text-[#0F3161] dark:text-white">Design</h3>
-              <p className="text-xs font-mono uppercase text-[#008579] dark:text-[#46A095] tracking-wider font-bold">
+              <h3 className="text-xl font-bold font-display text-white">Design</h3>
+              <p className="text-xs font-mono uppercase text-[#55D9CC] tracking-wider font-bold">
                 Build Resilience Architecture
               </p>
-              <p className="text-xs text-slate-700 dark:text-slate-100 leading-relaxed font-normal">
+              <p className="text-xs text-[#CBD5E1] leading-relaxed font-normal">
                 Formulating governance controls, KRIs, RCSA protocols, BCP architectures, and board appetite thresholds.
               </p>
-            </div>
+            </motion.div>
 
-            <div className="p-6 rounded-2xl bg-white dark:bg-[#06152B] border border-slate-200 dark:border-white/10 space-y-3 shadow-md">
+            <motion.div
+              animate={{ y: [0, -6, 0] }}
+              transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
+              whileHover={{ y: -10, scale: 1.02 }}
+              className="p-6 rounded-2xl bg-[#0A1725] text-white border border-[rgba(72,214,201,0.18)] hover:border-[#55D9CC] space-y-3 shadow-xl relative overflow-hidden group"
+            >
               <div className="flex items-center justify-between">
-                <span className="text-2xl font-mono font-bold text-[#008579] dark:text-[#46A095]">03</span>
-                <Eye className="w-6 h-6 text-[#008579] dark:text-[#46A095]" />
+                <span className="text-2xl font-mono font-bold text-[#55D9CC]">03</span>
+                <div className="p-2.5 rounded-xl bg-[rgba(40,199,183,0.10)] border border-[rgba(72,214,201,0.25)] text-[#55D9CC] group-hover:scale-110 transition-transform">
+                  <Eye className="w-5 h-5" />
+                </div>
               </div>
-              <h3 className="text-xl font-bold font-display text-[#0F3161] dark:text-white">Strengthen</h3>
-              <p className="text-xs font-mono uppercase text-[#008579] dark:text-[#46A095] tracking-wider font-bold">
+              <h3 className="text-xl font-bold font-display text-white">Strengthen</h3>
+              <p className="text-xs font-mono uppercase text-[#55D9CC] tracking-wider font-bold">
                 Continuous Governance & Telemetry
               </p>
-              <p className="text-xs text-slate-700 dark:text-slate-100 leading-relaxed font-normal">
+              <p className="text-xs text-[#CBD5E1] leading-relaxed font-normal">
                 Continuous control monitoring, board dashboard reporting, whistleblower integrity testing, and optimization.
               </p>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
