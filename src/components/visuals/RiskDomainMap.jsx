@@ -24,7 +24,7 @@ export default function RiskDomainMap({ onSelectDomain }) {
             key={practice.id}
             whileHover={{ y: -4 }}
             onClick={() => onSelectDomain && onSelectDomain(practice)}
-            className="glass-panel p-6 rounded-2xl cursor-pointer transition-all duration-200 relative overflow-hidden group border border-slate-200 dark:border-white/10 hover:border-[#008579] dark:hover:border-[#46A095] shadow-sm flex flex-col justify-between"
+            className="glass-panel p-6 rounded-2xl cursor-pointer transition-all duration-200 relative overflow-hidden group border border-[rgba(72,214,201,0.18)] hover:border-[#55D9CC] shadow-lg bg-[#0A1725] text-white flex flex-col justify-between"
           >
             <div className="space-y-4">
               {/* Practice Topic Header Banner */}
@@ -47,18 +47,18 @@ export default function RiskDomainMap({ onSelectDomain }) {
 
               {/* Title & Subheading */}
               <div className="space-y-1.5">
-                <h3 className="text-lg md:text-xl font-bold font-display text-[#0F3161] dark:text-white group-hover:text-[#008579] dark:group-hover:text-[#46A095] transition-colors leading-snug">
+                <h3 className="text-lg md:text-xl font-extrabold font-display text-[#55D9CC] group-hover:text-[#38BDF8] transition-colors leading-snug">
                   {practice.title}
                 </h3>
-                <p className="text-xs text-slate-600 dark:text-gray-300 font-medium leading-relaxed">
+                <p className="text-xs text-[#CBD5E1] font-medium leading-relaxed">
                   {practice.shortDesc}
                 </p>
               </div>
             </div>
 
             {/* Simple Action Footer */}
-            <div className="pt-4 mt-4 border-t border-slate-200 dark:border-white/10 flex items-center justify-between">
-              <span className="text-xs font-mono font-bold text-[#008579] dark:text-[#46A095] uppercase">
+            <div className="pt-4 mt-4 border-t border-white/10 flex items-center justify-between">
+              <span className="text-xs font-mono font-bold text-[#55D9CC] uppercase tracking-wider group-hover:underline">
                 Inspect Practice
               </span>
               <ArrowRight className="w-4 h-4 text-[#FFB340] group-hover:translate-x-1 transition-transform" />
