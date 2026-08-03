@@ -149,21 +149,21 @@ export default function Contact() {
 
         {/* Right Column: High-Contrast Corporate Advisory Form */}
         <div className="lg:col-span-7">
-          <div className="glass-panel p-8 md:p-10 rounded-3xl border border-slate-200 dark:border-teal-500/30 shadow-xl space-y-6">
+          <div className="glass-panel p-8 md:p-10 rounded-3xl border border-[rgba(72,214,201,0.18)] bg-[#0A1725] text-white shadow-2xl space-y-6">
             {!submitted ? (
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="space-y-1">
-                  <h3 className="text-2xl font-extrabold font-display text-[#0F3161] dark:text-white">
+                  <h3 className="text-2xl font-extrabold font-display text-white">
                     Schedule a Senior Advisory Session
                   </h3>
-                  <p className="text-sm font-semibold text-slate-700 dark:text-slate-200">
+                  <p className="text-sm font-medium text-[#CBD5E1]">
                     Fill in your corporate details to request an executive diagnostic audit.
                   </p>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   <div className="space-y-2">
-                    <label className="text-xs font-extrabold uppercase font-mono text-[#0F3161] dark:text-slate-100 tracking-wider block">
+                    <label className="text-xs font-extrabold uppercase font-mono text-[#55D9CC] tracking-wider block">
                       FULL NAME *
                     </label>
                     <input
@@ -172,12 +172,12 @@ export default function Contact() {
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                       placeholder="Executive Name"
-                      className="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-[#06152B] border border-slate-300 dark:border-white/20 text-slate-900 dark:text-white placeholder-slate-400 font-medium focus:outline-none focus:border-[#008579] dark:focus:border-[#46A095] transition-colors"
+                      className="w-full px-4 py-3 rounded-xl bg-white text-slate-900 placeholder-slate-500 font-semibold focus:outline-none focus:ring-2 focus:ring-[#55D9CC] transition-colors"
                     />
                   </div>
 
                   <div className="space-y-2">
-                    <label className="text-xs font-extrabold uppercase font-mono text-[#0F3161] dark:text-slate-100 tracking-wider block">
+                    <label className="text-xs font-extrabold uppercase font-mono text-[#55D9CC] tracking-wider block">
                       CORPORATE EMAIL *
                     </label>
                     <input
@@ -186,14 +186,14 @@ export default function Contact() {
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       placeholder="name@company.com"
-                      className="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-[#06152B] border border-slate-300 dark:border-white/20 text-slate-900 dark:text-white placeholder-slate-400 font-medium focus:outline-none focus:border-[#008579] dark:focus:border-[#46A095] transition-colors"
+                      className="w-full px-4 py-3 rounded-xl bg-white text-slate-900 placeholder-slate-500 font-semibold focus:outline-none focus:ring-2 focus:ring-[#55D9CC] transition-colors"
                     />
                   </div>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   <div className="space-y-2">
-                    <label className="text-xs font-extrabold uppercase font-mono text-[#0F3161] dark:text-slate-100 tracking-wider block">
+                    <label className="text-xs font-extrabold uppercase font-mono text-[#55D9CC] tracking-wider block">
                       COMPANY NAME *
                     </label>
                     <input
@@ -202,12 +202,12 @@ export default function Contact() {
                       value={formData.company}
                       onChange={(e) => setFormData({ ...formData, company: e.target.value })}
                       placeholder="Enterprise Organization"
-                      className="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-[#06152B] border border-slate-300 dark:border-white/20 text-slate-900 dark:text-white placeholder-slate-400 font-medium focus:outline-none focus:border-[#008579] dark:focus:border-[#46A095] transition-colors"
+                      className="w-full px-4 py-3 rounded-xl bg-white text-slate-900 placeholder-slate-500 font-semibold focus:outline-none focus:ring-2 focus:ring-[#55D9CC] transition-colors"
                     />
                   </div>
 
                   <div className="space-y-2">
-                    <label className="text-xs font-extrabold uppercase font-mono text-[#0F3161] dark:text-slate-100 tracking-wider block">
+                    <label className="text-xs font-extrabold uppercase font-mono text-[#55D9CC] tracking-wider block">
                       PHONE NUMBER
                     </label>
                     <input
@@ -215,19 +215,19 @@ export default function Contact() {
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                       placeholder="+1 (555) 000-0000"
-                      className="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-[#06152B] border border-slate-300 dark:border-white/20 text-slate-900 dark:text-white placeholder-slate-400 font-medium focus:outline-none focus:border-[#008579] dark:focus:border-[#46A095] transition-colors"
+                      className="w-full px-4 py-3 rounded-xl bg-white text-slate-900 placeholder-slate-500 font-semibold focus:outline-none focus:ring-2 focus:ring-[#55D9CC] transition-colors"
                     />
                   </div>
                 </div>
 
                 <div className="space-y-2">
-                  <label className="text-xs font-extrabold uppercase font-mono text-[#0F3161] dark:text-slate-100 tracking-wider block">
+                  <label className="text-xs font-extrabold uppercase font-mono text-[#55D9CC] tracking-wider block">
                     SELECT PRIMARY RISK PRACTICE
                   </label>
                   <select
                     value={formData.practice}
                     onChange={(e) => setFormData({ ...formData, practice: e.target.value })}
-                    className="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-[#06152B] border border-slate-300 dark:border-white/20 text-slate-900 dark:text-white text-sm font-medium focus:outline-none focus:border-[#008579] dark:focus:border-[#46A095] transition-colors"
+                    className="w-full px-4 py-3 rounded-xl bg-white text-slate-900 text-sm font-semibold focus:outline-none focus:ring-2 focus:ring-[#55D9CC] transition-colors"
                   >
                     <option value="Enterprise Risk Management (ERM)">Enterprise Risk Management (ERM)</option>
                     <option value="Cyber & ISMS Governance">Cyber & ISMS Governance</option>
@@ -240,7 +240,7 @@ export default function Contact() {
                 </div>
 
                 <div className="space-y-2">
-                  <label className="text-xs font-extrabold uppercase font-mono text-[#0F3161] dark:text-slate-100 tracking-wider block">
+                  <label className="text-xs font-extrabold uppercase font-mono text-[#55D9CC] tracking-wider block">
                     MESSAGE / PROJECT SCOPE
                   </label>
                   <textarea
@@ -248,13 +248,13 @@ export default function Contact() {
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     placeholder="Detail your organizational risk appetite, compliance objectives, or diagnostic audit goals..."
-                    className="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-[#06152B] border border-slate-300 dark:border-white/20 text-slate-900 dark:text-white placeholder-slate-400 text-sm font-medium focus:outline-none focus:border-[#008579] dark:focus:border-[#46A095] transition-colors resize-none"
+                    className="w-full px-4 py-3 rounded-xl bg-white text-slate-900 placeholder-slate-500 text-sm font-semibold focus:outline-none focus:ring-2 focus:ring-[#55D9CC] transition-colors resize-none"
                   />
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full py-4 rounded-xl bg-[#008579] hover:bg-[#00685E] text-white text-sm font-extrabold uppercase tracking-wider shadow-lg shadow-teal-600/20 transition-all flex items-center justify-center space-x-2"
+                  className="w-full py-4 rounded-xl bg-gradient-to-r from-[#008579] via-[#00A896] to-[#008579] text-white text-xs font-extrabold uppercase tracking-wider shadow-lg shadow-teal-600/30 transition-all flex items-center justify-center space-x-2"
                 >
                   <Send className="w-4 h-4 text-[#FFB340]" />
                   <span>Submit Enterprise Advisory Request</span>

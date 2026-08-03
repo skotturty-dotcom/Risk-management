@@ -759,14 +759,14 @@ export default function Home({ onOpenAudit }) {
           </div>
 
           <div className="lg:col-span-7">
-            <div className="glass-panel p-8 md:p-10 rounded-3xl border border-slate-200 dark:border-teal-500/30">
+            <div className="glass-panel p-8 md:p-10 rounded-3xl border border-[rgba(72,214,201,0.18)] bg-[#0A1725] text-white shadow-2xl">
               {!contactSubmitted ? (
                 <>
                   <div className="mb-6">
-                    <h3 className="text-2xl font-bold font-display text-[#0F3161] dark:text-white">
+                    <h3 className="text-2xl font-extrabold font-display text-white">
                       Request a Confidential Consultation
                     </h3>
-                    <p className="text-xs text-slate-700 dark:text-slate-200 mt-1 font-semibold">
+                    <p className="text-xs text-[#CBD5E1] mt-1 font-medium">
                       Fill in your corporate details to schedule a senior advisory session.
                     </p>
                   </div>
@@ -774,7 +774,7 @@ export default function Home({ onOpenAudit }) {
                   <form onSubmit={handleContactSubmit} className="space-y-4">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div>
-                        <label className="block text-xs font-mono font-extrabold uppercase tracking-wider text-[#0F3161] dark:text-slate-100 mb-1">
+                        <label className="block text-xs font-mono font-extrabold uppercase tracking-wider text-[#55D9CC] mb-1.5">
                           Full Name *
                         </label>
                         <input
@@ -782,13 +782,13 @@ export default function Home({ onOpenAudit }) {
                           value={contactData.fullName}
                           onChange={(e) => setContactData({ ...contactData, fullName: e.target.value })}
                           placeholder="Executive Name"
-                          className="w-full bg-slate-50 dark:bg-[#06152B] border border-slate-300 dark:border-white/15 rounded-xl px-4 py-3 text-sm text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-gray-400 focus:outline-none focus:border-[#008579] dark:focus:border-[#46A095] transition-colors shadow-sm font-medium"
+                          className="w-full bg-white text-slate-900 placeholder-slate-500 rounded-xl px-4 py-3 text-sm font-semibold focus:outline-none focus:ring-2 focus:ring-[#55D9CC] transition-colors shadow-sm"
                         />
-                        {contactErrors.fullName && <p className="text-xs text-rose-500 mt-1 font-mono">{contactErrors.fullName}</p>}
+                        {contactErrors.fullName && <p className="text-xs text-rose-400 mt-1 font-mono">{contactErrors.fullName}</p>}
                       </div>
 
                       <div>
-                        <label className="block text-xs font-mono font-extrabold uppercase tracking-wider text-[#0F3161] dark:text-slate-100 mb-1">
+                        <label className="block text-xs font-mono font-extrabold uppercase tracking-wider text-[#55D9CC] mb-1.5">
                           Corporate Email *
                         </label>
                         <input
@@ -796,15 +796,15 @@ export default function Home({ onOpenAudit }) {
                           value={contactData.corporateEmail}
                           onChange={(e) => setContactData({ ...contactData, corporateEmail: e.target.value })}
                           placeholder="name@company.com"
-                          className="w-full bg-slate-50 dark:bg-[#06152B] border border-slate-300 dark:border-white/15 rounded-xl px-4 py-3 text-sm text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-gray-400 focus:outline-none focus:border-[#008579] dark:focus:border-[#46A095] transition-colors shadow-sm font-medium"
+                          className="w-full bg-white text-slate-900 placeholder-slate-500 rounded-xl px-4 py-3 text-sm font-semibold focus:outline-none focus:ring-2 focus:ring-[#55D9CC] transition-colors shadow-sm"
                         />
-                        {contactErrors.corporateEmail && <p className="text-xs text-rose-500 mt-1 font-mono">{contactErrors.corporateEmail}</p>}
+                        {contactErrors.corporateEmail && <p className="text-xs text-rose-400 mt-1 font-mono">{contactErrors.corporateEmail}</p>}
                       </div>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div>
-                        <label className="block text-xs font-mono font-semibold uppercase tracking-wider text-slate-700 dark:text-gray-300 mb-1">
+                        <label className="block text-xs font-mono font-extrabold uppercase tracking-wider text-[#55D9CC] mb-1.5">
                           Company Name *
                         </label>
                         <input
@@ -812,13 +812,13 @@ export default function Home({ onOpenAudit }) {
                           value={contactData.companyName}
                           onChange={(e) => setContactData({ ...contactData, companyName: e.target.value })}
                           placeholder="Enterprise Organization"
-                          className="w-full bg-white dark:bg-[#06152B] border border-slate-300 dark:border-white/15 rounded-xl px-4 py-3 text-sm text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-gray-500 focus:outline-none focus:border-[#008579] dark:focus:border-[#46A095] transition-colors shadow-sm"
+                          className="w-full bg-white text-slate-900 placeholder-slate-500 rounded-xl px-4 py-3 text-sm font-semibold focus:outline-none focus:ring-2 focus:ring-[#55D9CC] transition-colors shadow-sm"
                         />
-                        {contactErrors.companyName && <p className="text-xs text-rose-500 mt-1 font-mono">{contactErrors.companyName}</p>}
+                        {contactErrors.companyName && <p className="text-xs text-rose-400 mt-1 font-mono">{contactErrors.companyName}</p>}
                       </div>
 
                       <div>
-                        <label className="block text-xs font-mono font-semibold uppercase tracking-wider text-slate-700 dark:text-gray-300 mb-1">
+                        <label className="block text-xs font-mono font-extrabold uppercase tracking-wider text-[#55D9CC] mb-1.5">
                           Phone Number
                         </label>
                         <input
@@ -826,19 +826,19 @@ export default function Home({ onOpenAudit }) {
                           value={contactData.phone}
                           onChange={(e) => setContactData({ ...contactData, phone: e.target.value })}
                           placeholder="+1 (555) 000-0000"
-                          className="w-full bg-white dark:bg-[#06152B] border border-slate-300 dark:border-white/15 rounded-xl px-4 py-3 text-sm text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-gray-500 focus:outline-none focus:border-[#008579] dark:focus:border-[#46A095] transition-colors shadow-sm"
+                          className="w-full bg-white text-slate-900 placeholder-slate-500 rounded-xl px-4 py-3 text-sm font-semibold focus:outline-none focus:ring-2 focus:ring-[#55D9CC] transition-colors shadow-sm"
                         />
                       </div>
                     </div>
 
                     <div>
-                      <label className="block text-xs font-mono font-semibold uppercase tracking-wider text-slate-700 dark:text-gray-300 mb-1">
+                      <label className="block text-xs font-mono font-extrabold uppercase tracking-wider text-[#55D9CC] mb-1.5">
                         Select Primary Risk Practice
                       </label>
                       <select
                         value={contactData.practice}
                         onChange={(e) => setContactData({ ...contactData, practice: e.target.value })}
-                        className="w-full bg-white dark:bg-[#06152B] border border-slate-300 dark:border-white/15 rounded-xl px-4 py-3 text-sm text-slate-900 dark:text-white focus:outline-none focus:border-[#008579] dark:focus:border-[#46A095] transition-colors font-mono text-xs shadow-sm"
+                        className="w-full bg-white text-slate-900 rounded-xl px-4 py-3 text-sm font-semibold focus:outline-none focus:ring-2 focus:ring-[#55D9CC] transition-colors font-mono text-xs shadow-sm"
                       >
                         <option value="Enterprise Risk Management (ERM)">Enterprise Risk Management (ERM)</option>
                         <option value="Cyber Risk Governance">Cyber Risk Governance</option>
@@ -852,7 +852,7 @@ export default function Home({ onOpenAudit }) {
                     </div>
 
                     <div>
-                      <label className="block text-xs font-mono font-semibold uppercase tracking-wider text-slate-700 dark:text-gray-300 mb-1">
+                      <label className="block text-xs font-mono font-extrabold uppercase tracking-wider text-[#55D9CC] mb-1.5">
                         Message / Project Scope
                       </label>
                       <textarea
@@ -860,13 +860,13 @@ export default function Home({ onOpenAudit }) {
                         value={contactData.message}
                         onChange={(e) => setContactData({ ...contactData, message: e.target.value })}
                         placeholder="Detail your organizational risk appetite, compliance objectives, or diagnostic audit goals..."
-                        className="w-full bg-white dark:bg-[#06152B] border border-slate-300 dark:border-white/15 rounded-xl px-4 py-3 text-sm text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-gray-500 focus:outline-none focus:border-[#008579] dark:focus:border-[#46A095] transition-colors resize-none shadow-sm"
+                        className="w-full bg-white text-slate-900 placeholder-slate-500 rounded-xl px-4 py-3 text-sm font-semibold focus:outline-none focus:ring-2 focus:ring-[#55D9CC] transition-colors resize-none shadow-sm"
                       />
                     </div>
 
                     <button
                       type="submit"
-                      className="w-full py-4 rounded-xl bg-gradient-to-r from-[#008579] to-[#0F3161] text-white text-xs font-extrabold uppercase tracking-wider shadow-lg shadow-teal-600/25 hover:brightness-110 transition-all flex items-center justify-center space-x-2"
+                      className="w-full py-4 rounded-xl bg-gradient-to-r from-[#008579] via-[#00A896] to-[#008579] text-white text-xs font-extrabold uppercase tracking-wider shadow-lg shadow-teal-600/30 hover:brightness-110 transition-all flex items-center justify-center space-x-2"
                     >
                       <span>Request a Confidential Consultation</span>
                       <ArrowRight className="w-4 h-4" />
