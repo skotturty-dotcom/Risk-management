@@ -25,6 +25,15 @@ export default function AuditModal({ isOpen, onClose, selectedPractice }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     setSubmitted(true);
+    const message = `Hello Guddeti Sanjay Raj,\n\nI would like to schedule an Executive Diagnostic Audit.\n\n*Full Name:* ${formData.fullName}\n*Work Email:* ${formData.workEmail}\n*Company:* ${formData.companyName}\n*Phone:* ${formData.phone || 'N/A'}\n*Primary Risk Domain:* ${formData.primaryPractice}\n*Scope Details:* ${formData.scopeDetails || 'N/A'}`;
+    const whatsappUrl = `https://wa.me/919182119045?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
+  };
+
+  const handleDirectWhatsApp = () => {
+    const message = `Hello Guddeti Sanjay Raj,\n\nI would like to request an Executive Diagnostic Audit for my organization.\n\nPrimary Risk Domain: ${formData.primaryPractice}`;
+    const whatsappUrl = `https://wa.me/919182119045?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
   };
 
   return (
@@ -169,19 +178,29 @@ export default function AuditModal({ isOpen, onClose, selectedPractice }) {
                   />
                 </div>
 
-                <div className="pt-2 flex items-center justify-between">
+                <div className="pt-2 flex flex-col sm:flex-row items-center justify-between gap-3">
                   <span className="text-xs font-sans text-slate-600 font-medium flex items-center space-x-1">
                     <Lock className="w-3.5 h-3.5 text-[#008579]" />
                     <span>NDAs Executed On-Request</span>
                   </span>
 
-                  <button
-                    type="submit"
-                    className="px-7 py-3 rounded-xl bg-[#008579] hover:bg-[#00685E] text-white text-xs font-extrabold uppercase tracking-wider shadow-lg flex items-center space-x-2 cursor-pointer transition-all border border-[#008579]"
-                  >
-                    <span>Request Audit</span>
-                    <ArrowRight className="w-4 h-4 text-white" />
-                  </button>
+                  <div className="flex items-center space-x-2.5 w-full sm:w-auto">
+                    <button
+                      type="button"
+                      onClick={handleDirectWhatsApp}
+                      className="flex-1 sm:flex-initial px-4 py-3 rounded-xl bg-[#25D366] hover:bg-[#20bd5a] text-white text-xs font-extrabold uppercase tracking-wider shadow-md flex items-center justify-center space-x-1.5 cursor-pointer transition-all"
+                    >
+                      <span>WhatsApp Audit</span>
+                    </button>
+
+                    <button
+                      type="submit"
+                      className="flex-1 sm:flex-initial px-6 py-3 rounded-xl bg-[#008579] hover:bg-[#00685E] text-white text-xs font-extrabold uppercase tracking-wider shadow-lg flex items-center justify-center space-x-2 cursor-pointer transition-all border border-[#008579]"
+                    >
+                      <span>Submit & Open WhatsApp</span>
+                      <ArrowRight className="w-4 h-4 text-white" />
+                    </button>
+                  </div>
                 </div>
               </form>
             </div>
@@ -192,21 +211,34 @@ export default function AuditModal({ isOpen, onClose, selectedPractice }) {
               </div>
               <div className="space-y-2">
                 <h3 className="text-2xl sm:text-3xl font-extrabold font-display text-[#06182D]">
-                  Audit Request Submitted
+                  Opening WhatsApp Chat...
                 </h3>
                 <p className="text-slate-600 text-sm sm:text-base font-semibold max-w-sm mx-auto leading-relaxed">
-                  Your parameters have been transmitted to Guddeti Sanjay Raj. We will contact you within 24 hours.
+                  Your audit parameters have been pre-filled. Connect directly with Guddeti Sanjay Raj on WhatsApp (+91 91821 19045).
                 </p>
               </div>
-              <button
-                onClick={() => {
-                  setSubmitted(false);
-                  onClose();
-                }}
-                className="px-8 py-3 rounded-xl bg-[#06182D] hover:bg-slate-800 text-white font-extrabold text-xs uppercase tracking-wider shadow-md cursor-pointer transition-all"
-              >
-                CLOSE WINDOW
-              </button>
+              <div className="flex justify-center space-x-3">
+                <a
+                  href={`https://wa.me/919182119045?text=${encodeURIComponent(
+                    `Hello Guddeti Sanjay Raj,\n\nI would like to schedule an Executive Diagnostic Audit.\n\nName: ${formData.fullName}\nEmail: ${formData.workEmail}\nCompany: ${formData.companyName}\nDomain: ${formData.primaryPractice}`
+                  )}`}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="px-6 py-3 rounded-xl bg-[#25D366] hover:bg-[#20bd5a] text-white font-extrabold text-xs uppercase tracking-wider shadow-md cursor-pointer transition-all inline-flex items-center space-x-2"
+                >
+                  <span>Re-open WhatsApp Chat</span>
+                  <ArrowRight className="w-4 h-4 text-white" />
+                </a>
+                <button
+                  onClick={() => {
+                    setSubmitted(false);
+                    onClose();
+                  }}
+                  className="px-6 py-3 rounded-xl bg-[#06182D] hover:bg-slate-800 text-white font-extrabold text-xs uppercase tracking-wider shadow-md cursor-pointer transition-all"
+                >
+                  CLOSE WINDOW
+                </button>
+              </div>
             </div>
           )}
         </motion.div>
