@@ -67,7 +67,7 @@ export default function SectorModal({ sector, onClose, onOpenAudit }) {
                 </span>
                 <span className="text-xs font-mono text-slate-400 uppercase font-bold">ENTERPRISE SCOPE</span>
               </div>
-              <h3 className="text-2xl font-extrabold font-display text-[#0F3161] dark:text-white mt-1">
+              <h3 className="text-2xl font-extrabold font-display text-[#06182D] dark:text-white mt-1">
                 {sector.name}
               </h3>
             </div>
@@ -76,10 +76,10 @@ export default function SectorModal({ sector, onClose, onOpenAudit }) {
           {/* Content Body */}
           <div className="space-y-6">
             <div className="p-4 rounded-xl bg-slate-50 dark:bg-[#06152B] border border-slate-200 dark:border-white/10">
-              <span className="text-xs font-mono font-bold text-[#FFB340] uppercase tracking-wider block mb-1">
+              <span className="text-xs font-mono font-bold text-[#008579] uppercase tracking-wider block mb-1">
                 PRIMARY RISK CATEGORY
               </span>
-              <p className="text-base font-extrabold font-heading text-[#0F3161] dark:text-white">
+              <p className="text-base font-extrabold font-heading text-[#06182D] dark:text-white">
                 {sector.riskCategory}
               </p>
             </div>

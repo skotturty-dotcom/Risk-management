@@ -252,7 +252,7 @@ export default function Home({ onOpenAudit }) {
           <span className="text-xs font-mono font-bold text-[#008579] dark:text-[#46A095] uppercase tracking-widest px-3.5 py-1 rounded-md bg-teal-50 dark:bg-teal-500/10 border border-teal-200 dark:border-teal-500/20">
             VALUE PRESERVATION
           </span>
-          <h2 className="text-3xl md:text-4xl font-extrabold font-display text-[#0F3161] dark:text-white">
+          <h2 className="text-3xl md:text-4xl font-extrabold font-display text-[#06182D] dark:text-white">
             Protecting Enterprise Value in a Dynamic World
           </h2>
           <p className="text-dark-navy text-base leading-relaxed font-semibold">
@@ -272,7 +272,7 @@ export default function Home({ onOpenAudit }) {
             <span className="text-xs font-mono font-bold text-[#008579] dark:text-[#46A095] uppercase tracking-widest px-3.5 py-1 rounded-md bg-teal-50 dark:bg-teal-500/10 border border-teal-200 dark:border-teal-500/20">
               PRACTICE ECOSYSTEM
             </span>
-            <h2 className="text-3xl md:text-4xl font-extrabold font-display text-[#0F3161] dark:text-white">
+            <h2 className="text-3xl md:text-4xl font-extrabold font-display text-[#06182D] dark:text-white">
               Core Solution Domains
             </h2>
             <p className="text-dark-navy text-base max-w-xl font-semibold">
@@ -307,7 +307,7 @@ export default function Home({ onOpenAudit }) {
           <span className="text-xs font-mono font-bold text-[#008579] dark:text-[#46A095] uppercase tracking-widest px-3.5 py-1 rounded-md bg-teal-50 dark:bg-teal-500/10 border border-teal-200 dark:border-teal-500/20">
             DETAILED PRACTICE ADVISORY
           </span>
-          <h2 className="text-3xl md:text-4xl font-extrabold font-display text-[#0F3161] dark:text-white">
+          <h2 className="text-3xl md:text-4xl font-extrabold font-display text-[#06182D] dark:text-white">
             Comprehensive Practice Solutions
           </h2>
           <p className="text-dark-navy text-base font-semibold">
