@@ -265,38 +265,22 @@ ${contactData.fullName}`;
           <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-[#008579] via-[#38BDF8] to-[#FFB340]" />
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center relative z-10">
-            {/* LEFT SIDE: Executive Founder Photo Card */}
-            <div className="lg:col-span-5 flex justify-center">
-              <div className="w-full max-w-sm relative rounded-3xl bg-white text-slate-900 border border-slate-200/80 hover:border-[#008579] flex flex-col items-center justify-center p-6 sm:p-7 text-center shadow-2xl overflow-hidden group space-y-3 transition-all duration-300">
-                <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-[#008579] via-[#38BDF8] to-[#FFB340]" />
-
-                {/* Founder Photo */}
-                <div className="relative w-48 h-48 sm:w-56 sm:h-56 rounded-2xl p-1 bg-gradient-to-tr from-[#008579] via-[#38BDF8] to-[#FFB340] shadow-xl group-hover:scale-[1.02] transition-transform duration-300 shrink-0 mt-1">
-                  <div className="w-full h-full rounded-xl border-2 border-white overflow-hidden bg-slate-100">
-                    <img
-                      src="/images/founder.png"
-                      alt={founderData.name}
-                      className="w-full h-full object-cover object-top"
-                    />
+            {/* LEFT SIDE: Big Executive Portrait Photo Card */}
+            <div className="lg:col-span-5 relative flex justify-center">
+              <div className="relative aspect-[4/5] w-full max-w-md rounded-3xl overflow-hidden shadow-2xl border-2 border-[rgba(72,214,201,0.35)] hover:border-[#55D9CC] transition-all group">
+                <img
+                  src="/images/founder.png"
+                  alt={founderData.name}
+                  className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#06152B] via-transparent to-transparent opacity-85" />
+                <div className="absolute bottom-4 left-4 right-4 p-4 rounded-2xl bg-[#06152B]/85 backdrop-blur-md border border-[rgba(72,214,201,0.3)] text-left space-y-1 shadow-xl">
+                  <h4 className="text-lg font-extrabold text-white font-display tracking-tight">{founderData.name}</h4>
+                  <p className="text-xs font-mono font-bold text-[#55D9CC] uppercase tracking-wider">{founderData.designation}</p>
+                  <div className="flex items-center space-x-1.5 text-xs text-slate-300 pt-0.5 font-medium">
+                    <ShieldCheck className="w-4 h-4 text-[#55D9CC]" />
+                    <span>Srajai Tech Founder & ERM Specialist</span>
                   </div>
-                </div>
-
-                {/* Founder Info */}
-                <div className="space-y-1 pt-1">
-                  <h3 className="text-sm sm:text-base font-extrabold font-display text-[#06182D] tracking-tight uppercase">
-                    {founderData.name}
-                  </h3>
-                  <span className="inline-block text-[10px] sm:text-[11px] font-mono font-bold text-[#008579] uppercase tracking-wider px-3 py-0.5 rounded-full bg-teal-50 border border-teal-200/80 shadow-sm">
-                    {founderData.designation}
-                  </span>
-                </div>
-
-                <div className="w-full pt-2.5 border-t border-slate-100 font-sans space-y-0.5">
-                  <p className="flex items-center justify-center space-x-1.5 text-[10px] sm:text-[11px] font-mono font-extrabold text-[#06182D] tracking-wider uppercase">
-                    <ShieldCheck className="w-3.5 h-3.5 text-[#008579]" />
-                    <span>SRAJAI TECH FOUNDER</span>
-                  </p>
-                  <p className="text-[10px] text-slate-500 font-medium">Enterprise Risk Strategy & ERM Specialist</p>
                 </div>
               </div>
             </div>
