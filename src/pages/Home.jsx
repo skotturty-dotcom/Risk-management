@@ -176,25 +176,25 @@ export default function Home({ onOpenAudit }) {
           2. FOUNDER & PRINCIPAL LEADERSHIP SECTION (RIGHT AFTER HERO)
          ========================================== */}
       <section id="founder" className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="glass-panel p-8 md:p-12 rounded-3xl grid grid-cols-1 lg:grid-cols-12 gap-10 items-center shadow-2xl bg-[#0A1725] border border-[rgba(72,214,201,0.18)]">
+        <div className="glass-panel p-6 sm:p-8 md:p-9 rounded-3xl grid grid-cols-1 lg:grid-cols-12 gap-8 items-center shadow-2xl bg-[#0A1725] border border-[rgba(72,214,201,0.18)]">
           <div className="lg:col-span-5 relative">
-            <div className="relative aspect-[4/5] rounded-2xl bg-gradient-to-br from-[#0F3161] via-[#06182D] to-[#020B14] text-white border-2 border-[#28C7B7] flex flex-col items-center justify-center p-6 sm:p-8 text-center shadow-2xl overflow-hidden group">
-              <div className="w-32 h-32 sm:w-36 sm:h-36 rounded-full border-2 border-[#55D9CC] overflow-hidden shadow-2xl mb-5 group-hover:scale-105 transition-transform duration-300 shrink-0">
+            <div className="relative rounded-2xl bg-gradient-to-br from-[#0F3161] via-[#06182D] to-[#020B14] text-white border-2 border-[#28C7B7] flex flex-col items-center justify-center p-5 sm:p-6 text-center shadow-2xl overflow-hidden group max-w-sm mx-auto lg:max-w-none">
+              <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-full border-2 border-[#55D9CC] overflow-hidden shadow-2xl mb-3 group-hover:scale-105 transition-transform duration-300 shrink-0">
                 <img
                   src="/images/founder.png"
                   alt={founderData.name}
                   className="w-full h-full object-cover object-top"
                 />
               </div>
-              <h3 className="text-2xl font-extrabold font-display text-[#F5F8FA]">
+              <h3 className="text-xl font-extrabold font-display text-white">
                 {founderData.name}
               </h3>
-              <p className="text-xs font-sans text-[#55D9CC] uppercase tracking-wider mt-2 font-extrabold px-3 py-1 rounded bg-[rgba(40,199,183,0.10)] border border-[rgba(40,199,183,0.25)]">
+              <p className="text-[11px] font-sans text-[#55D9CC] uppercase tracking-wider mt-1.5 font-extrabold px-3 py-0.5 rounded bg-[rgba(40,199,183,0.10)] border border-[rgba(40,199,183,0.25)]">
                 {founderData.designation}
               </p>
-              <div className="mt-6 pt-5 border-t border-[rgba(255,255,255,0.10)] text-xs font-sans text-[#B8C4CF] font-semibold space-y-1 w-full">
-                <p className="flex items-center justify-center space-x-1.5">
-                  <ShieldCheck className="w-4 h-4 text-[#55D9CC]" />
+              <div className="mt-4 pt-4 border-t border-[rgba(255,255,255,0.10)] text-xs font-sans text-[#B8C4CF] font-semibold space-y-1 w-full">
+                <p className="flex items-center justify-center space-x-1.5 text-xs">
+                  <ShieldCheck className="w-3.5 h-3.5 text-[#55D9CC]" />
                   <span>SRAJAI TECH FOUNDER</span>
                 </p>
                 <p className="text-[11px] text-[#8D9AA7]">Enterprise Risk Strategy & ERM Specialist</p>
@@ -202,39 +202,39 @@ export default function Home({ onOpenAudit }) {
             </div>
           </div>
 
-          <div className="lg:col-span-7 space-y-8">
-            <div className="space-y-3">
-              <span className="text-xs md:text-sm font-bold font-sans text-[#55D9CC] uppercase tracking-widest block">
+          <div className="lg:col-span-7 space-y-6">
+            <div className="space-y-2">
+              <span className="text-xs font-bold font-sans text-[#55D9CC] uppercase tracking-widest block">
                 FOUNDER & PRINCIPAL LEADERSHIP
               </span>
-              <h2 className="text-3xl md:text-4xl font-extrabold font-display text-[#55D9CC]">
+              <h2 className="text-2xl sm:text-3xl font-extrabold font-display text-[#55D9CC]">
                 {founderData.name}
               </h2>
             </div>
 
-            <p className="text-[#B8C4CF] text-base md:text-xl leading-relaxed font-normal">
+            <p className="text-white text-sm sm:text-base leading-relaxed font-normal">
               {founderData.bio}
             </p>
 
             {/* Quote Block */}
-            <div className="p-7 sm:p-8 rounded-2xl border-l-4 border-l-[#55D9CC] bg-[rgba(10,23,37,0.85)] border border-[rgba(72,214,201,0.18)] space-y-4 shadow-[0_20px_50px_rgba(0,0,0,0.20)]">
-              <Quote className="w-9 h-9 text-[#55D9CC]" />
-              <p className="text-lg md:text-xl font-bold text-[#F5F8FA] font-heading italic leading-relaxed">
+            <div className="p-5 sm:p-6 rounded-xl border-l-4 border-l-[#55D9CC] bg-[rgba(10,23,37,0.85)] border border-[rgba(72,214,201,0.18)] space-y-3 shadow-md">
+              <Quote className="w-6 h-6 text-[#55D9CC]" />
+              <p className="text-sm sm:text-base font-bold text-white font-heading italic leading-relaxed">
                 "{founderData.quote}"
               </p>
-              <p className="text-sm font-sans text-[#55D9CC] font-extrabold tracking-wide">
+              <p className="text-xs font-sans text-[#55D9CC] font-extrabold tracking-wide">
                 — Guddeti Sanjay Raj, Founder & Principal Risk Strategist
               </p>
             </div>
 
             {/* Expertise Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 pt-2">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-1">
               {founderData.expertise.map((exp, idx) => (
-                <div key={idx} className="p-6 rounded-2xl bg-[#0D1D2C] border border-[rgba(72,214,201,0.18)] space-y-2 shadow-md">
-                  <h4 className="text-base md:text-lg font-extrabold text-[#55D9CC] font-display">
+                <div key={idx} className="p-4 sm:p-5 rounded-xl bg-[#0D1D2C] border border-[rgba(72,214,201,0.18)] space-y-1.5 shadow-md">
+                  <h4 className="text-sm font-extrabold text-[#55D9CC] font-display">
                     {exp.title}
                   </h4>
-                  <p className="text-sm md:text-base text-[#B8C4CF] font-normal leading-relaxed">
+                  <p className="text-xs text-white font-normal leading-relaxed">
                     {exp.desc}
                   </p>
                 </div>
