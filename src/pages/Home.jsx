@@ -178,9 +178,13 @@ export default function Home({ onOpenAudit }) {
       <section id="founder" className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="glass-panel p-8 md:p-12 rounded-3xl grid grid-cols-1 lg:grid-cols-12 gap-10 items-center shadow-2xl bg-[#0A1725] border border-[rgba(72,214,201,0.18)]">
           <div className="lg:col-span-5 relative">
-            <div className="relative aspect-[4/5] rounded-2xl bg-gradient-to-br from-[#0F3161] via-[#06182D] to-[#020B14] text-white border-2 border-[#28C7B7] flex flex-col items-center justify-center p-8 text-center shadow-2xl overflow-hidden group">
-              <div className="w-28 h-28 rounded-full bg-[#020B14] border-2 border-[#55D9CC] flex items-center justify-center text-[#55D9CC] shadow-xl mb-6 group-hover:scale-105 transition-transform">
-                <ShieldCheck className="w-14 h-14" />
+            <div className="relative aspect-[4/5] rounded-2xl bg-gradient-to-br from-[#0F3161] via-[#06182D] to-[#020B14] text-white border-2 border-[#28C7B7] flex flex-col items-center justify-center p-6 sm:p-8 text-center shadow-2xl overflow-hidden group">
+              <div className="w-32 h-32 sm:w-36 sm:h-36 rounded-full border-2 border-[#55D9CC] overflow-hidden shadow-2xl mb-5 group-hover:scale-105 transition-transform duration-300 shrink-0">
+                <img
+                  src="/images/founder.png"
+                  alt={founderData.name}
+                  className="w-full h-full object-cover object-top"
+                />
               </div>
               <h3 className="text-2xl font-extrabold font-display text-[#F5F8FA]">
                 {founderData.name}
@@ -188,7 +192,7 @@ export default function Home({ onOpenAudit }) {
               <p className="text-xs font-sans text-[#55D9CC] uppercase tracking-wider mt-2 font-extrabold px-3 py-1 rounded bg-[rgba(40,199,183,0.10)] border border-[rgba(40,199,183,0.25)]">
                 {founderData.designation}
               </p>
-              <div className="mt-8 pt-6 border-t border-[rgba(255,255,255,0.10)] text-xs font-sans text-[#B8C4CF] font-semibold space-y-1">
+              <div className="mt-6 pt-5 border-t border-[rgba(255,255,255,0.10)] text-xs font-sans text-[#B8C4CF] font-semibold space-y-1 w-full">
                 <p className="flex items-center justify-center space-x-1.5">
                   <ShieldCheck className="w-4 h-4 text-[#55D9CC]" />
                   <span>SRAJAI TECH FOUNDER</span>
