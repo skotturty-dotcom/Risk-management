@@ -170,16 +170,16 @@ export default function AboutUs({ onOpenAudit }) {
               </p>
             </div>
 
-            {/* 4-Card Expertise Grid - Clean Executive Dark Cards */}
+            {/* 4-Card Expertise Grid - Pure White Cards with Top Accent Bar */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
               {founderData.expertise.map((exp, idx) => (
-                <div key={idx} className="relative p-5 rounded-2xl bg-[#06152B]/90 text-white border border-[rgba(72,214,201,0.25)] hover:border-[#55D9CC] space-y-1.5 shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden group">
+                <div key={idx} className="relative p-5 rounded-2xl bg-white text-slate-900 border border-slate-200 hover:border-[#008579] space-y-1.5 shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden group">
                   <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-[#008579] via-[#38BDF8] to-[#FFB340]" />
-                  <h4 className="text-base font-extrabold text-white font-display flex items-center space-x-2 pt-1">
-                    <CheckCircle2 className="w-4 h-4 text-[#55D9CC] shrink-0" />
+                  <h4 className="text-base font-extrabold text-[#06182D] font-display flex items-center space-x-2 pt-1">
+                    <CheckCircle2 className="w-4.5 h-4.5 text-[#008579] shrink-0" />
                     <span>{exp.title}</span>
                   </h4>
-                  <p className="text-xs sm:text-sm text-slate-300 font-medium leading-relaxed">
+                  <p className="text-xs sm:text-sm text-slate-800 font-medium leading-relaxed">
                     {exp.desc}
                   </p>
                 </div>
