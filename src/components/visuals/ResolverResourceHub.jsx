@@ -154,13 +154,14 @@ export default function ResolverResourceHub({ onOpenAudit }) {
         </div>
       </div>
 
-      {/* Featured Resource Banner - SOLID WHITE PREMIUM BOX */}
+      {/* Featured Resource Banner - GUARANTEED PURE SOLID WHITE BOX */}
       {featuredResource && selectedCategory === 'ALL RESOURCES' && !searchQuery && (
         <motion.div
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="rounded-2xl p-6 md:p-8 text-slate-900 bg-white border border-slate-200 hover:border-[#008579] grid grid-cols-1 lg:grid-cols-12 gap-6 items-center shadow-xl hover:shadow-2xl transition-all duration-300 relative overflow-hidden group"
+          style={{ backgroundColor: '#ffffff', color: '#06182D' }}
+          className="rounded-2xl p-6 md:p-8 !bg-white !text-slate-900 border border-slate-200 hover:border-[#008579] grid grid-cols-1 lg:grid-cols-12 gap-6 items-center shadow-xl hover:shadow-2xl transition-all duration-300 relative overflow-hidden group"
         >
           {/* Top Brand Accent Line */}
           <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-[#008579] via-[#00A896] to-[#008579]" />
@@ -173,24 +174,24 @@ export default function ResolverResourceHub({ onOpenAudit }) {
               <span className="text-xs font-mono text-[#008579] font-extrabold">{featuredResource.readTime}</span>
             </div>
 
-            <h3 className="text-xl md:text-3xl font-extrabold font-display text-[#06182D] leading-tight group-hover:text-[#008579] transition-colors">
+            <h3 className="text-xl md:text-3xl font-extrabold font-display !text-[#06182D] leading-tight group-hover:text-[#008579] transition-colors" style={{ color: '#06182D' }}>
               {featuredResource.title}
             </h3>
 
-            <p className="text-sm text-slate-700 font-semibold leading-relaxed max-w-2xl">
+            <p className="text-sm !text-slate-700 font-semibold leading-relaxed max-w-2xl" style={{ color: '#334155' }}>
               {featuredResource.desc}
             </p>
 
             <div className="pt-2 flex flex-wrap items-center gap-3">
               <button
                 onClick={onOpenAudit}
-                className="px-5 py-2.5 rounded-xl bg-gradient-to-r from-[#008579] via-[#00A896] to-[#008579] hover:brightness-110 text-white text-xs font-extrabold uppercase tracking-wider shadow-md hover:shadow-lg transition-all flex items-center space-x-2 cursor-pointer"
+                className="px-5 py-2.5 rounded-xl bg-gradient-to-r from-[#008579] via-[#00A896] to-[#008579] hover:brightness-110 !text-white text-xs font-extrabold uppercase tracking-wider shadow-md hover:shadow-lg transition-all flex items-center space-x-2 cursor-pointer"
               >
                 <Download className="w-4 h-4 text-white" />
                 <span>Download Executive eBook</span>
                 <ArrowRight className="w-4 h-4 text-[#FFB340]" />
               </button>
-              <span className="text-xs font-mono text-[#008579] font-bold flex items-center space-x-1.5 uppercase">
+              <span className="text-xs font-mono text-[#008579] font-bold flex items-center space-x-1.5 uppercase" style={{ color: '#008579' }}>
                 <ShieldCheck className="w-4 h-4 text-[#008579]" />
                 <span>CONFIDENTIAL BOARD ADVISORY</span>
               </span>
