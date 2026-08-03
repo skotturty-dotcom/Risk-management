@@ -15,17 +15,18 @@ export default function Footer({ onOpenAudit }) {
 
   return (
     <footer className="relative bg-[#06152B] text-white overflow-hidden border-t border-teal-500/20">
-      {/* Resolver-Inspired Newsletter & Intelligence Subscription Banner */}
-      <div className="relative bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-[#008579] via-[#00437E] to-[#00274A] py-12 px-4 sm:px-6 lg:px-8 border-b border-teal-400/20">
-        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-8">
+      {/* Resolver-Inspired Newsletter & Intelligence Subscription Banner - BRIGHT VIBRANT TEAL */}
+      <div className="relative bg-gradient-to-r from-[#008579] via-[#00A896] to-[#028090] py-12 px-4 sm:px-6 lg:px-8 border-b border-[#55D9CC]/40 shadow-2xl overflow-hidden">
+        <div className="absolute -right-20 -top-20 w-80 h-80 bg-white/10 rounded-full blur-3xl pointer-events-none" />
+        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-8 relative z-10">
           <div className="space-y-2 text-center lg:text-left">
-            <span className="text-xs font-mono font-extrabold text-[#FFB340] uppercase tracking-widest px-3 py-1 rounded bg-[#06152B]/40 border border-[#FFB340]/30 inline-block">
+            <span className="text-xs font-mono font-extrabold text-[#FFB340] uppercase tracking-widest px-3 py-1 rounded bg-[#06182D]/80 border border-[#FFB340]/40 inline-block shadow-md">
               SRAJAI TECH RISK INTELLIGENCE BULLETIN
             </span>
             <h3 className="text-2xl md:text-3xl font-extrabold font-display text-white">
               Subscribe to Boardroom Risk Briefings & Telemetry Insights
             </h3>
-            <p className="text-sm text-teal-100 max-w-xl font-medium">
+            <p className="text-sm text-white max-w-xl font-medium leading-relaxed">
               Join over 5,000+ CXOs, risk officers, and governance directors receiving our monthly advisory breakdown.
             </p>
           </div>
@@ -38,20 +39,20 @@ export default function Footer({ onOpenAudit }) {
                   value={newsletterEmail}
                   onChange={(e) => setNewsletterEmail(e.target.value)}
                   placeholder="Enter corporate email..."
-                  className="w-full sm:w-80 px-4 py-3 rounded-xl bg-white text-slate-900 placeholder-slate-400 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-[#FFB340] shadow-md"
+                  className="w-full sm:w-80 px-4 py-3 rounded-xl bg-white text-slate-900 placeholder-slate-500 text-sm font-semibold focus:outline-none focus:ring-2 focus:ring-[#FFB340] shadow-lg border border-white"
                   required
                 />
                 <button
                   type="submit"
-                  className="w-full sm:w-auto px-6 py-3 rounded-xl bg-[#FFB340] hover:bg-[#FFA41A] text-[#0F3161] font-extrabold text-xs uppercase tracking-wider shadow-lg transition-all flex items-center justify-center space-x-2 shrink-0"
+                  className="w-full sm:w-auto px-6 py-3 rounded-xl bg-[#FFB340] hover:bg-[#FFA41A] text-[#06182D] font-extrabold text-xs uppercase tracking-wider shadow-xl hover:scale-105 transition-all flex items-center justify-center space-x-2 shrink-0"
                 >
                   <span>Subscribe Briefs</span>
-                  <ArrowRight className="w-4 h-4" />
+                  <ArrowRight className="w-4 h-4 text-[#06182D]" />
                 </button>
               </form>
             ) : (
-              <div className="flex items-center space-x-2 text-[#FFB340] font-mono text-sm font-bold bg-[#06152B]/60 px-5 py-3 rounded-xl border border-[#FFB340]/40">
-                <CheckCircle2 className="w-5 h-5" />
+              <div className="flex items-center space-x-2 text-[#FFB340] font-mono text-sm font-extrabold bg-[#06182D]/90 px-5 py-3 rounded-xl border border-[#FFB340]/40 shadow-lg">
+                <CheckCircle2 className="w-5 h-5 text-[#FFB340]" />
                 <span>Subscription Confirmed. Welcome to Srajai Tech Intelligence.</span>
               </div>
             )}
