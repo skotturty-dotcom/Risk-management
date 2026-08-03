@@ -631,17 +631,24 @@ export default function Home({ onOpenAudit }) {
           {frameworkFoundations.map((found, idx) => (
             <motion.div
               key={idx}
-              whileHover={{ y: -4, scale: 1.02 }}
-              className="p-6 rounded-2xl bg-gradient-to-br from-[#122B46] to-[#0F2238] border border-[rgba(85,217,204,0.35)] hover:border-[#55D9CC] transition-all flex items-start space-x-4 shadow-xl group cursor-pointer"
+              initial={{ opacity: 0, y: 25 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: idx * 0.07 }}
+              whileHover={{ y: -6, scale: 1.025 }}
+              className="p-6 rounded-2xl bg-white border border-slate-200/90 hover:border-[#008579] transition-all duration-300 flex items-start space-x-4 shadow-md hover:shadow-2xl hover:shadow-[#008579]/15 group cursor-pointer relative overflow-hidden"
             >
-              <div className="w-10 h-10 rounded-xl bg-[rgba(85,217,204,0.15)] border border-[rgba(85,217,204,0.30)] flex items-center justify-center text-[#55D9CC] shrink-0 group-hover:scale-110 transition-transform">
-                <CheckCircle2 className="w-5 h-5 text-[#FFB340]" />
+              {/* Top Accent Line on Hover */}
+              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#008579] via-[#00A896] to-[#008579] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+
+              <div className="w-11 h-11 rounded-xl bg-teal-50 border border-teal-200/80 flex items-center justify-center text-[#008579] shrink-0 group-hover:scale-110 group-hover:bg-[#008579] group-hover:text-white transition-all duration-300 shadow-sm">
+                <CheckCircle2 className="w-5.5 h-5.5 transition-colors" />
               </div>
               <div>
-                <h3 className="text-lg font-extrabold font-display text-white group-hover:text-[#55D9CC] transition-colors">
+                <h3 className="text-lg font-extrabold font-display text-[#06182D] group-hover:text-[#008579] transition-colors duration-200">
                   {found.name}
                 </h3>
-                <p className="text-xs text-[#CBD5E1] mt-1 font-medium leading-relaxed">
+                <p className="text-xs text-slate-600 mt-1 font-medium leading-relaxed">
                   {found.desc}
                 </p>
               </div>
