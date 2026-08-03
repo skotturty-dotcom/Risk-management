@@ -129,6 +129,13 @@
   color: #FFFFFF !important;
 }
 
+.glass-panel h1:not([class*="text-[#06182D]"]):not([class*="text-[#008579]"]),
+.glass-panel h2:not([class*="text-[#06182D]"]):not([class*="text-[#008579]"]),
+.glass-panel h3:not([class*="text-[#06182D]"]):not([class*="text-[#008579]"]),
+.glass-panel h4:not([class*="text-[#06182D]"]):not([class*="text-[#008579]"]) {
+  color: #FFFFFF !important;
+}
+
 .glass-panel-hover {
   transition: all 0.3s ease;
 }
