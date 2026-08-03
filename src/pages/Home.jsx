@@ -274,15 +274,15 @@ ${contactData.fullName}`;
             </h2>
           </div>
 
-          {/* Vertical Founder Card - Pure White Box with Extra Large Photo & Small Text */}
-          <div className="w-full max-w-md sm:max-w-lg md:max-w-xl mx-auto">
-            <div className="relative rounded-3xl bg-white text-slate-900 border border-slate-200 hover:border-[#008579] flex flex-col items-center justify-center p-6 sm:p-8 text-center shadow-2xl overflow-hidden group space-y-3 transition-all duration-300">
+          {/* Vertical Founder Card - Compact Small White Box */}
+          <div className="w-full max-w-[280px] sm:max-w-[320px] mx-auto">
+            <div className="relative rounded-2xl bg-white text-slate-900 border border-slate-200 hover:border-[#008579] flex flex-col items-center justify-center p-4 sm:p-5 text-center shadow-xl overflow-hidden group space-y-2.5 transition-all duration-300">
               {/* Permanent Executive Accent Top Bar */}
-              <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-[#008579] via-[#38BDF8] to-[#FFB340]" />
+              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#008579] via-[#38BDF8] to-[#FFB340]" />
 
-              {/* Extra Large Executive Photo Box */}
-              <div className="relative w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 rounded-2xl p-1 bg-gradient-to-tr from-[#008579] via-[#38BDF8] to-[#FFB340] shadow-2xl group-hover:scale-[1.01] transition-transform duration-300 shrink-0 mt-1">
-                <div className="w-full h-full rounded-xl border-2 border-white overflow-hidden bg-slate-100">
+              {/* Compact Proportioned Photo */}
+              <div className="relative w-36 h-36 sm:w-40 sm:h-40 rounded-full p-1 bg-gradient-to-tr from-[#008579] via-[#38BDF8] to-[#FFB340] shadow-md group-hover:scale-[1.02] transition-transform duration-300 shrink-0 mt-0.5">
+                <div className="w-full h-full rounded-full border-2 border-white overflow-hidden bg-slate-100">
                   <img
                     src="/images/founder.png"
                     alt={founderData.name}
@@ -292,21 +292,21 @@ ${contactData.fullName}`;
               </div>
 
               {/* Compact Small Executive Typography */}
-              <div className="space-y-1 pt-1">
-                <h3 className="text-base sm:text-lg font-bold font-display text-[#06182D] tracking-tight uppercase">
+              <div className="space-y-1">
+                <h3 className="text-xs sm:text-sm font-bold font-display text-[#06182D] tracking-tight uppercase">
                   {founderData.name}
                 </h3>
-                <span className="inline-block text-[10px] font-mono font-bold text-[#008579] uppercase tracking-widest px-3 py-0.5 rounded-full bg-teal-50 border border-teal-200/80 shadow-sm">
+                <span className="inline-block text-[9px] sm:text-[10px] font-mono font-bold text-[#008579] uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-teal-50 border border-teal-200/80 shadow-sm">
                   {founderData.designation}
                 </span>
               </div>
 
-              <div className="w-full pt-2.5 border-t border-slate-100 font-sans space-y-0.5">
-                <p className="flex items-center justify-center space-x-1.5 text-[10px] font-mono font-extrabold text-[#06182D] tracking-wider uppercase">
+              <div className="w-full pt-2 border-t border-slate-100 font-sans space-y-0.5">
+                <p className="flex items-center justify-center space-x-1 text-[9px] sm:text-[10px] font-mono font-extrabold text-[#06182D] tracking-wider uppercase">
                   <ShieldCheck className="w-3 h-3 text-[#008579]" />
                   <span>SRAJAI TECH FOUNDER</span>
                 </p>
-                <p className="text-[10px] text-slate-500 font-medium">Enterprise Risk Strategy & ERM Specialist</p>
+                <p className="text-[9px] sm:text-[10px] text-slate-500 font-medium">Enterprise Risk Strategy & ERM Specialist</p>
               </div>
             </div>
           </div>
