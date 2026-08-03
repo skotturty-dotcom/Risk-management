@@ -311,49 +311,20 @@ ${contactData.fullName}`;
                 </p>
               </div>
 
-              {/* Expertise Cards Grid - Distinct Multi-Color Executive Cards */}
+              {/* Expertise Cards Grid - Clean Executive Dark Cards */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
-                {founderData.expertise.map((exp, idx) => {
-                  const cardThemes = [
-                    {
-                      bg: "bg-gradient-to-br from-emerald-50 via-teal-50/90 to-white border-2 border-emerald-500/50 hover:border-emerald-600",
-                      bar: "bg-gradient-to-r from-emerald-500 via-teal-400 to-emerald-600",
-                      titleColor: "text-emerald-950",
-                      icon: <ShieldCheck className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
-                    },
-                    {
-                      bg: "bg-gradient-to-br from-sky-50 via-blue-50/90 to-white border-2 border-sky-500/50 hover:border-sky-600",
-                      bar: "bg-gradient-to-r from-sky-500 via-blue-400 to-cyan-500",
-                      titleColor: "text-sky-950",
-                      icon: <Landmark className="w-3.5 h-3.5 text-sky-600 shrink-0" />
-                    },
-                    {
-                      bg: "bg-gradient-to-br from-amber-50 via-yellow-50/90 to-white border-2 border-amber-500/50 hover:border-amber-600",
-                      bar: "bg-gradient-to-r from-amber-500 via-orange-400 to-amber-600",
-                      titleColor: "text-amber-950",
-                      icon: <FileCheck className="w-3.5 h-3.5 text-amber-600 shrink-0" />
-                    },
-                    {
-                      bg: "bg-gradient-to-br from-indigo-50 via-purple-50/90 to-white border-2 border-indigo-500/50 hover:border-indigo-600",
-                      bar: "bg-gradient-to-r from-indigo-500 via-purple-400 to-violet-600",
-                      titleColor: "text-indigo-950",
-                      icon: <Target className="w-3.5 h-3.5 text-indigo-600 shrink-0" />
-                    }
-                  ];
-                  const theme = cardThemes[idx % cardThemes.length];
-                  return (
-                    <div key={idx} className={`relative p-3.5 rounded-xl ${theme.bg} text-slate-900 space-y-1 shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group`}>
-                      <div className={`absolute top-0 left-0 right-0 h-1 ${theme.bar}`} />
-                      <h4 className={`text-xs sm:text-sm font-extrabold ${theme.titleColor} font-display flex items-center space-x-1.5 pt-0.5`}>
-                        {theme.icon}
-                        <span>{exp.title}</span>
-                      </h4>
-                      <p className="text-[10px] sm:text-[11px] text-slate-700 font-medium leading-normal">
-                        {exp.desc}
-                      </p>
-                    </div>
-                  );
-                })}
+                {founderData.expertise.map((exp, idx) => (
+                  <div key={idx} className="relative p-3.5 rounded-xl bg-[#06152B]/90 text-white border border-[rgba(72,214,201,0.25)] hover:border-[#55D9CC] space-y-1 shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden group">
+                    <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#008579] via-[#38BDF8] to-[#FFB340]" />
+                    <h4 className="text-xs sm:text-sm font-extrabold text-white font-display flex items-center space-x-1.5 pt-0.5">
+                      <CheckCircle2 className="w-3.5 h-3.5 text-[#55D9CC] shrink-0" />
+                      <span>{exp.title}</span>
+                    </h4>
+                    <p className="text-[10px] sm:text-[11px] text-slate-300 font-medium leading-normal">
+                      {exp.desc}
+                    </p>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
