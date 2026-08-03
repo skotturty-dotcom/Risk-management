@@ -657,32 +657,32 @@ export default function Home({ onOpenAudit }) {
       <section id="contact" className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
           <div className="lg:col-span-5 space-y-8">
-            <div className="glass-panel p-8 rounded-3xl border border-slate-200 dark:border-teal-500/30 space-y-6">
+            <div className="glass-panel p-8 rounded-3xl border border-[rgba(72,214,201,0.18)] space-y-6 bg-[#0A1725] text-white shadow-2xl">
               <div className="space-y-2">
-                <span className="text-xs font-mono font-bold text-[#008579] dark:text-[#46A095] uppercase tracking-widest block">
+                <span className="text-xs font-mono font-extrabold text-[#55D9CC] uppercase tracking-widest block">
                   GET IN TOUCH
                 </span>
-                <h2 className="text-3xl font-extrabold font-display text-[#0F3161] dark:text-white">
+                <h2 className="text-3xl font-extrabold font-display text-white">
                   Connect with Our Advisory Team
                 </h2>
               </div>
 
-              <p className="text-sm text-slate-800 dark:text-slate-200 leading-relaxed font-semibold">
+              <p className="text-sm text-[#CBD5E1] leading-relaxed font-normal">
                 Partner with Srajai Tech to evaluate, strengthen, and optimize your organization's risk profile.
               </p>
 
-              <div className="space-y-4 pt-2">
+              <div className="space-y-5 pt-2">
                 <div className="flex items-start space-x-4">
-                  <div className="w-10 h-10 rounded-xl bg-teal-50 dark:bg-teal-500/10 border border-teal-200 dark:border-teal-500/30 flex items-center justify-center text-[#008579] dark:text-[#46A095] shrink-0">
+                  <div className="w-10 h-10 rounded-xl bg-[rgba(40,199,183,0.12)] border border-[rgba(72,214,201,0.30)] flex items-center justify-center text-[#55D9CC] shrink-0">
                     <Mail className="w-5 h-5" />
                   </div>
                   <div>
-                    <span className="text-xs font-mono uppercase text-[#008579] dark:text-[#FFB340] font-extrabold block">
+                    <span className="text-xs font-mono uppercase text-[#55D9CC] font-extrabold block tracking-wider">
                       DIRECT EMAIL
                     </span>
                     <a
                       href="mailto:srajaitech@gmail.com"
-                      className="text-[#0F3161] dark:text-white hover:text-[#008579] dark:hover:text-[#46A095] font-mono text-sm font-bold transition-colors"
+                      className="text-[#55D9CC] hover:text-[#38BDF8] font-mono text-base font-extrabold transition-colors"
                     >
                       srajaitech@gmail.com
                     </a>
@@ -690,23 +690,23 @@ export default function Home({ onOpenAudit }) {
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="w-10 h-10 rounded-xl bg-teal-50 dark:bg-teal-500/10 border border-teal-200 dark:border-teal-500/30 flex items-center justify-center text-[#008579] dark:text-[#46A095] shrink-0">
+                  <div className="w-10 h-10 rounded-xl bg-[rgba(40,199,183,0.12)] border border-[rgba(72,214,201,0.30)] flex items-center justify-center text-[#55D9CC] shrink-0">
                     <Phone className="w-5 h-5" />
                   </div>
                   <div>
-                    <span className="text-xs font-mono uppercase text-[#008579] dark:text-[#FFB340] font-extrabold block">
+                    <span className="text-xs font-mono uppercase text-[#55D9CC] font-extrabold block tracking-wider">
                       PHONE & WHATSAPP
                     </span>
                     <a
                       href="tel:+919182119045"
-                      className="text-[#0F3161] dark:text-white hover:text-[#008579] dark:hover:text-[#46A095] font-mono text-sm font-bold transition-colors block"
+                      className="text-[#55D9CC] hover:text-[#38BDF8] font-mono text-base font-extrabold transition-colors block"
                     >
                       +91 9182119045
                     </a>
-                    <div className="flex items-center gap-2 pt-1">
+                    <div className="flex items-center gap-2 pt-1.5">
                       <a
                         href="tel:+919182119045"
-                        className="px-2 py-0.5 rounded text-[11px] font-bold bg-[#0F3161] text-white hover:bg-[#008579] transition-colors"
+                        className="px-2.5 py-1 rounded text-xs font-extrabold bg-[#008579] text-white hover:bg-[#00685E] transition-colors"
                       >
                         Call
                       </a>
@@ -714,9 +714,9 @@ export default function Home({ onOpenAudit }) {
                         href="https://wa.me/919182119045"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="px-2 py-0.5 rounded text-[11px] font-bold bg-[#25D366] text-white hover:bg-[#1DA851] transition-colors flex items-center gap-1"
+                        className="px-2.5 py-1 rounded text-xs font-extrabold bg-[#25D366] text-white hover:bg-[#1DA851] transition-colors flex items-center gap-1"
                       >
-                        <MessageSquare className="w-3 h-3" />
+                        <MessageSquare className="w-3.5 h-3.5" />
                         WhatsApp
                       </a>
                     </div>
@@ -724,36 +724,36 @@ export default function Home({ onOpenAudit }) {
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="w-10 h-10 rounded-xl bg-teal-50 dark:bg-teal-500/10 border border-teal-200 dark:border-teal-500/30 flex items-center justify-center text-[#008579] dark:text-[#46A095] shrink-0">
+                  <div className="w-10 h-10 rounded-xl bg-[rgba(40,199,183,0.12)] border border-[rgba(72,214,201,0.30)] flex items-center justify-center text-[#55D9CC] shrink-0">
                     <MapPin className="w-5 h-5" />
                   </div>
                   <div>
-                    <span className="text-xs font-mono uppercase text-[#008579] dark:text-[#FFB340] font-extrabold block">
+                    <span className="text-xs font-mono uppercase text-[#55D9CC] font-extrabold block tracking-wider">
                       HEADQUARTERS
                     </span>
-                    <p className="text-[#0F3161] dark:text-white text-sm font-bold">
+                    <p className="text-white text-base font-extrabold">
                       Hyderabad, Telangana, India
                     </p>
                   </div>
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="w-10 h-10 rounded-xl bg-teal-50 dark:bg-teal-500/10 border border-teal-200 dark:border-teal-500/30 flex items-center justify-center text-[#008579] dark:text-[#46A095] shrink-0">
+                  <div className="w-10 h-10 rounded-xl bg-[rgba(40,199,183,0.12)] border border-[rgba(72,214,201,0.30)] flex items-center justify-center text-[#55D9CC] shrink-0">
                     <Clock className="w-5 h-5" />
                   </div>
                   <div>
-                    <span className="text-xs font-mono uppercase text-[#008579] dark:text-[#FFB340] font-extrabold block">
+                    <span className="text-xs font-mono uppercase text-[#55D9CC] font-extrabold block tracking-wider">
                       ADVISORY OPERATING HOURS
                     </span>
-                    <p className="text-[#0F3161] dark:text-white text-sm font-bold">
+                    <p className="text-white text-base font-extrabold">
                       Monday – Friday: 9:00 AM – 6:00 PM IST
                     </p>
                   </div>
                 </div>
               </div>
 
-              <div className="p-3.5 rounded-lg bg-slate-100 dark:bg-[#0B132B] border border-dashed border-slate-300 dark:border-teal-500/30 text-[11px] text-slate-800 dark:text-slate-200 leading-relaxed font-mono">
-                <span className="text-[#008579] dark:text-[#FFB340] font-bold">NOTE:</span> Email reflects official client documentation.
+              <div className="p-3.5 rounded-xl bg-[#06152B] border border-dashed border-[rgba(72,214,201,0.25)] text-xs text-[#CBD5E1] leading-relaxed font-mono">
+                <span className="text-[#55D9CC] font-bold">NOTE:</span> Email reflects official client documentation.
               </div>
             </div>
           </div>

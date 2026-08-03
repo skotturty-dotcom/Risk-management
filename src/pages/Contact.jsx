@@ -61,16 +61,16 @@ export default function Contact() {
 
             <div className="space-y-6 pt-2">
               <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 rounded-xl bg-teal-50 dark:bg-teal-500/10 border border-teal-200 dark:border-teal-500/30 flex items-center justify-center text-[#008579] dark:text-[#46A095] shrink-0 mt-1 shadow-sm">
+                <div className="w-12 h-12 rounded-xl bg-[rgba(40,199,183,0.12)] border border-[rgba(72,214,201,0.30)] flex items-center justify-center text-[#55D9CC] shrink-0 mt-1 shadow-sm">
                   <Mail className="w-6 h-6" />
                 </div>
                 <div>
-                  <span className="text-xs font-bold font-mono uppercase text-[#008579] dark:text-[#FFB340] tracking-wider block">
+                  <span className="text-xs font-bold font-mono uppercase text-[#55D9CC] tracking-wider block">
                     DIRECT ADVISORY EMAIL
                   </span>
                   <a
                     href={`mailto:${contactInfo.email}`}
-                    className="text-base md:text-lg font-extrabold text-[#0F3161] dark:text-white hover:text-[#008579] dark:hover:text-[#46A095] transition-colors"
+                    className="text-base md:text-lg font-extrabold text-[#55D9CC] hover:text-[#38BDF8] transition-colors"
                   >
                     {contactInfo.email}
                   </a>
@@ -78,23 +78,23 @@ export default function Contact() {
               </div>
 
               <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 rounded-xl bg-teal-50 dark:bg-teal-500/10 border border-teal-200 dark:border-teal-500/30 flex items-center justify-center text-[#008579] dark:text-[#46A095] shrink-0 mt-1 shadow-sm">
+                <div className="w-12 h-12 rounded-xl bg-[rgba(40,199,183,0.12)] border border-[rgba(72,214,201,0.30)] flex items-center justify-center text-[#55D9CC] shrink-0 mt-1 shadow-sm">
                   <Phone className="w-6 h-6" />
                 </div>
                 <div className="space-y-1.5">
-                  <span className="text-xs font-bold font-mono uppercase text-[#008579] dark:text-[#FFB340] tracking-wider block">
+                  <span className="text-xs font-bold font-mono uppercase text-[#55D9CC] tracking-wider block">
                     PHONE & WHATSAPP
                   </span>
                   <a
                     href={`tel:${contactInfo.phone.replace(/\s+/g, '')}`}
-                    className="text-base md:text-lg font-extrabold text-[#0F3161] dark:text-white hover:text-[#008579] dark:hover:text-[#46A095] transition-colors block"
+                    className="text-base md:text-lg font-extrabold text-[#55D9CC] hover:text-[#38BDF8] transition-colors block"
                   >
                     {contactInfo.phone}
                   </a>
                   <div className="flex flex-wrap items-center gap-2 pt-1">
                     <a
                       href={`tel:${contactInfo.phone.replace(/\s+/g, '')}`}
-                      className="px-3 py-1 rounded-lg text-xs font-bold bg-[#0F3161] text-white hover:bg-[#008579] transition-colors flex items-center gap-1.5 shadow-sm"
+                      className="px-3 py-1 rounded-lg text-xs font-bold bg-[#008579] text-white hover:bg-[#00685E] transition-colors flex items-center gap-1.5 shadow-sm"
                     >
                       <Phone className="w-3.5 h-3.5" />
                       Call Now
@@ -113,36 +113,36 @@ export default function Contact() {
               </div>
 
               <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 rounded-xl bg-teal-50 dark:bg-teal-500/10 border border-teal-200 dark:border-teal-500/30 flex items-center justify-center text-[#008579] dark:text-[#46A095] shrink-0 mt-1 shadow-sm">
+                <div className="w-12 h-12 rounded-xl bg-[rgba(40,199,183,0.12)] border border-[rgba(72,214,201,0.30)] flex items-center justify-center text-[#55D9CC] shrink-0 mt-1 shadow-sm">
                   <MapPin className="w-6 h-6" />
                 </div>
                 <div>
-                  <span className="text-xs font-bold font-mono uppercase text-[#008579] dark:text-[#FFB340] tracking-wider block">
+                  <span className="text-xs font-bold font-mono uppercase text-[#55D9CC] tracking-wider block">
                     HEADQUARTERS
                   </span>
-                  <p className="text-base md:text-lg font-extrabold text-[#0F3161] dark:text-white">
+                  <p className="text-base md:text-lg font-extrabold text-white">
                     {contactInfo.location}
                   </p>
                 </div>
               </div>
 
               <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 rounded-xl bg-teal-50 dark:bg-teal-500/10 border border-teal-200 dark:border-teal-500/30 flex items-center justify-center text-[#008579] dark:text-[#46A095] shrink-0 mt-1 shadow-sm">
+                <div className="w-12 h-12 rounded-xl bg-[rgba(40,199,183,0.12)] border border-[rgba(72,214,201,0.30)] flex items-center justify-center text-[#55D9CC] shrink-0 mt-1 shadow-sm">
                   <Clock className="w-6 h-6" />
                 </div>
                 <div>
-                  <span className="text-xs font-bold font-mono uppercase text-[#008579] dark:text-[#FFB340] tracking-wider block">
+                  <span className="text-xs font-bold font-mono uppercase text-[#55D9CC] tracking-wider block">
                     ADVISORY OPERATING HOURS
                   </span>
-                  <p className="text-base md:text-lg font-extrabold text-[#0F3161] dark:text-white">
+                  <p className="text-base md:text-lg font-extrabold text-white">
                     {contactInfo.hours}
                   </p>
                 </div>
               </div>
             </div>
 
-            <div className="p-3.5 rounded-lg bg-slate-100 dark:bg-[#0B132B] border border-dashed border-slate-300 dark:border-teal-500/30 text-xs font-mono text-slate-800 dark:text-slate-200 font-semibold">
-              <strong className="text-[#008579] dark:text-[#FFB340]">NOTE:</strong> Direct phone/WhatsApp and email requests receive priority response within 24 hours.
+            <div className="p-3.5 rounded-lg bg-[#06152B] border border-dashed border-[rgba(72,214,201,0.25)] text-xs font-mono text-[#CBD5E1] font-medium">
+              <strong className="text-[#55D9CC]">NOTE:</strong> Direct phone/WhatsApp and email requests receive priority response within 24 hours.
             </div>
           </div>
         </div>
