@@ -38,7 +38,7 @@ export default function App() {
       <ThemeProvider>
         <Router>
           <SEOHead />
-          <div className="relative min-h-screen bg-slate-50 dark:bg-[#050B14] text-slate-900 dark:text-[#EAF2F8] selection:bg-[#2563EB]/20 dark:selection:bg-[#5BC0EB]/30 selection:text-[#2563EB] dark:selection:text-[#5BC0EB] overflow-x-hidden font-sans transition-colors duration-300">
+          <div className="relative min-h-screen bg-white dark:bg-[#050B14] text-[#06182D] dark:text-[#EAF2F8] selection:bg-[#2563EB]/20 dark:selection:bg-[#5BC0EB]/30 selection:text-[#2563EB] dark:selection:text-[#5BC0EB] overflow-x-hidden font-sans transition-colors duration-300">
             {/* Ambient Canvas Visual Background */}
             <FloatingNetworkCanvas />
 
