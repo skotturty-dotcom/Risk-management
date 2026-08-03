@@ -115,9 +115,9 @@ export default function Home({ onOpenAudit }) {
                 <span>Strategic Risk Advisory & Governance</span>
               </div>
 
-              <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold font-display leading-[1.15] text-[#06182D] tracking-tight">
+              <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold font-display leading-[1.15] text-[#0F3161] dark:text-white tracking-tight">
                 Navigating Strategic Risk with <br className="hidden sm:inline" />
-                <span className="text-[#008579] font-extrabold">Uncompromising Resilience</span>
+                <span className="text-[#008579] dark:text-[#55D9CC] font-extrabold">Uncompromising Resilience</span>
               </h1>
 
               <p className="text-slate-700 text-base md:text-lg max-w-2xl leading-relaxed font-heading font-medium">
