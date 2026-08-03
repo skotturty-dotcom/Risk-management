@@ -32,23 +32,23 @@ export default function RiskFrameworkCircle() {
                   onClick={() => setActiveStage(stage)}
                   className={`flex flex-col items-center p-4 rounded-xl cursor-pointer transition-all duration-300 min-w-[130px] border shadow-md ${
                     isSelected
-                      ? 'bg-gradient-to-b from-[#10243C] to-[#0B1A2C] border-[#55D9CC] ring-2 ring-[#55D9CC]/50 shadow-xl shadow-teal-500/20'
-                      : 'bg-[#0A1725] border-[rgba(72,214,201,0.18)] hover:border-[#55D9CC]'
+                      ? 'bg-[#008579] border-[#008579] ring-2 ring-[#008579]/40 shadow-xl shadow-teal-500/20'
+                      : 'bg-white border-slate-200 hover:border-[#008579]'
                   }`}
                 >
-                  <span className="text-[10px] font-mono font-extrabold text-[#55D9CC] mb-1">
+                  <span className={`text-[10px] font-mono font-extrabold mb-1 ${isSelected ? 'text-[#FFB340]' : 'text-[#008579]'}`}>
                     STAGE {stage.step}
                   </span>
                   <div
                     className={`w-12 h-12 rounded-xl flex items-center justify-center mb-2 transition-colors ${
                       isSelected
-                        ? 'bg-[#008579] text-white border border-[#55D9CC]'
-                        : 'bg-[rgba(40,199,183,0.10)] text-[#55D9CC] border border-[rgba(72,214,201,0.25)]'
+                        ? 'bg-white/20 text-white border border-white/30'
+                        : 'bg-slate-100 text-[#008579] border border-slate-200'
                     }`}
                   >
                     <Icon className="w-6 h-6" />
                   </div>
-                  <span className="text-xs font-extrabold font-mono tracking-wider text-white uppercase text-center">
+                  <span className={`text-xs font-extrabold font-mono tracking-wider uppercase text-center ${isSelected ? 'text-white' : 'text-[#06182D]'}`}>
                     {stage.name}
                   </span>
                 </motion.div>
