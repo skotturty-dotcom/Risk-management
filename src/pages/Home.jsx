@@ -588,7 +588,7 @@ export default function Home({ onOpenAudit }) {
           <h2 className="text-3xl md:text-4xl font-extrabold font-display text-[#0F3161] dark:text-white">
             Risk Management Framework
           </h2>
-          <p className="text-[#CBD5E1] text-base font-normal">
+          <p className="text-[#06182D] text-base md:text-lg font-semibold leading-relaxed">
             A structured approach to identifying, assessing, mitigating, monitoring, and continuously improving enterprise risk.
           </p>
         </div>
@@ -621,7 +621,7 @@ export default function Home({ onOpenAudit }) {
           <h2 className="text-3xl font-extrabold font-display text-[#06182D]">
             Framework Foundations
           </h2>
-          <p className="text-[#CBD5E1] text-base font-normal">
+          <p className="text-[#06182D] text-base md:text-lg font-semibold leading-relaxed">
             Core international standards and internal control components underpinning Srajai Tech advisory architecture.
           </p>
         </div>
