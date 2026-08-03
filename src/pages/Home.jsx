@@ -227,14 +227,14 @@ export default function Home({ onOpenAudit }) {
               </p>
             </div>
 
-            {/* Expertise Grid */}
+            {/* Expertise Grid - Light Grey Cards with Dark Text */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-1">
               {founderData.expertise.map((exp, idx) => (
-                <div key={idx} className="p-4 sm:p-5 rounded-xl bg-[#0D1D2C] border border-[rgba(72,214,201,0.18)] space-y-1.5 shadow-md">
-                  <h4 className="text-sm font-extrabold text-[#55D9CC] font-display">
+                <div key={idx} className="p-4 sm:p-5 rounded-xl bg-slate-100 border border-slate-300 hover:border-[#008579] space-y-1.5 shadow-md transition-all">
+                  <h4 className="text-sm sm:text-base font-extrabold text-[#06182D] font-display">
                     {exp.title}
                   </h4>
-                  <p className="text-xs text-white font-normal leading-relaxed">
+                  <p className="text-xs sm:text-sm text-slate-800 font-semibold leading-relaxed">
                     {exp.desc}
                   </p>
                 </div>
