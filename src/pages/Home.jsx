@@ -10,6 +10,7 @@ import ResolverResourceHub from '../components/visuals/ResolverResourceHub';
 import AnimatedFrameworkArchitecture from '../components/visuals/AnimatedFrameworkArchitecture';
 import FloatingUI from '../components/FloatingUI';
 import SectorModal from '../components/SectorModal';
+import CareersSection from '../components/CareersSection';
 import { solutionsData } from '../data/solutionsData';
 import { industriesData } from '../data/industriesData';
 import { frameworkArchitecture, frameworkFoundations } from '../data/frameworkData';
@@ -650,6 +651,11 @@ export default function Home({ onOpenAudit }) {
       </section>
 
 
+
+      {/* ==========================================
+          11. CAREERS & EXECUTIVE HIRING SECTION
+         ========================================== */}
+      <CareersSection />
 
       {/* ==========================================
           12. CONTACT ADVISORY TEAM & INQUIRY FORM

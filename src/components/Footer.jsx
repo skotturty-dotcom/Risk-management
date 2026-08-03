@@ -110,6 +110,7 @@ export default function Footer({ onOpenAudit }) {
               <li><NavLink to="/industries" className="hover:text-[#FFB340] transition-colors">Industries We Serve (18 Sectors)</NavLink></li>
               <li><NavLink to="/risk-framework" className="hover:text-[#FFB340] transition-colors">Risk Management Framework</NavLink></li>
               <li><NavLink to="/founder" className="hover:text-[#FFB340] transition-colors">Founder Leadership</NavLink></li>
+              <li><NavLink to="/careers" className="hover:text-[#FFB340] transition-colors">Careers & Hiring</NavLink></li>
               <li><NavLink to="/contact" className="hover:text-[#FFB340] transition-colors">Contact Advisory Team</NavLink></li>
             </ul>
           </div>

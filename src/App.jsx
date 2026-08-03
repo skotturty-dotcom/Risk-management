@@ -17,6 +17,7 @@ import Industries from './pages/Industries';
 import RiskFrameworkPage from './pages/RiskFrameworkPage';
 import Founder from './pages/Founder';
 import Contact from './pages/Contact';
+import Careers from './pages/Careers';
 
 export default function App() {
   const [isAuditModalOpen, setIsAuditModalOpen] = useState(false);
@@ -57,6 +58,7 @@ export default function App() {
                 <Route path="/industries" element={<Industries onOpenAudit={handleOpenAudit} />} />
                 <Route path="/risk-framework" element={<RiskFrameworkPage onOpenAudit={handleOpenAudit} />} />
                 <Route path="/founder" element={<Founder onOpenAudit={handleOpenAudit} />} />
+                <Route path="/careers" element={<Careers onOpenAudit={handleOpenAudit} />} />
                 <Route path="/contact" element={<Contact />} />
               </Routes>
             </main>
