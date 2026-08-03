@@ -39,13 +39,13 @@ export default function CareersSection() {
   return (
     <section id="careers" className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
       <div className="text-center max-w-3xl mx-auto space-y-3">
-        <span className="text-xs font-mono font-extrabold text-[#008579] dark:text-[#55D9CC] uppercase tracking-widest px-3.5 py-1 rounded bg-teal-50 dark:bg-teal-500/10 border border-teal-200 dark:border-teal-500/30">
+        <span className="text-xs font-mono font-extrabold text-[#008579] uppercase tracking-widest px-3.5 py-1 rounded bg-teal-50 border border-teal-200 inline-block shadow-sm">
           CAREERS & HIRING
         </span>
-        <h2 className="text-3xl md:text-4xl font-extrabold font-display text-[#06182D] dark:text-white">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold font-display text-[#06182D]">
           Join Srajai Tech Advisory Practice
         </h2>
-        <p className="text-[#06182D] dark:text-[#CBD5E1] text-base md:text-lg font-semibold">
+        <p className="text-sm sm:text-base md:text-lg text-slate-700 font-semibold leading-relaxed">
           Build high-impact enterprise risk frameworks alongside senior risk strategists and board advisers.
         </p>
       </div>
@@ -53,11 +53,11 @@ export default function CareersSection() {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
         {/* Left Column: Featured Openings list */}
         <div className="lg:col-span-5 space-y-4">
-          <div className="p-6 rounded-2xl bg-slate-100 dark:bg-[#06152B] border border-slate-200 dark:border-white/10 space-y-2">
-            <h3 className="text-sm font-mono font-extrabold text-[#008579] dark:text-[#55D9CC] uppercase tracking-wider">
+          <div className="p-5 sm:p-6 rounded-2xl bg-gradient-to-br from-[#0B2545] via-[#13315C] to-[#061A33] border border-[#38BDF8]/40 text-white space-y-2 shadow-lg">
+            <h3 className="text-xs sm:text-sm font-mono font-extrabold text-[#38BDF8] uppercase tracking-wider">
               ACTIVE EXECUTIVE OPENINGS
             </h3>
-            <p className="text-xs text-slate-700 dark:text-slate-300 font-medium">
+            <p className="text-xs text-[#E2E8F0] font-medium">
               Select a position to pre-fill the candidate application.
             </p>
           </div>
