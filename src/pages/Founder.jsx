@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ShieldCheck, Award, Briefcase, Target, Quote, Mail, MapPin, ArrowRight, UserCheck, CheckCircle2, Landmark, FileCheck } from 'lucide-react';
+import { ShieldCheck, Award, Briefcase, Target, Quote, Mail, MapPin, ArrowRight, UserCheck } from 'lucide-react';
 import { founderData } from '../data/founderData';
 
 export default function Founder({ onOpenAudit }) {
@@ -59,7 +59,7 @@ export default function Founder({ onOpenAudit }) {
               </h2>
             </div>
 
-            <p className="text-[#CBD5E1] text-[10px] sm:text-[11px] leading-normal font-normal">
+            <p className="text-slate-800 dark:text-slate-100 text-base md:text-xl leading-relaxed font-semibold">
               {founderData.bio}
             </p>
 
@@ -74,15 +74,14 @@ export default function Founder({ onOpenAudit }) {
               </p>
             </div>
 
-            {/* 4-Card Expertise Grid - Pure White Cards */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+            {/* 4-Card Expertise Grid - Light Grey Cards with Dark Text */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 pt-2">
               {founderData.expertise.map((exp, idx) => (
-                <div key={idx} className="p-4.5 rounded-xl bg-white text-slate-900 border border-slate-200 hover:border-[#008579] space-y-1 shadow-md hover:shadow-xl transition-all duration-300">
-                  <h4 className="text-xs sm:text-sm font-extrabold text-[#06182D] font-display flex items-center space-x-1.5">
-                    <CheckCircle2 className="w-4 h-4 text-[#008579] shrink-0" />
-                    <span>{exp.title}</span>
+                <div key={idx} className="p-6 rounded-2xl bg-slate-100 border border-slate-300 hover:border-[#008579] space-y-2 shadow-md transition-all">
+                  <h4 className="text-base md:text-lg font-extrabold text-[#06182D] font-display">
+                    {exp.title}
                   </h4>
-                  <p className="text-xs sm:text-sm text-slate-700 font-medium leading-relaxed">
+                  <p className="text-sm md:text-base text-slate-800 font-semibold leading-relaxed">
                     {exp.desc}
                   </p>
                 </div>
