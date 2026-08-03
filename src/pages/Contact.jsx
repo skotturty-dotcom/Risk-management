@@ -41,7 +41,7 @@ export default function Contact() {
           <span className="text-gradient-emerald">& Advisory Consultation</span>
         </h1>
 
-        <p className="text-slate-700 dark:text-gray-200 text-lg md:text-xl font-medium leading-relaxed max-w-3xl">
+        <p className="text-[#06182D] text-lg md:text-xl font-semibold leading-relaxed max-w-3xl">
           Partner with Srajai Tech to evaluate, strengthen, and optimize your organization's risk profile. Our senior risk strategists deliver actionable governance frameworks.
         </p>
       </div>

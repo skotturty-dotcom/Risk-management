@@ -20,7 +20,7 @@ export default function AboutUs({ onOpenAudit }) {
             <span className="text-gradient-emerald">Through Strategic Risk</span>
           </h1>
 
-          <p className="text-slate-700 dark:text-gray-200 text-lg md:text-xl leading-relaxed font-medium">
+          <p className="text-[#06182D] text-lg md:text-xl leading-relaxed font-semibold">
             Srajai Tech provides integrated risk advisory capabilities spanning enterprise, cyber, operational, financial, legal, third-party, and fraud risk. We align corporate governance with quantitative risk appetite to safeguard capital and enable sustainable growth.
           </p>
         </div>
@@ -35,7 +35,7 @@ export default function AboutUs({ onOpenAudit }) {
           <h2 className="text-3xl md:text-4xl font-extrabold font-display text-[#0F3161] dark:text-white">
             The 3-Step Resilience Methodology
           </h2>
-          <p className="text-slate-700 dark:text-gray-200 text-base md:text-lg font-medium">
+          <p className="text-[#06182D] text-base md:text-lg font-semibold">
             Structured engagement workflow from diagnostic evaluation to continuous governance optimization.
           </p>
         </div>

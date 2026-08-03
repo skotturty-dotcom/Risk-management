@@ -32,7 +32,7 @@ export default function Solutions({ onOpenAudit }) {
             <span className="text-gradient-emerald">Quantitative Frameworks</span>
           </h1>
 
-          <p className="text-[#CBD5E1] text-base md:text-lg font-normal leading-relaxed max-w-3xl">
+          <p className="text-[#06182D] text-base md:text-lg font-semibold leading-relaxed max-w-3xl">
             Srajai Tech delivers tailored risk advisory frameworks designed to safeguard corporate capital, data infrastructure, legal standing, and operational continuity.
           </p>
         </div>

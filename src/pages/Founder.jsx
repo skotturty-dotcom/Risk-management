@@ -19,7 +19,7 @@ export default function Founder({ onOpenAudit }) {
             <span className="text-gradient-emerald">Enterprise Risk Strategy</span>
           </h1>
 
-          <p className="text-slate-700 dark:text-gray-200 text-lg md:text-xl leading-relaxed font-medium">
+          <p className="text-[#06182D] text-lg md:text-xl leading-relaxed font-semibold">
             Dedicated to transforming traditional risk management from a reactive defense mechanism into an intelligent, value-generating growth engine.
           </p>
         </div>

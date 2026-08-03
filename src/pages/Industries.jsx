@@ -39,7 +39,7 @@ export default function Industries({ onOpenAudit }) {
               <span className="text-gradient-emerald">Compliance Frameworks</span>
             </h1>
 
-            <p className="text-slate-700 dark:text-gray-200 text-base md:text-lg font-medium leading-relaxed">
+            <p className="text-[#06182D] text-base md:text-lg font-semibold leading-relaxed">
               Diagnostic risk profiling, statutory compliance audits, and custom Key Risk Indicators (KRIs) tailored across 18 major global sectors.
             </p>
           </div>
