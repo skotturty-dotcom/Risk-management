@@ -116,10 +116,10 @@
 
 /* Universal Card Surface Styling - CRISTAL CLEAR WHITE TEXT */
 .glass-panel {
-  background-color: #0A1725 !important;
+  background-color: #10243C !important;
   color: #FFFFFF !important;
-  border: 1px solid rgba(72, 214, 201, 0.18) !important;
-  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.20) !important;
+  border: 1px solid rgba(85, 217, 204, 0.28) !important;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25) !important;
   border-radius: 20px;
   font-family: 'Plus Jakarta Sans', 'Inter', system-ui, sans-serif;
 }

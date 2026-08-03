@@ -615,35 +615,36 @@ export default function Home({ onOpenAudit }) {
          ========================================== */}
       <section id="framework-foundations" className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
         <div className="text-center max-w-3xl mx-auto space-y-3">
-          <span className="text-xs font-mono font-bold text-[#008579] dark:text-[#46A095] uppercase tracking-widest px-3.5 py-1 rounded-md bg-teal-50 dark:bg-teal-500/10 border border-teal-200 dark:border-teal-500/20">
+          <span className="text-xs font-mono font-bold text-[#55D9CC] uppercase tracking-widest px-3.5 py-1 rounded-md bg-[rgba(40,199,183,0.10)] border border-[rgba(72,214,201,0.25)]">
             METHODOLOGY PILLARS
           </span>
-          <h2 className="text-3xl font-extrabold font-display text-[#0F3161] dark:text-white">
+          <h2 className="text-3xl font-extrabold font-display text-[#06182D]">
             Framework Foundations
           </h2>
-          <p className="text-slate-700 dark:text-gray-200 text-base font-medium">
+          <p className="text-slate-700 text-base font-medium">
             Core international standards and internal control components underpinning Srajai Tech advisory architecture.
           </p>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {frameworkFoundations.map((found, idx) => (
-            <div
+            <motion.div
               key={idx}
-              className="glass-panel p-6 rounded-2xl border border-slate-200 dark:border-white/10 hover:border-[#008579] dark:hover:border-[#46A095] transition-all flex items-start space-x-4"
+              whileHover={{ y: -4, scale: 1.02 }}
+              className="p-6 rounded-2xl bg-gradient-to-br from-[#122B46] to-[#0F2238] border border-[rgba(85,217,204,0.35)] hover:border-[#55D9CC] transition-all flex items-start space-x-4 shadow-xl group cursor-pointer"
             >
-              <div className="w-10 h-10 rounded-xl bg-teal-50 dark:bg-teal-500/10 border border-teal-200 dark:border-teal-500/30 flex items-center justify-center text-[#008579] dark:text-[#46A095] shrink-0">
-                <CheckCircle2 className="w-5 h-5" />
+              <div className="w-10 h-10 rounded-xl bg-[rgba(85,217,204,0.15)] border border-[rgba(85,217,204,0.30)] flex items-center justify-center text-[#55D9CC] shrink-0 group-hover:scale-110 transition-transform">
+                <CheckCircle2 className="w-5 h-5 text-[#FFB340]" />
               </div>
               <div>
-                <h3 className="text-lg font-bold font-display text-[#0F3161] dark:text-white">
+                <h3 className="text-lg font-extrabold font-display text-white group-hover:text-[#55D9CC] transition-colors">
                   {found.name}
                 </h3>
-                <p className="text-xs text-slate-600 dark:text-gray-400 mt-1 font-medium">
+                <p className="text-xs text-[#CBD5E1] mt-1 font-medium leading-relaxed">
                   {found.desc}
                 </p>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </section>
