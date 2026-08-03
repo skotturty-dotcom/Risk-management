@@ -25,6 +25,22 @@ export default function Contact() {
   const handleSubmit = (e) => {
     e.preventDefault();
     setSubmitted(true);
+
+    const subject = encodeURIComponent(`Enterprise Advisory Consultation Request - ${formData.company || formData.name}`);
+    const body = encodeURIComponent(
+      `Hello Guddeti Sanjay Raj / Srajai Tech Advisory Team,\n\nI would like to request an Executive Diagnostic Audit / Confidential Consultation.\n\n` +
+      `----------------------------------------\n` +
+      `FULL NAME: ${formData.name}\n` +
+      `CORPORATE EMAIL: ${formData.email}\n` +
+      `COMPANY NAME: ${formData.company}\n` +
+      `PHONE NUMBER: ${formData.phone || 'N/A'}\n` +
+      `PRIMARY RISK PRACTICE: ${formData.practice}\n` +
+      `----------------------------------------\n\n` +
+      `MESSAGE / PROJECT SCOPE:\n${formData.message || 'N/A'}\n\n` +
+      `Best regards,\n${formData.name}`
+    );
+
+    window.location.href = `mailto:srajaitech@gmail.com?subject=${subject}&body=${body}`;
   };
 
   return (
@@ -254,10 +270,10 @@ export default function Contact() {
 
                 <button
                   type="submit"
-                  className="w-full py-4 rounded-xl bg-gradient-to-r from-[#008579] via-[#00A896] to-[#008579] text-white text-xs font-extrabold uppercase tracking-wider shadow-lg shadow-teal-600/30 transition-all flex items-center justify-center space-x-2"
+                  className="w-full py-4 rounded-xl bg-gradient-to-r from-[#008579] via-[#00A896] to-[#008579] text-white text-xs font-extrabold uppercase tracking-wider shadow-lg shadow-teal-600/30 transition-all flex items-center justify-center space-x-2 cursor-pointer"
                 >
                   <Send className="w-4 h-4 text-[#FFB340]" />
-                  <span>Submit Enterprise Advisory Request</span>
+                  <span>Submit & Send Directly to Email</span>
                 </button>
               </form>
             ) : (
@@ -265,18 +281,29 @@ export default function Contact() {
                 <div className="w-16 h-16 rounded-full bg-emerald-100 dark:bg-emerald-500/20 text-[#008579] dark:text-[#46A095] flex items-center justify-center mx-auto shadow-md">
                   <CheckCircle2 className="w-10 h-10" />
                 </div>
-                <h3 className="text-2xl font-extrabold font-display text-[#0F3161] dark:text-white">
-                  Advisory Request Received
+                <h3 className="text-2xl font-extrabold font-display text-white">
+                  Opening Email Client...
                 </h3>
-                <p className="text-slate-700 dark:text-gray-200 text-base font-medium max-w-md mx-auto">
-                  Thank you for contacting Srajai Tech. A principal strategist will review your organizational scope and reach out within 24 business hours.
+                <p className="text-gray-200 text-base font-medium max-w-md mx-auto">
+                  Your parameters have been formatted and directed to <strong className="text-[#55D9CC]">srajaitech@gmail.com</strong>.
                 </p>
-                <button
-                  onClick={() => setSubmitted(false)}
-                  className="mt-4 px-6 py-2.5 rounded-xl bg-slate-100 dark:bg-white/10 text-[#0F3161] dark:text-white font-extrabold text-xs uppercase tracking-wider"
-                >
-                  Submit Another Request
-                </button>
+                <div className="flex flex-wrap justify-center gap-3 pt-2">
+                  <a
+                    href={`mailto:srajaitech@gmail.com?subject=${encodeURIComponent(`Enterprise Advisory Consultation Request - ${formData.company || formData.name}`)}&body=${encodeURIComponent(
+                      `Hello Guddeti Sanjay Raj / Srajai Tech Advisory Team,\n\nI would like to request an Executive Diagnostic Audit.\n\nName: ${formData.name}\nEmail: ${formData.email}\nCompany: ${formData.company}\nPhone: ${formData.phone}\nPractice: ${formData.practice}\nScope: ${formData.message}`
+                    )}`}
+                    className="px-6 py-3 rounded-xl bg-[#008579] hover:bg-[#00685E] text-white font-extrabold text-xs uppercase tracking-wider shadow-md cursor-pointer transition-all inline-flex items-center space-x-2"
+                  >
+                    <Mail className="w-4 h-4 text-white" />
+                    <span>Re-open Email Client</span>
+                  </a>
+                  <button
+                    onClick={() => setSubmitted(false)}
+                    className="px-6 py-3 rounded-xl bg-white/10 text-white font-extrabold text-xs uppercase tracking-wider hover:bg-white/20 transition-colors"
+                  >
+                    Submit Another Request
+                  </button>
+                </div>
               </div>
             )}
           </div>
