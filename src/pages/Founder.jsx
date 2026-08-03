@@ -26,22 +26,23 @@ export default function Founder({ onOpenAudit }) {
       </section>
 
       {/* Main Founder Profile & Expertise Section */}
-      <section className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="p-8 md:p-12 rounded-3xl border border-[#38BDF8]/40 bg-gradient-to-br from-[#0B2545] via-[#13315C] to-[#061A33] grid grid-cols-1 lg:grid-cols-12 gap-10 items-center shadow-2xl text-white">
-          {/* LEFT SIDE: Big Executive Portrait Photo Card */}
+      {/* Main Founder Profile & Expertise Section */}
+      <section className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="p-5 sm:p-7 md:p-8 rounded-2xl border border-[#38BDF8]/40 bg-gradient-to-br from-[#0B2545] via-[#13315C] to-[#061A33] grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center shadow-2xl text-white">
+          {/* LEFT SIDE: Executive Portrait Photo Card */}
           <div className="lg:col-span-5 relative flex justify-center">
-            <div className="relative aspect-[4/5] w-full max-w-md rounded-3xl overflow-hidden shadow-2xl border-2 border-[rgba(72,214,201,0.35)] hover:border-[#55D9CC] transition-all group">
+            <div className="relative aspect-[4/5] w-full max-w-[280px] sm:max-w-[310px] rounded-2xl overflow-hidden shadow-xl border-2 border-[rgba(72,214,201,0.35)] hover:border-[#55D9CC] transition-all group">
               <img
                 src="/images/founder.png"
                 alt={founderData.name}
                 className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#06152B] via-transparent to-transparent opacity-85" />
-              <div className="absolute bottom-4 left-4 right-4 p-4 rounded-2xl bg-[#06152B]/85 backdrop-blur-md border border-[rgba(72,214,201,0.3)] text-left space-y-1 shadow-xl">
-                <h4 className="text-lg font-extrabold text-white font-display tracking-tight">{founderData.name}</h4>
-                <p className="text-xs font-mono font-bold text-[#55D9CC] uppercase tracking-wider">{founderData.designation}</p>
-                <div className="flex items-center space-x-1.5 text-xs text-slate-300 pt-0.5 font-medium">
-                  <UserCheck className="w-4 h-4 text-[#55D9CC]" />
+              <div className="absolute bottom-3 left-3 right-3 p-3 rounded-xl bg-[#06152B]/85 backdrop-blur-md border border-[rgba(72,214,201,0.3)] text-left space-y-0.5 shadow-lg">
+                <h4 className="text-base font-extrabold text-white font-display tracking-tight">{founderData.name}</h4>
+                <p className="text-[11px] font-mono font-bold text-[#55D9CC] uppercase tracking-wider">{founderData.designation}</p>
+                <div className="flex items-center space-x-1 text-[11px] text-slate-300 pt-0.5 font-medium">
+                  <UserCheck className="w-3.5 h-3.5 text-[#55D9CC]" />
                   <span>Srajai Tech Founder & ERM Specialist</span>
                 </div>
               </div>
@@ -49,27 +50,27 @@ export default function Founder({ onOpenAudit }) {
           </div>
 
           {/* Right Column: Bio, Quote & Expertise Grid */}
-          <div className="lg:col-span-7 space-y-8">
-            <div className="space-y-3">
-              <span className="text-xs md:text-sm font-bold font-sans text-[#008579] dark:text-[#46A095] uppercase tracking-widest">
+          <div className="lg:col-span-7 space-y-5">
+            <div className="space-y-1.5">
+              <span className="text-[11px] font-mono font-bold text-[#55D9CC] uppercase tracking-widest px-3 py-1 rounded-full bg-teal-500/10 border border-teal-500/30 inline-block shadow-sm">
                 FOUNDER & PRINCIPAL RISK STRATEGIST
               </span>
-              <h2 className="text-3xl md:text-4xl font-extrabold font-display text-[#0F3161] dark:text-white">
+              <h2 className="text-2xl sm:text-3xl font-extrabold font-display text-white">
                 {founderData.name}
               </h2>
             </div>
 
-            <p className="text-slate-800 dark:text-slate-100 text-base md:text-xl leading-relaxed font-semibold">
+            <p className="text-slate-200 text-xs sm:text-sm leading-relaxed font-medium">
               {founderData.bio}
             </p>
 
             {/* Quote Block */}
-            <div className="p-7 sm:p-8 rounded-2xl border-l-4 border-l-[#008579] dark:border-l-[#46A095] bg-slate-100 dark:bg-[#0B132B] border border-slate-200 dark:border-teal-500/30 space-y-4 shadow-md">
-              <Quote className="w-9 h-9 text-[#008579] dark:text-[#46A095]" />
-              <p className="text-lg md:text-xl font-bold text-[#0F3161] dark:text-white font-heading italic leading-relaxed">
+            <div className="p-4 sm:p-4.5 rounded-xl border-l-4 border-l-[#55D9CC] bg-[#06152B]/90 border border-[rgba(72,214,201,0.2)] space-y-1.5 shadow-md">
+              <Quote className="w-5 h-5 text-[#55D9CC]" />
+              <p className="text-xs sm:text-sm font-bold text-white font-heading italic leading-relaxed">
                 "{founderData.quote}"
               </p>
-              <p className="text-sm font-sans text-[#008579] dark:text-[#FFB340] font-extrabold tracking-wide">
+              <p className="text-[11px] font-sans text-[#55D9CC] font-extrabold tracking-wide">
                 — Guddeti Sanjay Raj, Founder & Principal Risk Strategist
               </p>
             </div>

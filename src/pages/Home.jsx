@@ -268,32 +268,35 @@ ${contactData.fullName}`;
       {/* ==========================================
           2. FOUNDER & PRINCIPAL LEADERSHIP SECTION (HORIZONTAL SIDE-BY-SIDE LAYOUT)
          ========================================== */}
-      <section id="founder" className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* ==========================================
+          2. FOUNDER & PRINCIPAL LEADERSHIP SECTION (HORIZONTAL SIDE-BY-SIDE LAYOUT)
+         ========================================== */}
+      <section id="founder" className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 25 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
-          className="glass-panel p-8 sm:p-10 md:p-12 rounded-3xl bg-[#0A1725] border border-[rgba(72,214,201,0.18)] shadow-2xl relative overflow-hidden"
+          transition={{ duration: 0.6 }}
+          className="glass-panel p-5 sm:p-7 md:p-8 rounded-2xl bg-[#0A1725] border border-[rgba(72,214,201,0.18)] shadow-2xl relative overflow-hidden"
         >
           {/* Permanent Top Accent Line */}
-          <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-[#008579] via-[#38BDF8] to-[#FFB340]" />
+          <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#008579] via-[#38BDF8] to-[#FFB340]" />
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center relative z-10">
-            {/* LEFT SIDE: Big Executive Portrait Photo Card */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center relative z-10">
+            {/* LEFT SIDE: Executive Portrait Photo Card */}
             <div className="lg:col-span-5 relative flex justify-center">
-              <div className="relative aspect-[4/5] w-full max-w-md rounded-3xl overflow-hidden shadow-2xl border-2 border-[rgba(72,214,201,0.35)] hover:border-[#55D9CC] transition-all group">
+              <div className="relative aspect-[4/5] w-full max-w-[280px] sm:max-w-[310px] rounded-2xl overflow-hidden shadow-xl border-2 border-[rgba(72,214,201,0.35)] hover:border-[#55D9CC] transition-all group">
                 <img
                   src="/images/founder.png"
                   alt={founderData.name}
                   className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#06152B] via-transparent to-transparent opacity-85" />
-                <div className="absolute bottom-4 left-4 right-4 p-4 rounded-2xl bg-[#06152B]/85 backdrop-blur-md border border-[rgba(72,214,201,0.3)] text-left space-y-1 shadow-xl">
-                  <h4 className="text-lg font-extrabold text-white font-display tracking-tight">{founderData.name}</h4>
-                  <p className="text-xs font-mono font-bold text-[#55D9CC] uppercase tracking-wider">{founderData.designation}</p>
-                  <div className="flex items-center space-x-1.5 text-xs text-slate-300 pt-0.5 font-medium">
-                    <ShieldCheck className="w-4 h-4 text-[#55D9CC]" />
+                <div className="absolute bottom-3 left-3 right-3 p-3 rounded-xl bg-[#06152B]/85 backdrop-blur-md border border-[rgba(72,214,201,0.3)] text-left space-y-0.5 shadow-lg">
+                  <h4 className="text-base font-extrabold text-white font-display tracking-tight">{founderData.name}</h4>
+                  <p className="text-[11px] font-mono font-bold text-[#55D9CC] uppercase tracking-wider">{founderData.designation}</p>
+                  <div className="flex items-center space-x-1 text-[11px] text-slate-300 pt-0.5 font-medium">
+                    <ShieldCheck className="w-3.5 h-3.5 text-[#55D9CC]" />
                     <span>Srajai Tech Founder & ERM Specialist</span>
                   </div>
                 </div>
@@ -301,39 +304,39 @@ ${contactData.fullName}`;
             </div>
 
             {/* RIGHT SIDE: Text Content, Quote & Expertise */}
-            <div className="lg:col-span-7 space-y-6 text-left">
-              <div className="space-y-2">
-                <span className="text-xs font-mono font-extrabold text-[#55D9CC] uppercase tracking-widest px-4 py-1.5 rounded-full bg-teal-500/10 border border-teal-500/30 inline-block shadow-sm">
+            <div className="lg:col-span-7 space-y-4 text-left">
+              <div className="space-y-1.5">
+                <span className="text-[11px] font-mono font-extrabold text-[#55D9CC] uppercase tracking-widest px-3 py-1 rounded-full bg-teal-500/10 border border-teal-500/30 inline-block shadow-sm">
                   FOUNDER & PRINCIPAL LEADERSHIP
                 </span>
-                <h2 className="text-3xl sm:text-4xl font-extrabold font-display text-white leading-tight">
+                <h2 className="text-2xl sm:text-3xl font-extrabold font-display text-white leading-tight">
                   Architecting Executive Risk Resilience
                 </h2>
               </div>
 
-              <p className="text-slate-200 text-base sm:text-lg leading-relaxed font-medium">
+              <p className="text-slate-200 text-xs sm:text-sm leading-relaxed font-medium">
                 {founderData.bio}
               </p>
 
               {/* Quote Box */}
-              <div className="p-5 sm:p-6 rounded-2xl border-l-4 border-l-[#55D9CC] bg-[#06152B]/90 border border-[rgba(72,214,201,0.2)] space-y-2 shadow-lg">
-                <Quote className="w-6 h-6 text-[#55D9CC]" />
-                <p className="text-base sm:text-lg font-bold text-white font-heading italic leading-relaxed">
+              <div className="p-4 sm:p-4.5 rounded-xl border-l-4 border-l-[#55D9CC] bg-[#06152B]/90 border border-[rgba(72,214,201,0.2)] space-y-1.5 shadow-md">
+                <Quote className="w-5 h-5 text-[#55D9CC]" />
+                <p className="text-xs sm:text-sm font-bold text-white font-heading italic leading-relaxed">
                   "{founderData.quote}"
                 </p>
-                <p className="text-xs font-sans text-[#55D9CC] font-extrabold tracking-wide">
+                <p className="text-[11px] font-sans text-[#55D9CC] font-extrabold tracking-wide">
                   — Guddeti Sanjay Raj, Founder & Principal Risk Strategist
                 </p>
               </div>
 
               {/* Expertise Cards Grid - Pure Solid White Cards */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-1">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
                 {founderData.expertise.map((exp, idx) => (
-                  <div key={idx} className="p-5 rounded-2xl bg-white text-slate-900 border border-slate-200 hover:border-[#008579] space-y-1.5 shadow-md hover:shadow-xl transition-all duration-300">
-                    <h4 className="text-base font-extrabold text-[#06182D] font-display">
+                  <div key={idx} className="p-3.5 rounded-xl bg-white text-slate-900 border border-slate-200 hover:border-[#008579] space-y-1 shadow-sm hover:shadow-md transition-all duration-300">
+                    <h4 className="text-xs sm:text-sm font-extrabold text-[#06182D] font-display">
                       {exp.title}
                     </h4>
-                    <p className="text-xs sm:text-sm text-slate-700 font-medium leading-relaxed">
+                    <p className="text-[11px] sm:text-xs text-slate-700 font-medium leading-relaxed">
                       {exp.desc}
                     </p>
                   </div>
