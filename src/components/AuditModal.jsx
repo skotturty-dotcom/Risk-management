@@ -22,12 +22,36 @@ export default function AuditModal({ isOpen, onClose, selectedPractice }) {
 
   if (!isOpen) return null;
 
-  const handleSubmit = (e) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setSubmitted(true);
-    const message = `Hello Guddeti Sanjay Raj,\n\nI would like to schedule an Executive Diagnostic Audit.\n\n*Full Name:* ${formData.fullName}\n*Work Email:* ${formData.workEmail}\n*Company:* ${formData.companyName}\n*Phone:* ${formData.phone || 'N/A'}\n*Primary Risk Domain:* ${formData.primaryPractice}\n*Scope Details:* ${formData.scopeDetails || 'N/A'}`;
-    const whatsappUrl = `https://wa.me/919182119045?text=${encodeURIComponent(message)}`;
-    window.open(whatsappUrl, '_blank');
+    setIsSubmitting(true);
+
+    try {
+      await fetch("https://formsubmit.co/ajax/srajaitech@gmail.com", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        body: JSON.stringify({
+          _subject: `New Executive Diagnostic Audit Request - ${formData.companyName || formData.fullName}`,
+          _template: "table",
+          "Executive Name": formData.fullName,
+          "Work Email": formData.workEmail,
+          "Company Name": formData.companyName,
+          "Phone Number": formData.phone || "N/A",
+          "Primary Risk Domain": formData.primaryPractice,
+          "Scope / Objectives": formData.scopeDetails || "N/A"
+        })
+      });
+    } catch (err) {
+      console.error("AuditModal email submission error:", err);
+    } finally {
+      setIsSubmitting(false);
+      setSubmitted(true);
+    }
   };
 
   const handleDirectWhatsApp = () => {

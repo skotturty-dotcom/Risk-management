@@ -20,27 +20,37 @@ export default function Contact() {
     message: ''
   });
 
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setSubmitted(true);
+    setIsSubmitting(true);
 
-    const subject = encodeURIComponent(`Enterprise Advisory Consultation Request - ${formData.company || formData.name}`);
-    const body = encodeURIComponent(
-      `Hello Guddeti Sanjay Raj / Srajai Tech Advisory Team,\n\nI would like to request an Executive Diagnostic Audit / Confidential Consultation.\n\n` +
-      `----------------------------------------\n` +
-      `FULL NAME: ${formData.name}\n` +
-      `CORPORATE EMAIL: ${formData.email}\n` +
-      `COMPANY NAME: ${formData.company}\n` +
-      `PHONE NUMBER: ${formData.phone || 'N/A'}\n` +
-      `PRIMARY RISK PRACTICE: ${formData.practice}\n` +
-      `----------------------------------------\n\n` +
-      `MESSAGE / PROJECT SCOPE:\n${formData.message || 'N/A'}\n\n` +
-      `Best regards,\n${formData.name}`
-    );
-
-    window.location.href = `mailto:srajaitech@gmail.com?subject=${subject}&body=${body}`;
+    try {
+      await fetch("https://formsubmit.co/ajax/srajaitech@gmail.com", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        body: JSON.stringify({
+          _subject: `New Enterprise Advisory Consultation Request - ${formData.company || formData.name}`,
+          _template: "table",
+          "Full Name": formData.name,
+          "Corporate Email": formData.email,
+          "Company Name": formData.company,
+          "Phone Number": formData.phone || "N/A",
+          "Primary Risk Practice": formData.practice,
+          "Message / Project Scope": formData.message || "N/A"
+        })
+      });
+    } catch (err) {
+      console.error("FormSubmit error:", err);
+    } finally {
+      setIsSubmitting(false);
+      setSubmitted(true);
+    }
   };
 
   return (
@@ -270,36 +280,28 @@ export default function Contact() {
 
                 <button
                   type="submit"
-                  className="w-full py-4 rounded-xl bg-gradient-to-r from-[#008579] via-[#00A896] to-[#008579] text-white text-xs font-extrabold uppercase tracking-wider shadow-lg shadow-teal-600/30 transition-all flex items-center justify-center space-x-2 cursor-pointer"
+                  disabled={isSubmitting}
+                  className="w-full py-4 rounded-xl bg-gradient-to-r from-[#008579] via-[#00A896] to-[#008579] hover:from-[#00685E] hover:to-[#00685E] text-white text-xs font-extrabold uppercase tracking-wider shadow-lg shadow-teal-600/30 transition-all flex items-center justify-center space-x-2 cursor-pointer disabled:opacity-75"
                 >
                   <Send className="w-4 h-4 text-[#FFB340]" />
-                  <span>Submit & Send Directly to Email</span>
+                  <span>{isSubmitting ? 'Transmitting Request to Email...' : 'Request a Confidential Consultation'}</span>
                 </button>
               </form>
             ) : (
               <div className="text-center py-12 space-y-4">
-                <div className="w-16 h-16 rounded-full bg-emerald-100 dark:bg-emerald-500/20 text-[#008579] dark:text-[#46A095] flex items-center justify-center mx-auto shadow-md">
-                  <CheckCircle2 className="w-10 h-10" />
+                <div className="w-16 h-16 rounded-full bg-emerald-500/20 text-[#55D9CC] flex items-center justify-center mx-auto shadow-md">
+                  <CheckCircle2 className="w-10 h-10 text-[#55D9CC]" />
                 </div>
                 <h3 className="text-2xl font-extrabold font-display text-white">
-                  Opening Email Client...
+                  Consultation Request Sent directly to Email!
                 </h3>
-                <p className="text-gray-200 text-base font-medium max-w-md mx-auto">
-                  Your parameters have been formatted and directed to <strong className="text-[#55D9CC]">srajaitech@gmail.com</strong>.
+                <p className="text-gray-200 text-base font-medium max-w-md mx-auto leading-relaxed">
+                  Your parameters have been transmitted directly to <strong className="text-[#55D9CC]">srajaitech@gmail.com</strong>. A principal strategist will contact you shortly.
                 </p>
-                <div className="flex flex-wrap justify-center gap-3 pt-2">
-                  <a
-                    href={`mailto:srajaitech@gmail.com?subject=${encodeURIComponent(`Enterprise Advisory Consultation Request - ${formData.company || formData.name}`)}&body=${encodeURIComponent(
-                      `Hello Guddeti Sanjay Raj / Srajai Tech Advisory Team,\n\nI would like to request an Executive Diagnostic Audit.\n\nName: ${formData.name}\nEmail: ${formData.email}\nCompany: ${formData.company}\nPhone: ${formData.phone}\nPractice: ${formData.practice}\nScope: ${formData.message}`
-                    )}`}
-                    className="px-6 py-3 rounded-xl bg-[#008579] hover:bg-[#00685E] text-white font-extrabold text-xs uppercase tracking-wider shadow-md cursor-pointer transition-all inline-flex items-center space-x-2"
-                  >
-                    <Mail className="w-4 h-4 text-white" />
-                    <span>Re-open Email Client</span>
-                  </a>
+                <div className="flex justify-center pt-2">
                   <button
                     onClick={() => setSubmitted(false)}
-                    className="px-6 py-3 rounded-xl bg-white/10 text-white font-extrabold text-xs uppercase tracking-wider hover:bg-white/20 transition-colors"
+                    className="px-6 py-3 rounded-xl bg-[#008579] hover:bg-[#00685E] text-white font-extrabold text-xs uppercase tracking-wider transition-colors shadow-md"
                   >
                     Submit Another Request
                   </button>
