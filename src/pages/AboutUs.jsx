@@ -155,7 +155,7 @@ export default function AboutUs({ onOpenAudit }) {
               </h2>
             </div>
 
-            <p className="text-slate-800 dark:text-slate-100 text-base md:text-xl leading-relaxed font-semibold">
+            <p className="text-[#CBD5E1] text-[10px] sm:text-[11px] leading-normal font-normal">
               {founderData.bio}
             </p>
 

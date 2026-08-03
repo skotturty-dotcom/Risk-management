@@ -296,7 +296,7 @@ ${contactData.fullName}`;
                 </h2>
               </div>
 
-              <p className="text-[11px] sm:text-xs text-slate-300 leading-relaxed font-normal">
+              <p className="text-[10px] sm:text-[11px] text-slate-300 leading-normal font-normal">
                 {founderData.bio}
               </p>
 
