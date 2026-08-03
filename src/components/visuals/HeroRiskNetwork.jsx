@@ -68,11 +68,7 @@ export default function HeroRiskNetwork({ onOpenAudit }) {
         onClick={onOpenAudit}
         className="relative z-20 w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-full bg-slate-900 text-white border-2 border-emerald-500 dark:border-emerald-400 flex flex-col items-center justify-center cursor-pointer shadow-2xl shadow-emerald-600/30 group"
       >
-        <img
-          src="/emblem-icon.png"
-          alt="Srajai Tech Emblem"
-          className="w-8 h-8 sm:w-10 sm:h-10 object-contain mb-0.5 sm:mb-1 group-hover:scale-110 transition-transform duration-300"
-        />
+        <Shield className="w-7 h-7 sm:w-9 sm:h-9 text-emerald-400 mb-0.5 sm:mb-1 group-hover:scale-110 transition-transform duration-300" />
         <span className="text-[9px] sm:text-[11px] font-extrabold tracking-widest uppercase text-white font-mono">
           ENTERPRISE
         </span>
