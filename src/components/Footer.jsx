@@ -15,18 +15,17 @@ export default function Footer({ onOpenAudit }) {
 
   return (
     <footer className="relative bg-[#008579] text-white overflow-hidden border-t border-teal-300/40 shadow-2xl">
-      {/* Resolver-Inspired Newsletter & Intelligence Subscription Banner - UNIFIED BRIGHT TEAL */}
-      <div className="relative bg-[#008579] py-12 px-4 sm:px-6 lg:px-8 border-b border-white/20 overflow-hidden">
-        <div className="absolute -right-20 -top-20 w-80 h-80 bg-white/10 rounded-full blur-3xl pointer-events-none" />
+      {/* Resolver-Inspired Newsletter & Intelligence Subscription Banner - PURE WHITE CONTAINER BOX */}
+      <div className="relative bg-white py-12 px-4 sm:px-6 lg:px-8 border-b border-slate-200 shadow-lg text-slate-900 overflow-hidden">
         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-8 relative z-10">
           <div className="space-y-2 text-center lg:text-left">
-            <span className="text-xs font-mono font-extrabold text-[#FFB340] uppercase tracking-widest px-3 py-1 rounded bg-[#00685E] border border-[#FFB340]/40 inline-block shadow-md">
+            <span className="text-xs font-mono font-extrabold text-[#008579] uppercase tracking-widest px-3.5 py-1 rounded bg-teal-50 border border-teal-200 inline-block shadow-sm">
               SRAJAI TECH RISK INTELLIGENCE BULLETIN
             </span>
-            <h3 className="text-2xl md:text-3xl font-extrabold font-display text-white">
+            <h3 className="text-2xl md:text-3xl font-extrabold font-display text-[#06182D]">
               Subscribe to Boardroom Risk Briefings & Telemetry Insights
             </h3>
-            <p className="text-sm text-white max-w-xl font-semibold leading-relaxed">
+            <p className="text-sm text-slate-600 max-w-xl font-medium leading-relaxed">
               Join over 5,000+ CXOs, risk officers, and governance directors receiving our monthly advisory breakdown.
             </p>
           </div>
@@ -39,20 +38,20 @@ export default function Footer({ onOpenAudit }) {
                   value={newsletterEmail}
                   onChange={(e) => setNewsletterEmail(e.target.value)}
                   placeholder="Enter corporate email..."
-                  className="w-full sm:w-80 px-4 py-3 rounded-xl bg-white text-slate-900 placeholder-slate-500 text-sm font-semibold focus:outline-none focus:ring-2 focus:ring-[#FFB340] shadow-lg border border-white"
+                  className="w-full sm:w-80 px-4 py-3 rounded-xl bg-slate-50 text-slate-900 placeholder-slate-400 text-sm font-semibold focus:outline-none focus:ring-2 focus:ring-[#008579] shadow-inner border border-slate-300"
                   required
                 />
                 <button
                   type="submit"
-                  className="w-full sm:w-auto px-6 py-3 rounded-xl bg-[#FFB340] hover:bg-[#FFA41A] text-[#06182D] font-extrabold text-xs uppercase tracking-wider shadow-xl hover:scale-105 transition-all flex items-center justify-center space-x-2 shrink-0 cursor-pointer"
+                  className="w-full sm:w-auto px-6 py-3 rounded-xl bg-[#008579] hover:bg-[#00685E] text-white font-extrabold text-xs uppercase tracking-wider shadow-lg hover:scale-105 transition-all flex items-center justify-center space-x-2 shrink-0 cursor-pointer"
                 >
                   <span>Subscribe Briefs</span>
-                  <ArrowRight className="w-4 h-4 text-[#06182D]" />
+                  <ArrowRight className="w-4 h-4 text-white" />
                 </button>
               </form>
             ) : (
-              <div className="flex items-center space-x-2 text-[#FFB340] font-mono text-sm font-extrabold bg-[#00685E] px-5 py-3 rounded-xl border border-[#FFB340]/40 shadow-lg">
-                <CheckCircle2 className="w-5 h-5 text-[#FFB340]" />
+              <div className="flex items-center space-x-2 text-[#008579] font-mono text-sm font-extrabold bg-teal-50 px-5 py-3 rounded-xl border border-teal-200 shadow-sm">
+                <CheckCircle2 className="w-5 h-5 text-[#008579]" />
                 <span>Subscription Confirmed. Welcome to Srajai Tech Intelligence.</span>
               </div>
             )}
