@@ -124,8 +124,8 @@
   font-family: 'Plus Jakarta Sans', 'Inter', system-ui, sans-serif;
 }
 
-.glass-panel p,
-.glass-panel li {
+.glass-panel p:not([class*="text-[#06182D]"]):not([class*="text-[#0A1725]"]):not([class*="text-[#008579]"]):not([class*="text-slate-700"]):not([class*="text-slate-800"]):not([class*="text-slate-900"]):not([class*="text-black"]),
+.glass-panel li:not([class*="text-[#06182D]"]):not([class*="text-[#0A1725]"]):not([class*="text-[#008579]"]):not([class*="text-slate-700"]):not([class*="text-slate-800"]):not([class*="text-slate-900"]):not([class*="text-black"]) {
   color: #FFFFFF !important;
 }
 
