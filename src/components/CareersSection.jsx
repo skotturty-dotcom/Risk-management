@@ -122,8 +122,8 @@ export default function CareersSection() {
                       required
                       value={form.name}
                       onChange={(e) => setForm({ ...form, name: e.target.value })}
-                      placeholder="e.g. Ananya Rao"
-                      className="w-full px-4 py-2.5 rounded-xl bg-white text-slate-900 font-semibold placeholder-slate-400 text-xs focus:outline-none focus:ring-2 focus:ring-[#38BDF8] border border-white"
+                      placeholder=""
+                      className="w-full px-4 py-2.5 rounded-xl bg-white text-slate-900 font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-[#38BDF8] border border-white"
                     />
                   </div>
 
@@ -136,8 +136,8 @@ export default function CareersSection() {
                       required
                       value={form.email}
                       onChange={(e) => setForm({ ...form, email: e.target.value })}
-                      placeholder="ananya@company.com"
-                      className="w-full px-4 py-2.5 rounded-xl bg-white text-slate-900 font-semibold placeholder-slate-400 text-xs focus:outline-none focus:ring-2 focus:ring-[#38BDF8] border border-white"
+                      placeholder=""
+                      className="w-full px-4 py-2.5 rounded-xl bg-white text-slate-900 font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-[#38BDF8] border border-white"
                     />
                   </div>
                 </div>
@@ -152,8 +152,8 @@ export default function CareersSection() {
                       required
                       value={form.phone}
                       onChange={(e) => setForm({ ...form, phone: e.target.value })}
-                      placeholder="+91 91234 56789"
-                      className="w-full px-4 py-2.5 rounded-xl bg-white text-slate-900 font-semibold placeholder-slate-400 text-xs focus:outline-none focus:ring-2 focus:ring-[#38BDF8] border border-white"
+                      placeholder=""
+                      className="w-full px-4 py-2.5 rounded-xl bg-white text-slate-900 font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-[#38BDF8] border border-white"
                     />
                   </div>
 
@@ -166,8 +166,8 @@ export default function CareersSection() {
                       required
                       value={form.link}
                       onChange={(e) => setForm({ ...form, link: e.target.value })}
-                      placeholder="https://linkedin.com/in/..."
-                      className="w-full px-4 py-2.5 rounded-xl bg-white text-slate-900 font-semibold placeholder-slate-400 text-xs focus:outline-none focus:ring-2 focus:ring-[#38BDF8] border border-white"
+                      placeholder=""
+                      className="w-full px-4 py-2.5 rounded-xl bg-white text-slate-900 font-semibold text-xs focus:outline-none focus:ring-2 focus:ring-[#38BDF8] border border-white"
                     />
                   </div>
                 </div>

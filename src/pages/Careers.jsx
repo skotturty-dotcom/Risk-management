@@ -219,8 +219,8 @@ export default function Careers({ onOpenAudit }) {
                     required
                     value={formData.fullName}
                     onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
-                    placeholder="e.g. Vikram Malhotra"
-                    className="w-full px-4 py-3 rounded-xl bg-white text-slate-900 font-semibold placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#38BDF8] border border-white"
+                    placeholder=""
+                    className="w-full px-4 py-3 rounded-xl bg-white text-slate-900 font-semibold focus:outline-none focus:ring-2 focus:ring-[#38BDF8] border border-white"
                   />
                 </div>
 
@@ -233,8 +233,8 @@ export default function Careers({ onOpenAudit }) {
                     required
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    placeholder="vikram@corporate.com"
-                    className="w-full px-4 py-3 rounded-xl bg-white text-slate-900 font-semibold placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#38BDF8] border border-white"
+                    placeholder=""
+                    className="w-full px-4 py-3 rounded-xl bg-white text-slate-900 font-semibold focus:outline-none focus:ring-2 focus:ring-[#38BDF8] border border-white"
                   />
                 </div>
               </div>
@@ -249,8 +249,8 @@ export default function Careers({ onOpenAudit }) {
                     required
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                    placeholder="+91 98765 43210"
-                    className="w-full px-4 py-3 rounded-xl bg-white text-slate-900 font-semibold placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#38BDF8] border border-white"
+                    placeholder=""
+                    className="w-full px-4 py-3 rounded-xl bg-white text-slate-900 font-semibold focus:outline-none focus:ring-2 focus:ring-[#38BDF8] border border-white"
                   />
                 </div>
 
