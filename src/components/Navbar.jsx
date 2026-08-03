@@ -1,14 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Shield, ArrowRight, Sun, Moon } from 'lucide-react';
-import { useTheme } from '../context/ThemeContext';
+import { Menu, X, Shield, ArrowRight } from 'lucide-react';
 
 export default function Navbar({ onOpenAudit }) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const location = useLocation();
-  const { theme, toggleTheme } = useTheme();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -72,17 +70,8 @@ export default function Navbar({ onOpenAudit }) {
           ))}
         </nav>
 
-        {/* CTA & Theme Switcher Buttons - Thin Height */}
+        {/* CTA Button - Thin Height */}
         <div className="hidden lg:flex items-center space-x-2.5 shrink-0">
-          <button
-            onClick={toggleTheme}
-            className="p-1.5 rounded-lg bg-slate-100 border border-slate-200 text-slate-700 hover:text-[#008579] transition-colors"
-            title={theme === 'light' ? 'Switch to Dark Mode' : 'Switch to Bright Theme'}
-            aria-label="Toggle Theme"
-          >
-            {theme === 'light' ? <Moon className="w-4 h-4 text-[#008579]" /> : <Sun className="w-4 h-4 text-[#008579]" />}
-          </button>
-
           <button
             onClick={onOpenAudit}
             className="btn-primary-cta px-3.5 py-2 rounded-lg text-xs tracking-wide flex items-center space-x-1.5 shrink-0 group"
@@ -92,16 +81,8 @@ export default function Navbar({ onOpenAudit }) {
           </button>
         </div>
 
-        {/* Mobile Controls */}
+        {/* Mobile Menu Control */}
         <div className="lg:hidden flex items-center space-x-2">
-          <button
-            onClick={toggleTheme}
-            className="p-1.5 rounded-lg bg-slate-100 border border-slate-200 text-slate-700"
-            aria-label="Toggle Theme"
-          >
-            {theme === 'light' ? <Moon className="w-4 h-4 text-[#008579]" /> : <Sun className="w-4 h-4 text-[#008579]" />}
-          </button>
-
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             className="p-1.5 rounded-lg bg-slate-100 border border-slate-200 text-slate-800 focus:outline-none"
