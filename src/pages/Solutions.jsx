@@ -80,7 +80,7 @@ export default function Solutions({ onOpenAudit }) {
 
                   {/* Title & Subheading */}
                   <div className="space-y-1.5">
-                    <h3 className="text-lg md:text-xl font-extrabold font-display text-[#38BDF8] group-hover:text-[#55D9CC] transition-colors leading-snug">
+                    <h3 className="text-lg md:text-xl font-extrabold font-display text-white group-hover:text-[#55D9CC] transition-colors leading-snug">
                       {practice.title}
                     </h3>
                     <p className="text-xs text-[#E2E8F0] font-medium leading-relaxed">

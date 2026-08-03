@@ -342,7 +342,7 @@ export default function Home({ onOpenAudit }) {
                     </span>
                   </div>
 
-                  <h3 className="text-xl md:text-2xl font-extrabold font-display text-[#38BDF8] leading-tight">
+                  <h3 className="text-xl md:text-2xl font-extrabold font-display text-white group-hover:text-[#55D9CC] transition-colors leading-tight">
                     {sol.title}
                   </h3>
 
