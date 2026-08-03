@@ -430,7 +430,7 @@ export default function Home({ onOpenAudit }) {
 
                     <button
                       onClick={onOpenAudit}
-                      className="w-full py-2.5 rounded-lg bg-[#38BDF8] hover:bg-[#55D9CC] text-[#06182D] text-xs font-extrabold uppercase tracking-wider shadow-md transition-all flex items-center justify-center space-x-2 cursor-pointer"
+                      className="w-full py-2.5 rounded-lg bg-white hover:bg-slate-100 text-[#06182D] text-xs font-extrabold uppercase tracking-wider shadow-md hover:shadow-xl transition-all flex items-center justify-center space-x-2 cursor-pointer border border-white"
                     >
                       <span>Audit {sol.title.split(' ')[0]} Scope</span>
                       <ArrowRight className="w-3.5 h-3.5 text-[#06182D]" />
