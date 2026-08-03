@@ -8,6 +8,7 @@ import RiskFrameworkCircle from '../components/visuals/RiskFrameworkCircle';
 import RiskHeatmap from '../components/visuals/RiskHeatmap';
 import ResolverResourceHub from '../components/visuals/ResolverResourceHub';
 import AnimatedFrameworkArchitecture from '../components/visuals/AnimatedFrameworkArchitecture';
+import AdvisoryWorkflow from '../components/visuals/AdvisoryWorkflow';
 import FloatingUI from '../components/FloatingUI';
 import SectorModal from '../components/SectorModal';
 import CareersSection from '../components/CareersSection';
@@ -679,7 +680,12 @@ export default function Home({ onOpenAudit }) {
 
 
       {/* ==========================================
-          11. CAREERS & EXECUTIVE HIRING SECTION
+          11. INTERACTIVE 4-STEP ADVISORY WORKFLOW
+         ========================================== */}
+      <AdvisoryWorkflow onOpenAudit={onOpenAudit} />
+
+      {/* ==========================================
+          12. CAREERS & EXECUTIVE HIRING SECTION
          ========================================== */}
       <CareersSection />
 
