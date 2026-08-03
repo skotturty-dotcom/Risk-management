@@ -140,6 +140,10 @@
   transition: all 0.3s ease;
 }
 
+.text-dark-navy {
+  color: #06182D !important;
+}
+
 .glass-panel-hover:hover {
   border-color: rgba(72, 214, 201, 0.35) !important;
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.30) !important;
