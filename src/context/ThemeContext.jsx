@@ -5,7 +5,7 @@ const ThemeContext = createContext();
 export function ThemeProvider({ children }) {
   const [theme, setTheme] = useState(() => {
     const saved = localStorage.getItem('srajai_theme');
-    return saved ? saved : 'dark'; // Default to Enterprise Dark Theme
+    return saved ? saved : 'light'; // Default to Clean Desktop Light Theme
   });
 
   useEffect(() => {

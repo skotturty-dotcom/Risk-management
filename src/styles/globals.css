@@ -46,8 +46,8 @@
   html, body {
     font-size: 16px;
     cursor: default !important;
-    background-color: #FFFFFF;
-    color: #06182D;
+    background-color: #FFFFFF !important;
+    color: #06182D !important;
   }
 
   body {
@@ -63,12 +63,12 @@
   }
 
   html.dark body {
-    background-color: #020B14 !important;
-    color: #F5F8FA !important;
+    background-color: #FFFFFF !important;
+    color: #06182D !important;
   }
 
   @media (max-width: 768px) {
-    html, body {
+    html, body, html.dark, html.dark body {
       background-color: #FFFFFF !important;
       color: #06182D !important;
     }
