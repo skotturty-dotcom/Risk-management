@@ -67,9 +67,9 @@ export default function Footer({ onOpenAudit }) {
           <div className="lg:col-span-2 space-y-4">
             <div className="flex items-center space-x-3">
               <img
-                src="/logo-dark.png"
+                src="/logo-light.png"
                 alt="Srajai Tech Logo"
-                className="h-14 sm:h-16 md:h-20 max-h-20 w-auto object-contain brightness-0 invert"
+                className="h-14 sm:h-16 md:h-20 max-h-20 w-auto object-contain"
               />
             </div>
 
