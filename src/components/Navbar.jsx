@@ -44,11 +44,11 @@ export default function Navbar({ onOpenAudit }) {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         {/* Brand Logo */}
-        <NavLink to="/" className="flex items-center space-x-3 group shrink-0">
+        <NavLink to="/" className="flex items-center space-x-3 group shrink-0 py-1">
           <img
             src="/logo-dark.png"
             alt="Srajai Tech Logo"
-            className="h-10 md:h-12 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
+            className="h-12 sm:h-14 md:h-16 lg:h-20 max-h-20 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
           />
         </NavLink>
 

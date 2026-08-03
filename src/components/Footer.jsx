@@ -68,7 +68,7 @@ export default function Footer({ onOpenAudit }) {
               <img
                 src="/logo-dark.png"
                 alt="Srajai Tech Logo"
-                className="h-11 md:h-12 w-auto object-contain"
+                className="h-14 sm:h-16 md:h-20 max-h-20 w-auto object-contain"
               />
             </div>
 
