@@ -311,14 +311,14 @@ ${contactData.fullName}`;
                 </p>
               </div>
 
-              {/* Expertise Cards Grid */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 pt-1">
+              {/* Expertise Cards Grid - Pure Solid White Cards */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-1">
                 {founderData.expertise.map((exp, idx) => (
-                  <div key={idx} className="p-4 rounded-xl bg-white/5 border border-white/10 hover:border-[#55D9CC] space-y-1 transition-all shadow-sm">
-                    <h4 className="text-xs sm:text-sm font-extrabold text-white font-display">
+                  <div key={idx} className="p-5 rounded-2xl bg-white text-slate-900 border border-slate-200 hover:border-[#008579] space-y-1.5 shadow-md hover:shadow-xl transition-all duration-300">
+                    <h4 className="text-base font-extrabold text-[#06182D] font-display">
                       {exp.title}
                     </h4>
-                    <p className="text-xs text-slate-300 font-medium leading-relaxed">
+                    <p className="text-xs sm:text-sm text-slate-700 font-medium leading-relaxed">
                       {exp.desc}
                     </p>
                   </div>
