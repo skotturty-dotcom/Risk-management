@@ -216,48 +216,48 @@ export default function ResolverResourceHub({ onOpenAudit }) {
                 initial={{ opacity: 0, scale: 0.98 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.98 }}
-                whileHover={{ y: -4 }}
-                className="glass-panel p-5 rounded-2xl border border-[rgba(72,214,201,0.18)] hover:border-[#55D9CC] transition-all duration-200 flex flex-col justify-between group shadow-lg bg-[#0A1725] text-white"
+                whileHover={{ y: -6, scale: 1.02 }}
+                className="p-5 rounded-2xl cursor-pointer border border-[#38BDF8]/40 hover:border-[#38BDF8] transition-all duration-300 flex flex-col justify-between group shadow-2xl bg-gradient-to-br from-[#0B2545] via-[#13315C] to-[#061A33] text-white"
               >
                 <div className="space-y-3">
                   {/* Top Badges & Category Icon */}
                   <div className="flex items-center justify-between">
                     <div className="flex items-center space-x-2">
-                      <div className="w-7 h-7 rounded-md bg-[rgba(40,199,183,0.10)] border border-[rgba(72,214,201,0.25)] flex items-center justify-center text-[#55D9CC]">
+                      <div className="w-7 h-7 rounded-md bg-[#38BDF8]/15 border border-[#38BDF8]/30 flex items-center justify-center text-[#38BDF8]">
                         <IconComponent className="w-3.5 h-3.5" />
                       </div>
-                      <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-[#55D9CC] bg-[rgba(40,199,183,0.10)] px-2 py-0.5 rounded border border-[rgba(72,214,201,0.25)]">
+                      <span className="text-[10px] font-mono font-extrabold uppercase tracking-wider text-[#38BDF8] bg-[#38BDF8]/15 px-2 py-0.5 rounded border border-[#38BDF8]/30 shadow-sm">
                         {res.tag}
                       </span>
                     </div>
 
-                    <span className="text-[11px] font-mono text-[#CBD5E1] font-semibold">
+                    <span className="text-[11px] font-mono text-[#E2E8F0] font-semibold">
                       {res.readTime}
                     </span>
                   </div>
 
                   {/* Title */}
-                  <h4 className="text-base font-bold font-display text-white group-hover:text-[#55D9CC] transition-colors leading-snug">
+                  <h4 className="text-base font-extrabold font-display text-[#38BDF8] group-hover:text-[#55D9CC] transition-colors leading-snug">
                     {res.title}
                   </h4>
 
                   {/* Description */}
-                  <p className="text-xs text-[#CBD5E1] leading-relaxed font-normal line-clamp-3">
+                  <p className="text-xs text-[#E2E8F0] leading-relaxed font-medium line-clamp-3">
                     {res.desc}
                   </p>
                 </div>
 
                 {/* Simple Action Footer */}
-                <div className="pt-4 mt-3 border-t border-white/10 flex items-center justify-between">
-                  <span className="text-[11px] font-mono text-[#CBD5E1] uppercase font-bold tracking-wider">
+                <div className="pt-4 mt-3 border-t border-white/15 flex items-center justify-between">
+                  <span className="text-[11px] font-mono text-[#E2E8F0] uppercase font-extrabold tracking-wider">
                     {res.type}
                   </span>
                   <button
                     onClick={onOpenAudit}
-                    className="inline-flex items-center space-x-1.5 text-xs font-extrabold text-[#55D9CC] hover:underline"
+                    className="inline-flex items-center space-x-1.5 text-xs font-extrabold text-[#38BDF8] hover:underline"
                   >
                     <span>Download</span>
-                    <ArrowRight className="w-3.5 h-3.5 text-[#FFB340] group-hover:translate-x-0.5 transition-transform" />
+                    <ArrowRight className="w-3.5 h-3.5 text-[#38BDF8] group-hover:translate-x-1 transition-transform" />
                   </button>
                 </div>
               </motion.div>
