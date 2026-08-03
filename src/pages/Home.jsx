@@ -432,11 +432,11 @@ export default function Home({ onOpenAudit }) {
               animate={{ y: [0, -6, 0] }}
               transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
               whileHover={{ y: -10, scale: 1.02 }}
-              className="p-6 rounded-2xl bg-slate-100 border border-slate-300 hover:border-[#008579] space-y-3 shadow-lg relative overflow-hidden group"
+              className="p-6 rounded-2xl bg-white border border-slate-200 hover:border-[#008579] space-y-3 shadow-lg relative overflow-hidden group"
             >
               <div className="flex items-center justify-between">
                 <span className="text-2xl font-mono font-extrabold text-[#008579]">01</span>
-                <div className="p-2.5 rounded-xl bg-white border border-slate-300 text-[#008579] group-hover:scale-110 transition-transform shadow-sm">
+                <div className="p-2.5 rounded-xl bg-slate-100 border border-slate-200 text-[#008579] group-hover:scale-110 transition-transform shadow-sm">
                   <Target className="w-5 h-5" />
                 </div>
               </div>
@@ -453,11 +453,11 @@ export default function Home({ onOpenAudit }) {
               animate={{ y: [0, 6, 0] }}
               transition={{ duration: 4.5, repeat: Infinity, ease: 'easeInOut' }}
               whileHover={{ y: -10, scale: 1.02 }}
-              className="p-6 rounded-2xl bg-slate-100 border border-slate-300 hover:border-[#008579] space-y-3 shadow-lg relative overflow-hidden group"
+              className="p-6 rounded-2xl bg-white border border-slate-200 hover:border-[#008579] space-y-3 shadow-lg relative overflow-hidden group"
             >
               <div className="flex items-center justify-between">
                 <span className="text-2xl font-mono font-extrabold text-[#008579]">02</span>
-                <div className="p-2.5 rounded-xl bg-white border border-slate-300 text-[#008579] group-hover:scale-110 transition-transform shadow-sm">
+                <div className="p-2.5 rounded-xl bg-slate-100 border border-slate-200 text-[#008579] group-hover:scale-110 transition-transform shadow-sm">
                   <Layers className="w-5 h-5" />
                 </div>
               </div>
@@ -474,11 +474,11 @@ export default function Home({ onOpenAudit }) {
               animate={{ y: [0, -6, 0] }}
               transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
               whileHover={{ y: -10, scale: 1.02 }}
-              className="p-6 rounded-2xl bg-slate-100 border border-slate-300 hover:border-[#008579] space-y-3 shadow-lg relative overflow-hidden group"
+              className="p-6 rounded-2xl bg-white border border-slate-200 hover:border-[#008579] space-y-3 shadow-lg relative overflow-hidden group"
             >
               <div className="flex items-center justify-between">
                 <span className="text-2xl font-mono font-extrabold text-[#008579]">03</span>
-                <div className="p-2.5 rounded-xl bg-white border border-slate-300 text-[#008579] group-hover:scale-110 transition-transform shadow-sm">
+                <div className="p-2.5 rounded-xl bg-slate-100 border border-slate-200 text-[#008579] group-hover:scale-110 transition-transform shadow-sm">
                   <Eye className="w-5 h-5" />
                 </div>
               </div>
