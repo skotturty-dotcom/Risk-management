@@ -134,7 +134,7 @@ export default function HeroRiskNetwork({ onOpenAudit }) {
             }}
           >
             <Icon className="w-5 h-5 sm:w-6 sm:h-6 mb-0.5" style={{ color: node.color }} />
-            <span className="text-[8px] sm:text-[9px] font-mono font-bold text-slate-800 dark:text-gray-200 tracking-tight">
+            <span className="text-[8px] sm:text-[9px] font-mono font-extrabold text-[#06182D] dark:text-white tracking-tight">
               {node.label}
             </span>
           </motion.div>

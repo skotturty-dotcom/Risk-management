@@ -67,7 +67,7 @@ export default function AuditModal({ isOpen, onClose, selectedPractice }) {
                 <h3 className="text-2xl sm:text-3xl font-extrabold font-display text-[#0F3161] dark:text-white">
                   Schedule Executive Diagnostic Audit
                 </h3>
-                <p className="text-sm font-medium text-slate-700 dark:text-gray-200">
+                <p className="text-sm font-semibold text-[#06182D] dark:text-white">
                   Provide your organizational parameters to initiate a senior advisory assessment with Guddeti Sanjay Raj.
                 </p>
               </div>

@@ -88,7 +88,7 @@ export default function SectorModal({ sector, onClose, onOpenAudit }) {
               <h4 className="text-xs font-mono font-bold uppercase text-slate-500 dark:text-gray-400 tracking-wider mb-2">
                 Executive Advisory Overview
               </h4>
-              <p className="text-sm text-slate-700 dark:text-gray-200 leading-relaxed font-medium">
+              <p className="text-sm text-[#06182D] dark:text-white leading-relaxed font-semibold">
                 {sector.details}
               </p>
             </div>
@@ -100,7 +100,7 @@ export default function SectorModal({ sector, onClose, onOpenAudit }) {
                 </h4>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
                   {sector.kris.map((kri, idx) => (
-                    <div key={idx} className="flex items-center space-x-2.5 p-3 rounded-lg bg-white dark:bg-[#132B4F] border border-slate-200 dark:border-white/10 text-xs font-bold text-slate-800 dark:text-gray-200">
+                    <div key={idx} className="flex items-center space-x-2.5 p-3 rounded-lg bg-white dark:bg-[#132B4F] border border-slate-200 dark:border-white/10 text-xs font-extrabold text-[#06182D] dark:text-white">
                       <CheckCircle2 className="w-4 h-4 text-[#008579] dark:text-[#46A095] shrink-0" />
                       <span>{kri}</span>
                     </div>

@@ -126,10 +126,10 @@ export default function Navbar({ onOpenAudit }) {
                   key={link.path}
                   to={link.path}
                   className={({ isActive }) =>
-                    `px-3.5 py-2 rounded-lg text-xs font-semibold tracking-normal transition-colors ${
+                    `px-3.5 py-2.5 rounded-lg text-xs font-extrabold tracking-normal transition-colors ${
                       isActive
-                        ? 'text-[#008579] bg-teal-50 border border-teal-200/80 font-bold'
-                        : 'text-slate-700 hover:text-[#008579] hover:bg-slate-100/80'
+                        ? 'text-[#008579] bg-teal-50 border border-teal-200/80'
+                        : 'text-[#06182D] hover:text-[#008579] hover:bg-slate-100'
                     }`
                   }
                 >
