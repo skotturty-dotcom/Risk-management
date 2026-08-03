@@ -548,16 +548,16 @@ export default function Home({ onOpenAudit }) {
 
                   {/* Title & Subheading */}
                   <div className="space-y-1.5">
-                    <h3 className="text-xl md:text-2xl font-extrabold font-display text-[#0F3161] dark:text-white group-hover:text-[#008579] dark:group-hover:text-[#46A095] transition-colors leading-snug">
+                    <h3 className="text-xl md:text-2xl font-extrabold font-display text-white group-hover:text-[#55D9CC] transition-colors leading-snug">
                       {ind.name || ind.title}
                     </h3>
-                    <p className="text-xs font-sans font-semibold uppercase tracking-wider text-[#008579] dark:text-[#46A095]">
+                    <p className="text-xs font-sans font-semibold uppercase tracking-wider text-[#55D9CC]">
                       {ind.riskCategory || ind.kri}
                     </p>
                   </div>
 
                   {/* Description Info Copy */}
-                  <p className="text-sm md:text-base text-slate-700 dark:text-gray-200 font-medium leading-relaxed">
+                  <p className="text-sm md:text-base text-[#CBD5E1] font-normal leading-relaxed">
                     {ind.description || ind.desc}
                   </p>
                 </div>

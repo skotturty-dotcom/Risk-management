@@ -80,18 +80,18 @@ export default function Solutions({ onOpenAudit }) {
 
                   {/* Title & Subheading */}
                   <div className="space-y-1.5">
-                    <h3 className="text-lg md:text-xl font-bold font-display text-[#0F3161] dark:text-white group-hover:text-[#008579] dark:group-hover:text-[#46A095] transition-colors leading-snug">
+                    <h3 className="text-lg md:text-xl font-bold font-display text-white group-hover:text-[#55D9CC] transition-colors leading-snug">
                       {practice.title}
                     </h3>
-                    <p className="text-xs text-slate-600 dark:text-gray-300 font-medium leading-relaxed">
+                    <p className="text-xs text-[#CBD5E1] font-normal leading-relaxed">
                       {practice.shortDesc}
                     </p>
                   </div>
                 </div>
 
                 {/* Simple Action Footer */}
-                <div className="pt-4 mt-4 border-t border-slate-200 dark:border-white/10 flex items-center justify-between">
-                  <span className="text-xs font-mono font-bold text-[#008579] dark:text-[#46A095] uppercase">
+                <div className="pt-4 mt-4 border-t border-white/10 flex items-center justify-between">
+                  <span className="text-xs font-mono font-bold text-[#55D9CC] uppercase">
                     Inspect Practice
                   </span>
                   <ArrowRight className="w-4 h-4 text-[#FFB340] group-hover:translate-x-1 transition-transform" />

@@ -78,30 +78,30 @@ export default function Industries({ onOpenAudit }) {
                       <IconComponent className="w-5 h-5" />
                     </div>
 
-                    <span className="text-[10px] font-mono font-bold text-[#008579] dark:text-[#46A095] bg-teal-50 dark:bg-teal-500/10 px-2.5 py-0.5 rounded border border-teal-200 dark:border-teal-500/20 uppercase tracking-wider">
+                    <span className="text-[10px] font-mono font-bold text-[#55D9CC] bg-[rgba(40,199,183,0.10)] px-2.5 py-0.5 rounded border border-[rgba(72,214,201,0.25)] uppercase tracking-wider">
                       SECTOR 0{ind.id}
                     </span>
                   </div>
 
                   {/* Title & Subheading */}
                   <div className="space-y-1">
-                    <h3 className="text-lg md:text-xl font-bold font-display text-[#0F3161] dark:text-white group-hover:text-[#008579] dark:group-hover:text-[#46A095] transition-colors leading-snug">
+                    <h3 className="text-lg md:text-xl font-bold font-display text-white group-hover:text-[#55D9CC] transition-colors leading-snug">
                       {ind.title}
                     </h3>
-                    <p className="text-xs font-sans font-semibold text-[#008579] dark:text-[#46A095] tracking-wider uppercase">
+                    <p className="text-xs font-sans font-semibold text-[#55D9CC] tracking-wider uppercase">
                       {ind.kri}
                     </p>
                   </div>
 
                   {/* Description Info Copy */}
-                  <p className="text-xs md:text-sm text-slate-600 dark:text-gray-300 font-medium leading-relaxed">
+                  <p className="text-xs md:text-sm text-[#CBD5E1] font-normal leading-relaxed">
                     {ind.desc}
                   </p>
                 </div>
 
                 {/* Card Action Footer */}
-                <div className="pt-4 mt-4 border-t border-slate-200 dark:border-white/10 flex items-center justify-between">
-                  <span className="text-xs font-mono font-bold text-slate-500 dark:text-gray-400 group-hover:text-[#008579] dark:group-hover:text-[#46A095]">
+                <div className="pt-4 mt-4 border-t border-white/10 flex items-center justify-between">
+                  <span className="text-xs font-mono font-bold text-[#B8C4CF] group-hover:text-[#55D9CC]">
                     Inspect Scope
                   </span>
                   <ArrowRight className="w-4 h-4 text-[#FFB340] group-hover:translate-x-1 transition-transform" />
