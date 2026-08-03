@@ -215,10 +215,13 @@ export default function Home({ onOpenAudit }) {
             </h2>
           </div>
 
-          {/* Vertical Founder Card */}
-          <div className="w-full max-w-md mx-auto">
-            <div className="relative rounded-3xl bg-gradient-to-br from-[#0F3161] via-[#06182D] to-[#020B14] text-white border-2 border-[#28C7B7] flex flex-col items-center justify-center p-8 text-center shadow-2xl overflow-hidden group space-y-4">
-              <div className="w-28 h-28 sm:w-32 sm:h-32 rounded-full border-2 border-[#55D9CC] overflow-hidden shadow-2xl group-hover:scale-105 transition-transform duration-300 shrink-0">
+          {/* Vertical Founder Card - Pure White Box */}
+          <div className="w-full max-w-sm sm:max-w-md mx-auto">
+            <div className="relative rounded-3xl bg-white text-slate-900 border-2 border-teal-500/40 hover:border-[#008579] flex flex-col items-center justify-center p-8 text-center shadow-2xl overflow-hidden group space-y-4 transition-all duration-300">
+              {/* Permanent Executive Accent Top Bar */}
+              <div className="absolute top-0 left-0 right-0 h-2 bg-gradient-to-r from-[#008579] via-[#38BDF8] to-[#FFB340]" />
+
+              <div className="w-28 h-28 sm:w-32 sm:h-32 rounded-full border-4 border-[#008579] overflow-hidden shadow-xl group-hover:scale-105 transition-transform duration-300 shrink-0 mt-2">
                 <img
                   src="/images/founder.png"
                   alt={founderData.name}
@@ -227,20 +230,20 @@ export default function Home({ onOpenAudit }) {
               </div>
 
               <div className="space-y-2">
-                <h3 className="text-2xl font-extrabold font-display text-white">
+                <h3 className="text-2xl font-extrabold font-display text-[#06182D]">
                   {founderData.name}
                 </h3>
-                <span className="inline-block text-xs font-mono font-extrabold text-[#55D9CC] uppercase tracking-wider px-4 py-1 rounded-full bg-[rgba(40,199,183,0.10)] border border-[rgba(40,199,183,0.25)] shadow-sm">
+                <span className="inline-block text-xs font-mono font-extrabold text-[#008579] uppercase tracking-wider px-4 py-1 rounded-full bg-teal-50 border border-teal-200 shadow-sm">
                   {founderData.designation}
                 </span>
               </div>
 
-              <div className="w-full pt-4 border-t border-[rgba(255,255,255,0.10)] text-xs font-sans text-[#B8C4CF] font-semibold space-y-1.5">
-                <p className="flex items-center justify-center space-x-1.5 text-xs text-white">
-                  <ShieldCheck className="w-4 h-4 text-[#55D9CC]" />
+              <div className="w-full pt-4 border-t border-slate-200 text-xs font-sans text-slate-700 font-semibold space-y-1.5">
+                <p className="flex items-center justify-center space-x-1.5 text-xs font-extrabold text-[#06182D]">
+                  <ShieldCheck className="w-4 h-4 text-[#008579]" />
                   <span>SRAJAI TECH FOUNDER</span>
                 </p>
-                <p className="text-xs text-[#8D9AA7]">Enterprise Risk Strategy & ERM Specialist</p>
+                <p className="text-xs text-slate-600 font-medium">Enterprise Risk Strategy & ERM Specialist</p>
               </div>
             </div>
           </div>
