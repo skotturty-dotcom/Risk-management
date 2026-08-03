@@ -69,7 +69,7 @@ export default function AnimatedFrameworkArchitecture() {
   const [activeNode, setActiveNode] = useState(frameworkNodes[0]);
 
   return (
-    <div className="glass-panel p-8 md:p-12 rounded-3xl border border-[rgba(72,214,201,0.18)] bg-[#0A1725] text-white space-y-10 shadow-2xl relative overflow-hidden">
+    <div className="glass-panel p-5 sm:p-7 md:p-8 rounded-2xl border border-[rgba(85,217,204,0.28)] bg-[#10243C] text-white space-y-6 shadow-2xl relative overflow-hidden max-w-5xl mx-auto">
       {/* Background Floating Orbs */}
       <motion.div
         animate={{ scale: [1, 1.2, 1], opacity: [0.15, 0.3, 0.15] }}
@@ -78,23 +78,23 @@ export default function AnimatedFrameworkArchitecture() {
       />
 
       {/* Header */}
-      <div className="text-center max-w-3xl mx-auto space-y-3 relative z-10">
-        <div className="inline-flex items-center space-x-2 text-[#55D9CC] font-mono text-xs font-bold uppercase tracking-wider px-3.5 py-1 rounded bg-[rgba(40,199,183,0.10)] border border-[rgba(72,214,201,0.25)]">
-          <Sparkles className="w-4 h-4 text-[#FFB340]" />
+      <div className="text-center max-w-3xl mx-auto space-y-2 relative z-10">
+        <div className="inline-flex items-center space-x-1.5 text-[#55D9CC] font-mono text-[11px] font-bold uppercase tracking-wider px-3 py-0.5 rounded bg-[rgba(40,199,183,0.10)] border border-[rgba(72,214,201,0.25)]">
+          <Sparkles className="w-3.5 h-3.5 text-[#FFB340]" />
           <span>INTERACTIVE SYSTEM HIERARCHY</span>
         </div>
-        <h2 className="text-3xl md:text-5xl font-extrabold font-display text-white">
+        <h2 className="text-xl sm:text-2xl md:text-3xl font-extrabold font-display text-white">
           Framework Architecture Engine
         </h2>
-        <p className="text-[#CBD5E1] text-base md:text-lg font-normal">
+        <p className="text-[#CBD5E1] text-xs sm:text-sm font-normal max-w-2xl mx-auto">
           Strategic alignment flow from corporate vision to continuous control telemetry. Click any node to inspect governance scope.
         </p>
       </div>
 
       {/* Animated Vertical Laser Flow Container */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start relative z-10">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start relative z-10">
         {/* Left Interactive Animated Tree Stack */}
-        <div className="lg:col-span-7 space-y-4 relative">
+        <div className="lg:col-span-7 space-y-2.5 relative">
           {frameworkNodes.map((node, idx) => {
             const IconComp = node.icon;
             const isSelected = activeNode.id === node.id;
@@ -102,35 +102,35 @@ export default function AnimatedFrameworkArchitecture() {
             return (
               <React.Fragment key={node.id}>
                 <motion.div
-                  whileHover={{ scale: 1.02, x: 6 }}
+                  whileHover={{ scale: 1.01, x: 4 }}
                   onClick={() => setActiveNode(node)}
-                  className={`p-5 sm:p-6 rounded-2xl cursor-pointer transition-all duration-300 border relative overflow-hidden flex items-center justify-between shadow-lg ${
+                  className={`p-3.5 sm:p-4 rounded-xl cursor-pointer transition-all duration-300 border relative overflow-hidden flex items-center justify-between shadow-md ${
                     isSelected
-                      ? 'bg-gradient-to-r from-[#0F3161] via-[#00437E] to-[#008579] text-white border-[#55D9CC] ring-2 ring-[#55D9CC]/50 shadow-2xl shadow-teal-500/20'
+                      ? 'bg-gradient-to-r from-[#0F3161] via-[#00437E] to-[#008579] text-white border-[#55D9CC] ring-2 ring-[#55D9CC]/40 shadow-xl shadow-teal-500/20'
                       : 'bg-[#06152B] text-white border-[rgba(72,214,201,0.15)] hover:border-[#55D9CC]'
                   }`}
                 >
                   {/* Left Icon & Info */}
-                  <div className="flex items-center space-x-4">
+                  <div className="flex items-center space-x-3">
                     <div
-                      className={`w-12 h-12 rounded-xl flex items-center justify-center shrink-0 border shadow-md ${
+                      className={`w-9 h-9 rounded-lg flex items-center justify-center shrink-0 border shadow-sm ${
                         isSelected
                           ? 'bg-white/15 text-[#FFB340] border-white/30'
                           : 'bg-[rgba(40,199,183,0.10)] text-[#55D9CC] border-[rgba(72,214,201,0.25)]'
                       }`}
                     >
-                      <IconComp className="w-6 h-6" />
+                      <IconComp className="w-4.5 h-4.5" />
                     </div>
 
-                    <div className="space-y-1">
+                    <div className="space-y-0.5">
                       <span
-                        className={`text-[11px] font-mono font-bold uppercase tracking-wider block ${
+                        className={`text-[10px] font-mono font-bold uppercase tracking-wider block ${
                           isSelected ? 'text-[#FFB340]' : 'text-[#55D9CC]'
                         }`}
                       >
                         {node.level}
                       </span>
-                      <h4 className="text-lg md:text-xl font-extrabold font-display leading-tight text-white">
+                      <h4 className="text-base sm:text-lg font-extrabold font-display leading-tight text-white">
                         {node.title}
                       </h4>
                     </div>
@@ -138,7 +138,7 @@ export default function AnimatedFrameworkArchitecture() {
 
                   {/* Right Badge */}
                   <span
-                    className={`text-[10px] font-mono font-extrabold px-3 py-1 rounded-full uppercase tracking-wider hidden sm:block ${
+                    className={`text-[9px] font-mono font-extrabold px-2.5 py-0.5 rounded-full uppercase tracking-wider hidden sm:block ${
                       isSelected
                         ? 'bg-[#FFB340] text-[#0F3161]'
                         : 'bg-white/10 text-[#CBD5E1] border border-white/15'
@@ -150,12 +150,12 @@ export default function AnimatedFrameworkArchitecture() {
 
                 {/* Animated Connecting Laser Connector */}
                 {idx < frameworkNodes.length - 1 && (
-                  <div className="flex justify-center my-1 relative">
-                    <div className="w-0.5 h-6 bg-white/20 relative overflow-hidden">
+                  <div className="flex justify-center my-0.5 relative">
+                    <div className="w-0.5 h-4 bg-white/20 relative overflow-hidden">
                       <motion.div
-                        animate={{ y: [0, 24] }}
+                        animate={{ y: [0, 16] }}
                         transition={{ repeat: Infinity, duration: 1.2, ease: 'linear' }}
-                        className="w-full h-3 bg-gradient-to-b from-[#55D9CC] via-[#FFB340] to-transparent shadow-[0_0_8px_#55D9CC]"
+                        className="w-full h-2.5 bg-gradient-to-b from-[#55D9CC] via-[#FFB340] to-transparent shadow-[0_0_8px_#55D9CC]"
                       />
                     </div>
                   </div>
@@ -170,48 +170,48 @@ export default function AnimatedFrameworkArchitecture() {
           <AnimatePresence mode="wait">
             <motion.div
               key={activeNode.id}
-              initial={{ opacity: 0, y: 15, scale: 0.98 }}
+              initial={{ opacity: 0, y: 12, scale: 0.98 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
-              exit={{ opacity: 0, y: -15, scale: 0.98 }}
-              className="glass-panel p-8 rounded-3xl border-2 border-[#55D9CC] space-y-6 shadow-2xl bg-[#06152B] text-white relative overflow-hidden"
+              exit={{ opacity: 0, y: -12, scale: 0.98 }}
+              className="glass-panel p-5 sm:p-6 rounded-2xl border-2 border-[#55D9CC] space-y-4 shadow-2xl bg-[#06152B] text-white relative overflow-hidden"
             >
-              <div className="flex items-center space-x-3">
-                <div className="relative w-11 h-11 rounded-xl bg-[rgba(40,199,183,0.10)] border border-[rgba(72,214,201,0.25)] flex items-center justify-center text-[#55D9CC]">
-                  <Zap className="w-6 h-6 text-[#FFB340] relative z-10" />
+              <div className="flex items-center space-x-2.5">
+                <div className="relative w-9 h-9 rounded-lg bg-[rgba(40,199,183,0.10)] border border-[rgba(72,214,201,0.25)] flex items-center justify-center text-[#55D9CC]">
+                  <Zap className="w-4.5 h-4.5 text-[#FFB340] relative z-10" />
                   <motion.div
                     animate={{ scale: [1, 1.3, 1], opacity: [0.3, 0.7, 0.3] }}
                     transition={{ duration: 2, repeat: Infinity }}
-                    className="absolute inset-0 rounded-xl bg-[#FFB340]/20 pointer-events-none"
+                    className="absolute inset-0 rounded-lg bg-[#FFB340]/20 pointer-events-none"
                   />
                 </div>
                 <div>
-                  <span className="text-xs font-mono font-bold text-[#55D9CC] uppercase tracking-wider block">
+                  <span className="text-[10px] font-mono font-bold text-[#55D9CC] uppercase tracking-wider block">
                     TELEMETRY INSPECTION
                   </span>
-                  <h3 className="text-xl font-extrabold font-display text-white">
+                  <h3 className="text-base sm:text-lg font-extrabold font-display text-white">
                     {activeNode.title}
                   </h3>
                 </div>
               </div>
 
-              <p className="text-sm md:text-base text-[#CBD5E1] font-normal leading-relaxed">
+              <p className="text-xs sm:text-sm text-[#CBD5E1] font-normal leading-relaxed">
                 {activeNode.desc}
               </p>
 
-              <div className="p-5 rounded-2xl bg-[#0F2342] border border-white/10 space-y-2">
-                <span className="text-xs font-mono font-bold text-[#55D9CC] uppercase tracking-wider flex items-center space-x-1.5">
-                  <CheckCircle2 className="w-4 h-4 text-[#FFB340]" />
+              <div className="p-3.5 rounded-xl bg-[#0F2342] border border-white/10 space-y-1">
+                <span className="text-[10px] font-mono font-bold text-[#55D9CC] uppercase tracking-wider flex items-center space-x-1.5">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-[#FFB340]" />
                   <span>CORE GOVERNANCE CONTROLS</span>
                 </span>
-                <p className="text-sm text-white font-semibold leading-relaxed">
+                <p className="text-xs text-white font-semibold leading-relaxed">
                   {activeNode.details}
                 </p>
               </div>
 
-              <div className="pt-2 text-xs font-mono text-[#B8C4CF] font-semibold flex items-center justify-between border-t border-white/10">
+              <div className="pt-2 text-[10px] font-mono text-[#B8C4CF] font-semibold flex items-center justify-between border-t border-white/10">
                 <span>ISO 31000 & COSO ENFORCED</span>
                 <span className="text-[#55D9CC] font-bold flex items-center">
-                  <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse mr-1.5 inline-block" />
+                  <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse mr-1 inline-block" />
                   SYSTEM READY
                 </span>
               </div>
