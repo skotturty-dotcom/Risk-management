@@ -23,10 +23,42 @@ export default function AuditModal({ isOpen, onClose, selectedPractice }) {
   if (!isOpen) return null;
 
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [modalGmailUrl, setModalGmailUrl] = useState('');
+  const [modalMailtoUrl, setModalMailtoUrl] = useState('');
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
+
+    const subject = `Executive Diagnostic Audit Request - ${formData.companyName || formData.fullName}`;
+    const body = `Hello Srajai Tech Advisory Board,
+
+I am requesting an Executive Diagnostic Audit with the following parameters:
+
+- Executive Name: ${formData.fullName}
+- Work Email: ${formData.workEmail}
+- Company Name: ${formData.companyName}
+- Phone Number: ${formData.phone || 'N/A'}
+- Primary Risk Domain: ${formData.primaryPractice}
+
+Scope / Objectives:
+${formData.scopeDetails || 'N/A'}
+
+Best regards,
+${formData.fullName}`;
+
+    const gmail = `https://mail.google.com/mail/?view=cm&fs=1&to=srajaitech@gmail.com&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    const mailto = `mailto:srajaitech@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+    setModalGmailUrl(gmail);
+    setModalMailtoUrl(mailto);
+
+    // Auto open Gmail compose window immediately on click
+    try {
+      window.open(gmail, '_blank');
+    } catch (e) {
+      console.warn("Could not auto-open tab:", e);
+    }
 
     try {
       await fetch("https://formsubmit.co/ajax/srajaitech@gmail.com", {
@@ -36,7 +68,7 @@ export default function AuditModal({ isOpen, onClose, selectedPractice }) {
           "Accept": "application/json"
         },
         body: JSON.stringify({
-          _subject: `New Executive Diagnostic Audit Request - ${formData.companyName || formData.fullName}`,
+          _subject: subject,
           _template: "table",
           "Executive Name": formData.fullName,
           "Work Email": formData.workEmail,
@@ -219,10 +251,11 @@ export default function AuditModal({ isOpen, onClose, selectedPractice }) {
 
                     <button
                       type="submit"
-                      className="flex-1 sm:flex-initial px-6 py-3 rounded-xl bg-[#008579] hover:bg-[#00685E] text-white text-xs font-extrabold uppercase tracking-wider shadow-lg flex items-center justify-center space-x-2 cursor-pointer transition-all border border-[#008579]"
+                      disabled={isSubmitting}
+                      className="flex-1 sm:flex-initial px-6 py-3 rounded-xl bg-[#008579] hover:bg-[#00685E] text-white text-xs font-extrabold uppercase tracking-wider shadow-lg flex items-center justify-center space-x-2 cursor-pointer transition-all border border-[#008579] disabled:opacity-75"
                     >
-                      <span>Submit & Open WhatsApp</span>
-                      <ArrowRight className="w-4 h-4 text-white" />
+                      <Mail className="w-4 h-4 text-[#FFB340]" />
+                      <span>{isSubmitting ? 'Transmitting Request...' : 'Submit & Open Email'}</span>
                     </button>
                   </div>
                 </div>
@@ -235,32 +268,47 @@ export default function AuditModal({ isOpen, onClose, selectedPractice }) {
               </div>
               <div className="space-y-2">
                 <h3 className="text-2xl sm:text-3xl font-extrabold font-display text-[#06182D]">
-                  Opening WhatsApp Chat...
+                  Audit Request Transmitted & Auto-Opened in Gmail!
                 </h3>
                 <p className="text-slate-600 text-sm sm:text-base font-semibold max-w-sm mx-auto leading-relaxed">
-                  Your audit parameters have been pre-filled. Connect directly with Guddeti Sanjay Raj on WhatsApp (+91 91821 19045).
+                  Your audit parameters have been sent to <strong className="text-[#008579]">srajaitech@gmail.com</strong> and pre-filled into Gmail.
                 </p>
               </div>
-              <div className="flex justify-center space-x-3">
+              <div className="flex flex-wrap items-center justify-center gap-3">
+                <a
+                  href={modalGmailUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-5 py-3 rounded-xl bg-[#008579] hover:bg-[#00685E] text-white font-extrabold text-xs uppercase tracking-wider shadow-md cursor-pointer transition-all inline-flex items-center space-x-2"
+                >
+                  <Mail className="w-4 h-4 text-[#FFB340]" />
+                  <span>Open Gmail Web Compose</span>
+                </a>
+                <a
+                  href={modalMailtoUrl}
+                  className="px-5 py-3 rounded-xl bg-slate-700 hover:bg-slate-600 text-white font-extrabold text-xs uppercase tracking-wider shadow-md cursor-pointer transition-all inline-flex items-center space-x-2 border border-slate-500"
+                >
+                  <Mail className="w-4 h-4 text-[#55D9CC]" />
+                  <span>Open System Mail App</span>
+                </a>
                 <a
                   href={`https://wa.me/919182119045?text=${encodeURIComponent(
                     `Hello Guddeti Sanjay Raj,\n\nI would like to schedule an Executive Diagnostic Audit.\n\nName: ${formData.fullName}\nEmail: ${formData.workEmail}\nCompany: ${formData.companyName}\nDomain: ${formData.primaryPractice}`
                   )}`}
                   target="_blank"
                   rel="noreferrer"
-                  className="px-6 py-3 rounded-xl bg-[#25D366] hover:bg-[#20bd5a] text-white font-extrabold text-xs uppercase tracking-wider shadow-md cursor-pointer transition-all inline-flex items-center space-x-2"
+                  className="px-5 py-3 rounded-xl bg-[#25D366] hover:bg-[#20bd5a] text-white font-extrabold text-xs uppercase tracking-wider shadow-md cursor-pointer transition-all inline-flex items-center space-x-2"
                 >
-                  <span>Re-open WhatsApp Chat</span>
-                  <ArrowRight className="w-4 h-4 text-white" />
+                  <span>WhatsApp Audit</span>
                 </a>
                 <button
                   onClick={() => {
                     setSubmitted(false);
                     onClose();
                   }}
-                  className="px-6 py-3 rounded-xl bg-[#06182D] hover:bg-slate-800 text-white font-extrabold text-xs uppercase tracking-wider shadow-md cursor-pointer transition-all"
+                  className="px-5 py-3 rounded-xl bg-[#06182D] hover:bg-slate-800 text-white font-extrabold text-xs uppercase tracking-wider shadow-md cursor-pointer transition-all"
                 >
-                  CLOSE WINDOW
+                  Close Window
                 </button>
               </div>
             </div>

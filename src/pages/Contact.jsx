@@ -22,10 +22,42 @@ export default function Contact() {
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [gmailUrl, setGmailUrl] = useState('');
+  const [mailtoUrl, setMailtoUrl] = useState('');
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
+
+    const subject = `New Enterprise Advisory Consultation Request - ${formData.company || formData.name}`;
+    const body = `Hello Srajai Tech Advisory Team,
+
+I would like to request a Confidential Advisory Consultation with the following details:
+
+- Full Name: ${formData.name}
+- Corporate Email: ${formData.email}
+- Company Name: ${formData.company}
+- Phone Number: ${formData.phone || 'N/A'}
+- Primary Risk Practice: ${formData.practice}
+
+Message / Project Scope:
+${formData.message || 'N/A'}
+
+Best regards,
+${formData.name}`;
+
+    const gmail = `https://mail.google.com/mail/?view=cm&fs=1&to=srajaitech@gmail.com&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    const mailto = `mailto:srajaitech@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+    setGmailUrl(gmail);
+    setMailtoUrl(mailto);
+
+    // Open Gmail web compose window immediately on user click
+    try {
+      window.open(gmail, '_blank');
+    } catch (e) {
+      console.warn("Could not auto-open tab:", e);
+    }
 
     try {
       await fetch("https://formsubmit.co/ajax/srajaitech@gmail.com", {
@@ -35,7 +67,7 @@ export default function Contact() {
           "Accept": "application/json"
         },
         body: JSON.stringify({
-          _subject: `New Enterprise Advisory Consultation Request - ${formData.company || formData.name}`,
+          _subject: subject,
           _template: "table",
           "Full Name": formData.name,
           "Corporate Email": formData.email,
@@ -288,20 +320,36 @@ export default function Contact() {
                 </button>
               </form>
             ) : (
-              <div className="text-center py-12 space-y-4">
+              <div className="text-center py-12 space-y-5">
                 <div className="w-16 h-16 rounded-full bg-emerald-500/20 text-[#55D9CC] flex items-center justify-center mx-auto shadow-md">
                   <CheckCircle2 className="w-10 h-10 text-[#55D9CC]" />
                 </div>
                 <h3 className="text-2xl font-extrabold font-display text-white">
-                  Consultation Request Sent directly to Email!
+                  Consultation Request Transmitted & Auto-Opened in Gmail!
                 </h3>
                 <p className="text-gray-200 text-base font-medium max-w-md mx-auto leading-relaxed">
-                  Your parameters have been transmitted directly to <strong className="text-[#55D9CC]">srajaitech@gmail.com</strong>. A principal strategist will contact you shortly.
+                  Your details have been transmitted to <strong className="text-[#55D9CC]">srajaitech@gmail.com</strong> and pre-filled into Gmail.
                 </p>
-                <div className="flex justify-center pt-2">
+                <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-3 pt-2">
+                  <a
+                    href={gmailUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-gradient-to-r from-[#008579] via-[#00A896] to-[#008579] hover:brightness-110 text-white font-extrabold text-xs uppercase tracking-wider transition-all shadow-lg flex items-center justify-center space-x-2"
+                  >
+                    <Mail className="w-4 h-4 text-[#FFB340]" />
+                    <span>Open Gmail Web Compose</span>
+                  </a>
+                  <a
+                    href={mailtoUrl}
+                    className="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-slate-700 hover:bg-slate-600 text-white font-extrabold text-xs uppercase tracking-wider transition-all shadow-md flex items-center justify-center space-x-2 border border-slate-500"
+                  >
+                    <Mail className="w-4 h-4 text-[#55D9CC]" />
+                    <span>Open System Mail App</span>
+                  </a>
                   <button
                     onClick={() => setSubmitted(false)}
-                    className="px-6 py-3 rounded-xl bg-[#008579] hover:bg-[#00685E] text-white font-extrabold text-xs uppercase tracking-wider transition-colors shadow-md"
+                    className="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-extrabold text-xs uppercase tracking-wider transition-colors shadow-md border border-slate-600"
                   >
                     Submit Another Request
                   </button>

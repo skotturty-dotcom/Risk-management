@@ -68,7 +68,10 @@ export default function Home({ onOpenAudit }) {
     message: ''
   });
   const [contactSubmitted, setContactSubmitted] = useState(false);
+  const [contactSubmitting, setContactSubmitting] = useState(false);
   const [contactErrors, setContactErrors] = useState({});
+  const [homeGmailUrl, setHomeGmailUrl] = useState('');
+  const [homeMailtoUrl, setHomeMailtoUrl] = useState('');
 
   const validateContact = () => {
     const errs = {};
@@ -82,14 +85,70 @@ export default function Home({ onOpenAudit }) {
     return errs;
   };
 
-  const handleContactSubmit = (e) => {
+  const handleContactSubmit = async (e) => {
     e.preventDefault();
     const errs = validateContact();
     if (Object.keys(errs).length > 0) {
       setContactErrors(errs);
       return;
     }
-    setContactSubmitted(true);
+
+    setContactSubmitting(true);
+
+    const subject = `New Enterprise Advisory Consultation Request - ${contactData.companyName || contactData.fullName}`;
+    const body = `Hello Srajai Tech Advisory Team,
+
+I would like to request a Confidential Advisory Consultation with the following details:
+
+- Full Name: ${contactData.fullName}
+- Corporate Email: ${contactData.corporateEmail}
+- Company Name: ${contactData.companyName}
+- Phone Number: ${contactData.phone || 'N/A'}
+- Primary Risk Practice: ${contactData.practice}
+
+Message / Project Scope:
+${contactData.message || 'N/A'}
+
+Best regards,
+${contactData.fullName}`;
+
+    const gmail = `https://mail.google.com/mail/?view=cm&fs=1&to=srajaitech@gmail.com&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    const mailto = `mailto:srajaitech@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+    setHomeGmailUrl(gmail);
+    setHomeMailtoUrl(mailto);
+
+    // Auto open Gmail compose window immediately on user click
+    try {
+      window.open(gmail, '_blank');
+    } catch (e) {
+      console.warn("Could not auto-open tab:", e);
+    }
+
+    try {
+      await fetch("https://formsubmit.co/ajax/srajaitech@gmail.com", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        body: JSON.stringify({
+          _subject: subject,
+          _template: "table",
+          "Full Name": contactData.fullName,
+          "Corporate Email": contactData.corporateEmail,
+          "Company Name": contactData.companyName,
+          "Phone Number": contactData.phone || "N/A",
+          "Primary Risk Practice": contactData.practice,
+          "Message / Project Scope": contactData.message || "N/A"
+        })
+      });
+    } catch (err) {
+      console.error("FormSubmit error:", err);
+    } finally {
+      setContactSubmitting(false);
+      setContactSubmitted(true);
+    }
   };
 
   return (
@@ -921,41 +980,60 @@ export default function Home({ onOpenAudit }) {
 
                     <button
                       type="submit"
-                      className="w-full py-4 rounded-xl bg-gradient-to-r from-[#008579] via-[#00A896] to-[#008579] text-white text-xs font-extrabold uppercase tracking-wider shadow-lg shadow-teal-600/30 hover:brightness-110 transition-all flex items-center justify-center space-x-2"
+                      disabled={contactSubmitting}
+                      className="w-full py-4 rounded-xl bg-gradient-to-r from-[#008579] via-[#00A896] to-[#008579] text-white text-xs font-extrabold uppercase tracking-wider shadow-lg shadow-teal-600/30 hover:brightness-110 transition-all flex items-center justify-center space-x-2 cursor-pointer disabled:opacity-75"
                     >
-                      <span>Request a Confidential Consultation</span>
-                      <ArrowRight className="w-4 h-4" />
+                      <Mail className="w-4 h-4 text-[#FFB340]" />
+                      <span>{contactSubmitting ? 'Transmitting Request to Email...' : 'Request a Confidential Consultation'}</span>
                     </button>
                   </form>
                 </>
               ) : (
-                <div className="py-12 text-center space-y-4">
+                <div className="py-12 text-center space-y-5">
                   <div className="w-16 h-16 bg-teal-50 dark:bg-teal-500/20 border border-[#008579] dark:border-[#46A095] rounded-full flex items-center justify-center mx-auto text-[#008579] dark:text-[#46A095]">
                     <CheckCircle2 className="w-10 h-10" />
                   </div>
-                  <h3 className="text-2xl font-bold font-display text-[#0F3161] dark:text-white">
-                    Consultation Inquiry Sent
+                  <h3 className="text-2xl font-bold font-display text-white">
+                    Consultation Request Transmitted & Auto-Opened in Gmail!
                   </h3>
-                  <p className="text-slate-700 dark:text-gray-200 text-sm max-w-md mx-auto leading-relaxed">
-                    Thank you, <span className="text-[#008579] dark:text-[#46A095] font-semibold">{contactData.fullName}</span>. Our advisory board will review your requirements for <span className="text-[#0F3161] dark:text-white font-semibold">{contactData.companyName}</span> and respond to <span className="text-[#008579] dark:text-[#46A095] font-mono">{contactData.corporateEmail}</span> promptly.
+                  <p className="text-slate-200 text-sm max-w-md mx-auto leading-relaxed font-medium">
+                    Thank you, <span className="text-[#55D9CC] font-semibold">{contactData.fullName}</span>. Your details for <span className="text-white font-semibold">{contactData.companyName}</span> have been transmitted to <strong className="text-[#55D9CC]">srajaitech@gmail.com</strong> and pre-filled into Gmail.
                   </p>
-                  <button
-                    onClick={() => {
-                      setContactSubmitted(false);
-                      setContactData({
-                        fullName: '',
-                        corporateEmail: '',
-                        companyName: '',
-                        phone: '',
-                        practice: 'Enterprise Risk Management (ERM)',
-                        message: ''
-                      });
-                      setContactErrors({});
-                    }}
-                    className="px-6 py-2.5 rounded-lg bg-[#0F3161] text-white text-xs font-semibold uppercase tracking-wider hover:bg-[#06152B] transition-colors"
-                  >
-                    Submit Another Inquiry
-                  </button>
+                  <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-3 pt-2">
+                    <a
+                      href={homeGmailUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-full sm:w-auto px-6 py-3 rounded-xl bg-gradient-to-r from-[#008579] via-[#00A896] to-[#008579] hover:brightness-110 text-white font-extrabold text-xs uppercase tracking-wider transition-all shadow-lg flex items-center justify-center space-x-2"
+                    >
+                      <Mail className="w-4 h-4 text-[#FFB340]" />
+                      <span>Open Gmail Web Compose</span>
+                    </a>
+                    <a
+                      href={homeMailtoUrl}
+                      className="w-full sm:w-auto px-6 py-3 rounded-xl bg-slate-700 hover:bg-slate-600 text-white font-extrabold text-xs uppercase tracking-wider transition-all shadow-md flex items-center justify-center space-x-2 border border-slate-500"
+                    >
+                      <Mail className="w-4 h-4 text-[#55D9CC]" />
+                      <span>Open System Mail App</span>
+                    </a>
+                    <button
+                      onClick={() => {
+                        setContactSubmitted(false);
+                        setContactData({
+                          fullName: '',
+                          corporateEmail: '',
+                          companyName: '',
+                          phone: '',
+                          practice: 'Enterprise Risk Management (ERM)',
+                          message: ''
+                        });
+                        setContactErrors({});
+                      }}
+                      className="w-full sm:w-auto px-6 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-white text-xs font-extrabold uppercase tracking-wider border border-slate-600 transition-colors shadow-md"
+                    >
+                      Submit Another Inquiry
+                    </button>
+                  </div>
                 </div>
               )}
             </div>
