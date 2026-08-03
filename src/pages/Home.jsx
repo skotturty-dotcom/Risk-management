@@ -549,7 +549,7 @@ export default function Home({ onOpenAudit }) {
 
                   {/* Title & Subheading */}
                   <div className="space-y-0.5">
-                    <h3 className="text-base md:text-lg font-extrabold font-display text-[#38BDF8] group-hover:text-[#55D9CC] transition-colors leading-snug">
+                    <h3 className="text-base md:text-lg font-extrabold font-display text-white group-hover:text-[#55D9CC] transition-colors leading-snug">
                       {ind.name || ind.title}
                     </h3>
                     <p className="text-[10px] font-mono font-extrabold uppercase tracking-wider text-white">

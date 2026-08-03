@@ -47,7 +47,7 @@ export default function RiskDomainMap({ onSelectDomain }) {
 
               {/* Title & Subheading */}
               <div className="space-y-0.5">
-                <h3 className="text-sm sm:text-base font-extrabold font-display leading-tight text-[#38BDF8] group-hover:text-[#55D9CC] transition-colors">
+                <h3 className="text-sm sm:text-base font-extrabold font-display leading-tight text-white group-hover:text-[#55D9CC] transition-colors">
                   {practice.title}
                 </h3>
                 <p className="text-[10.5px] text-[#E2E8F0] font-medium leading-tight line-clamp-2">

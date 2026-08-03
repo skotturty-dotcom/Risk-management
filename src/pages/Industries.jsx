@@ -85,7 +85,7 @@ export default function Industries({ onOpenAudit }) {
 
                   {/* Title & Subheading */}
                   <div className="space-y-0.5">
-                    <h3 className="text-sm sm:text-base font-extrabold font-display text-[#38BDF8] group-hover:text-[#55D9CC] transition-colors leading-tight">
+                    <h3 className="text-sm sm:text-base font-extrabold font-display text-white group-hover:text-[#55D9CC] transition-colors leading-tight">
                       {ind.title}
                     </h3>
                     <p className="text-[10px] font-mono font-extrabold text-white tracking-wider uppercase">
