@@ -84,7 +84,7 @@ export default function ValueCards() {
                   {card.title}
                 </h3>
 
-                <p className="text-xs font-mono font-extrabold uppercase tracking-wider text-[#38BDF8]">
+                <p className="text-xs font-mono font-extrabold uppercase tracking-wider text-white">
                   {card.subtitle}
                 </p>
               </div>
