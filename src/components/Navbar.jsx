@@ -31,7 +31,7 @@ export default function Navbar({ onOpenAudit }) {
     { name: 'Industries', path: '/industries' },
     { name: 'Risk Framework', path: '/risk-framework' },
     { name: 'Founder', path: '/founder' },
-    { name: 'Careers', path: '/careers' },
+    { name: 'Careers & Hiring', path: '/careers' },
     { name: 'Contact Us', path: '/contact' }
   ];
 
