@@ -237,7 +237,7 @@ export default function ResolverResourceHub({ onOpenAudit }) {
                   </div>
 
                   {/* Title */}
-                  <h4 className="text-base font-extrabold font-display text-[#38BDF8] group-hover:text-[#55D9CC] transition-colors leading-snug">
+                  <h4 className="text-base font-extrabold font-display text-white group-hover:text-[#55D9CC] transition-colors leading-snug">
                     {res.title}
                   </h4>
 
