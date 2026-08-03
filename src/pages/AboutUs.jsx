@@ -170,15 +170,15 @@ export default function AboutUs({ onOpenAudit }) {
               </p>
             </div>
 
-            {/* 4-Card Expertise Grid - Plain Pure White Cards with Big Text */}
+            {/* 4-Card Expertise Grid - Pure White Cards */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
               {founderData.expertise.map((exp, idx) => (
-                <div key={idx} className="p-5 sm:p-6 rounded-2xl bg-white text-slate-900 border border-slate-200 hover:border-[#008579] space-y-2 shadow-xl hover:shadow-2xl transition-all duration-300">
-                  <h4 className="text-base sm:text-lg font-extrabold text-[#06182D] font-display flex items-center space-x-2">
-                    <CheckCircle2 className="w-4.5 h-4.5 text-[#008579] shrink-0" />
+                <div key={idx} className="p-4.5 rounded-xl bg-white text-slate-900 border border-slate-200 hover:border-[#008579] space-y-1 shadow-md hover:shadow-xl transition-all duration-300">
+                  <h4 className="text-xs sm:text-sm font-extrabold text-[#06182D] font-display flex items-center space-x-1.5">
+                    <CheckCircle2 className="w-4 h-4 text-[#008579] shrink-0" />
                     <span>{exp.title}</span>
                   </h4>
-                  <p className="text-sm sm:text-base text-slate-700 font-medium leading-relaxed">
+                  <p className="text-xs sm:text-sm text-slate-700 font-medium leading-relaxed">
                     {exp.desc}
                   </p>
                 </div>

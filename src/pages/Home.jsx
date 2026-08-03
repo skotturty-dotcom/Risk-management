@@ -286,40 +286,40 @@ ${contactData.fullName}`;
             </div>
 
             {/* RIGHT SIDE: Text Content, Quote & Expertise */}
-            <div className="lg:col-span-7 space-y-6 text-left">
-              <div className="space-y-2">
-                <span className="text-xs font-mono font-extrabold text-[#55D9CC] uppercase tracking-widest px-4 py-1.5 rounded-full bg-teal-500/10 border border-teal-500/30 inline-block shadow-sm">
+            <div className="lg:col-span-7 space-y-4 text-left">
+              <div className="space-y-1.5">
+                <span className="text-[10px] sm:text-xs font-mono font-bold text-[#55D9CC] uppercase tracking-widest px-3 py-1 rounded-full bg-teal-500/10 border border-teal-500/30 inline-block shadow-sm">
                   FOUNDER & PRINCIPAL LEADERSHIP
                 </span>
-                <h2 className="text-3xl sm:text-4xl font-extrabold font-display text-white leading-tight">
+                <h2 className="text-xl sm:text-2xl md:text-3xl font-extrabold font-display text-white leading-snug">
                   Architecting Executive Risk Resilience
                 </h2>
               </div>
 
-              <p className="text-base sm:text-lg text-slate-100 font-medium leading-relaxed">
+              <p className="text-xs sm:text-sm text-slate-200 leading-relaxed font-medium">
                 {founderData.bio}
               </p>
 
               {/* Quote Box */}
-              <div className="p-5 sm:p-6 rounded-2xl border-l-4 border-l-[#55D9CC] bg-[#06152B]/90 border border-[rgba(72,214,201,0.2)] space-y-2 shadow-lg">
-                <Quote className="w-6 h-6 text-[#55D9CC]" />
-                <p className="text-base sm:text-lg font-bold text-white font-heading italic leading-relaxed">
+              <div className="p-4 sm:p-5 rounded-2xl border-l-4 border-l-[#55D9CC] bg-[#06152B]/90 border border-[rgba(72,214,201,0.2)] space-y-1.5 shadow-lg">
+                <Quote className="w-5 h-5 text-[#55D9CC]" />
+                <p className="text-xs sm:text-sm font-bold text-white font-heading italic leading-relaxed">
                   "{founderData.quote}"
                 </p>
-                <p className="text-xs sm:text-sm font-sans text-[#55D9CC] font-bold tracking-wide">
+                <p className="text-[10px] sm:text-xs font-sans text-[#55D9CC] font-bold tracking-wide">
                   — Guddeti Sanjay Raj, Founder & Principal Risk Strategist
                 </p>
               </div>
 
-              {/* Expertise Cards Grid - Pure White Cards with Big Text (No Multicolor Bar) */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-1">
+              {/* Expertise Cards Grid - Pure White Cards */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 pt-1">
                 {founderData.expertise.map((exp, idx) => (
-                  <div key={idx} className="p-5 sm:p-6 rounded-2xl bg-white text-slate-900 border border-slate-200 hover:border-[#008579] space-y-2 shadow-lg hover:shadow-2xl transition-all duration-300">
-                    <h4 className="text-base sm:text-lg font-extrabold text-[#06182D] font-display flex items-center space-x-2">
-                      <CheckCircle2 className="w-4.5 h-4.5 text-[#008579] shrink-0" />
+                  <div key={idx} className="p-4 rounded-xl bg-white text-slate-900 border border-slate-200 hover:border-[#008579] space-y-1 shadow-md hover:shadow-xl transition-all duration-300">
+                    <h4 className="text-xs sm:text-sm font-extrabold text-[#06182D] font-display flex items-center space-x-1.5">
+                      <CheckCircle2 className="w-4 h-4 text-[#008579] shrink-0" />
                       <span>{exp.title}</span>
                     </h4>
-                    <p className="text-sm sm:text-base text-slate-700 font-medium leading-relaxed">
+                    <p className="text-xs sm:text-sm text-slate-700 font-medium leading-relaxed">
                       {exp.desc}
                     </p>
                   </div>
