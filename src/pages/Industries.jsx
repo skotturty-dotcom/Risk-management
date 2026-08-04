@@ -17,11 +17,17 @@ export default function Industries({ onOpenAudit }) {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedSectorModal, setSelectedSectorModal] = useState(null);
 
-  const filteredIndustries = industriesData.filter(ind =>
-    ind.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    ind.desc.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    ind.kri.toLowerCase().includes(searchQuery.toLowerCase())
-  );
+  const filteredIndustries = industriesData.filter(ind => {
+    const title = ind.name || ind.title || '';
+    const desc = ind.description || ind.desc || '';
+    const category = ind.riskCategory || ind.kri || (Array.isArray(ind.kris) ? ind.kris.join(' ') : '');
+    const query = searchQuery.toLowerCase();
+    return (
+      title.toLowerCase().includes(query) ||
+      desc.toLowerCase().includes(query) ||
+      category.toLowerCase().includes(query)
+    );
+  });
 
   return (
     <div className="pt-28 pb-20 space-y-16">
@@ -63,6 +69,9 @@ export default function Industries({ onOpenAudit }) {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3.5 sm:gap-4">
           {filteredIndustries.map((ind) => {
             const IconComponent = iconMap[ind.icon] || Landmark;
+            const sectorTitle = ind.name || ind.title;
+            const sectorCategory = ind.riskCategory || ind.kri;
+            const sectorDesc = ind.description || ind.desc;
 
             return (
               <motion.div
@@ -86,16 +95,16 @@ export default function Industries({ onOpenAudit }) {
                   {/* Title & Subheading */}
                   <div className="space-y-0.5">
                     <h3 className="text-sm sm:text-base font-extrabold font-display text-white group-hover:text-[#55D9CC] transition-colors leading-tight">
-                      {ind.title}
+                      {sectorTitle}
                     </h3>
-                    <p className="text-[10px] font-mono font-extrabold text-white tracking-wider uppercase">
-                      {ind.kri}
+                    <p className="text-[10px] font-mono font-extrabold text-[#38BDF8] tracking-wider uppercase">
+                      {sectorCategory}
                     </p>
                   </div>
 
                   {/* Description */}
                   <p className="text-[10.5px] text-[#E2E8F0] font-medium leading-snug line-clamp-2">
-                    {ind.desc}
+                    {sectorDesc}
                   </p>
                 </div>
 
