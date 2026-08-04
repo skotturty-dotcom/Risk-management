@@ -24,8 +24,12 @@ export default function App() {
   const [selectedAuditPractice, setSelectedAuditPractice] = useState(null);
 
   const handleOpenAudit = (practice) => {
-    if (practice) {
+    if (practice && typeof practice === 'object' && (practice.nativeEvent || practice.target || practice.preventDefault)) {
+      setSelectedAuditPractice(null);
+    } else if (practice) {
       setSelectedAuditPractice(practice);
+    } else {
+      setSelectedAuditPractice(null);
     }
     setIsAuditModalOpen(true);
   };

@@ -12,19 +12,20 @@ export default function AuditModal({ isOpen, onClose, selectedPractice }) {
     primaryPractice: 'Enterprise Risk Management (ERM)',
     scopeDetails: ''
   });
-
-  useEffect(() => {
-    if (selectedPractice) {
-      const practiceName = typeof selectedPractice === 'string' ? selectedPractice : selectedPractice.title;
-      setFormData((prev) => ({ ...prev, primaryPractice: practiceName }));
-    }
-  }, [selectedPractice]);
-
-  if (!isOpen) return null;
-
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [modalGmailUrl, setModalGmailUrl] = useState('');
   const [modalMailtoUrl, setModalMailtoUrl] = useState('');
+
+  useEffect(() => {
+    if (selectedPractice) {
+      const practiceName = typeof selectedPractice === 'string'
+        ? selectedPractice
+        : (selectedPractice && selectedPractice.title) || (selectedPractice && selectedPractice.name) || 'Enterprise Risk Management (ERM)';
+      setFormData((prev) => ({ ...prev, primaryPractice: practiceName || 'Enterprise Risk Management (ERM)' }));
+    } else {
+      setFormData((prev) => ({ ...prev, primaryPractice: 'Enterprise Risk Management (ERM)' }));
+    }
+  }, [selectedPractice]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -109,7 +110,8 @@ ${formData.fullName}`;
 
   return (
     <AnimatePresence>
-      <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 overflow-y-auto">
+      {isOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 overflow-y-auto">
         {/* Backdrop */}
         <motion.div
           initial={{ opacity: 0 }}
@@ -329,7 +331,8 @@ ${formData.fullName}`;
             </div>
           )}
         </motion.div>
-      </div>
+        </div>
+      )}
     </AnimatePresence>
   );
 }
