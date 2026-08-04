@@ -124,11 +124,11 @@ ${formData.name}`;
         {/* Left Column: Direct Advisory Contact Info */}
         <div className="lg:col-span-5 space-y-8">
           <div className="glass-panel p-8 rounded-3xl border border-slate-200 dark:border-teal-500/30 space-y-7 shadow-xl">
-            <h3 className="text-2xl font-extrabold font-display text-[#0F3161] dark:text-white">
+            <h3 className="text-2xl font-extrabold font-display text-white">
               Direct Advisory Channels
             </h3>
 
-            <p className="text-sm md:text-base text-slate-800 dark:text-slate-200 font-semibold leading-relaxed">
+            <p className="text-sm md:text-base text-[#E2E8F0] font-semibold leading-relaxed">
               Reach out to our principal strategists for diagnostic audits, corporate board presentations, or customized risk framework implementations.
             </p>
 
