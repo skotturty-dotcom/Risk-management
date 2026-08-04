@@ -108,24 +108,24 @@ export default function Solutions({ onOpenAudit }) {
           <div className="p-6 md:p-10 rounded-3xl border-2 border-[#38BDF8] space-y-6 shadow-2xl bg-gradient-to-br from-[#0B2545] via-[#13315C] to-[#061A33] text-white">
             <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 border-b border-white/15 pb-5">
               <div className="space-y-1">
-                <span className="text-xs font-mono font-bold text-[#008579] dark:text-[#46A095] uppercase tracking-widest px-3 py-0.5 rounded bg-teal-50 dark:bg-teal-500/10 border border-teal-200 dark:border-teal-500/30">
+                <span className="text-xs font-mono font-bold text-[#38BDF8] uppercase tracking-widest px-3 py-1 rounded-md bg-[#38BDF8]/15 border border-[#38BDF8]/30 shadow-sm">
                   ACTIVE PRACTICE DEPLOYMENT SCOPE
                 </span>
-                <h2 className="text-2xl md:text-3xl font-extrabold font-display text-[#0F3161] dark:text-white">
+                <h2 className="text-2xl md:text-3xl font-extrabold font-display text-white">
                   {selectedPractice.title}
                 </h2>
               </div>
 
               <button
                 onClick={onOpenAudit}
-                className="px-5 py-2.5 rounded-xl bg-[#008579] hover:bg-[#00685E] text-white text-xs font-bold uppercase tracking-wider shadow-md flex items-center space-x-2 shrink-0 transition-all"
+                className="px-5 py-2.5 rounded-xl bg-[#008579] hover:bg-[#00685E] text-white text-xs font-bold uppercase tracking-wider shadow-md flex items-center space-x-2 shrink-0 transition-all cursor-pointer"
               >
                 <span>Request {selectedPractice.title.split(' ')[0]} Audit</span>
                 <ArrowRight className="w-4 h-4 text-[#FFB340]" />
               </button>
             </div>
 
-            <p className="text-slate-700 dark:text-gray-200 text-base md:text-lg font-medium leading-relaxed">
+            <p className="text-[#E2E8F0] text-base md:text-lg font-medium leading-relaxed">
               {selectedPractice.fullDesc}
             </p>
 
@@ -134,7 +134,7 @@ export default function Solutions({ onOpenAudit }) {
                 <div key={fIdx} className="p-4 rounded-xl bg-[#0A1725] border border-[rgba(72,214,201,0.18)] space-y-1 shadow-md">
                   <div className="flex items-center space-x-2 text-[#55D9CC]">
                     <CheckCircle2 className="w-4 h-4 text-[#FFB340]" />
-                    <span className="text-xs font-mono font-bold uppercase">Control Core 0{fIdx + 1}</span>
+                    <span className="text-xs font-mono font-bold uppercase text-[#38BDF8]">Control Core 0{fIdx + 1}</span>
                   </div>
                   <p className="text-xs md:text-sm text-white font-bold leading-relaxed">{feat}</p>
                 </div>
